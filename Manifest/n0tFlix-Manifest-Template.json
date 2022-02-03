@@ -5,15 +5,15 @@
     "description": "Subtitle downloader for yifi",
     "overview": "Grabs subtitles from yifi",
     "owner": "n0tme",
-    "category": "General",
-    "imageUrl": "https://repo.jellyfin.org/releases/plugin/images/jellyfin-plugin-autoorganize.png",
+    "category": "n0tFlix",
+    "imageUrl": "https://fictionhorizon.com/wp-content/uploads/2021/06/Dizajn-bez-naslova-2-1024x576.jpg",
     "versions": [
       {
         "version": "12.0.0.0",
         "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
-        "targetAbi": "10.8.0.0",
+        "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
-        "checksum": "04F800A683E4121F930D1572340B5DA9",
+        "checksum": "3658D3717CA15106DE13603A88EEBCA4",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]

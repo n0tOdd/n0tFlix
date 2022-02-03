@@ -21,3 +21,4 @@ D:\n0tFlix\n0tFlix\Build\{$ProjectName}\Release\net6.0\n0tFlix.Plugin.SubtitleBa
 D:\n0tFlix\n0tFlix\Build\{$ProjectName}\Release\net6.0\n0tFlix.Plugin.SubtitleBase.dll
 D:\n0tFlix\n0tFlix\Build\{$ProjectName}\Release\net6.0\ref\n0tFlix.Plugin.SubtitleBase.dll
 D:\n0tFlix\n0tFlix\Build\{$ProjectName}\Release\net6.0\n0tFlix.Plugin.SubtitleBase.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Release\net6.0\n0tFlix.Plugin.SubtitleBase.csproj.AssemblyReference.cache
