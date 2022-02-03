@@ -46,11 +46,11 @@
             },
             "Jellyfin.Common": {
               "target": "Package",
-              "version": "[10.7.7, )"
+              "version": "[10.8.0-alpha5, )"
             },
             "Jellyfin.Controller": {
               "target": "Package",
-              "version": "[10.7.7, )"
+              "version": "[10.8.0-alpha5, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
@@ -68,6 +68,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

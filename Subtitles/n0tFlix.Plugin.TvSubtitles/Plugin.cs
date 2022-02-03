@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
@@ -11,9 +13,9 @@ namespace n0tFlix.Plugin.TvSubtitles
     /// </summary>
     public class TvSubtitles : BasePlugin<PluginConfiguration>, IHasWebPages
     {
-        
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="OpenSubtitlesPlugin"/> class.
+        /// Initializes a new instance of the <see cref="TvSubtitles"/> class.
         /// </summary>
         /// <param name="applicationPaths">Instance of the <see cref="IApplicationPaths"/> interface.</param>
         /// <param name="xmlSerializer">Instance of the <see cref="IXmlSerializer"/> interface.</param>
@@ -44,12 +46,12 @@ namespace n0tFlix.Plugin.TvSubtitles
                 new PluginPageInfo
                 {
                     Name = this.GetType().Name,
-                    EmbeddedResourcePath = GetType().Namespace + ".Web." + this.GetType().Name + ".html",
+                    EmbeddedResourcePath = GetType().Namespace + ".Web.TvSubtitles.html",
                 },
                 new PluginPageInfo
                 {
                     Name = this.GetType().Name + "js",
-                    EmbeddedResourcePath = GetType().Namespace + ".Web." + this.GetType().Name + ".js"
+                    EmbeddedResourcePath = GetType().Namespace + ".Web.TvSubtitles.js"
                 }
             };
         }

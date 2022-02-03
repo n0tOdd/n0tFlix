@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <AssemblyVersion>11.0.0.0</AssemblyVersion>
+	  <FileVersion>11.0.0.0</FileVersion>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
     <BaseOutputPath></BaseOutputPath>
   </PropertyGroup>
@@ -12,12 +14,15 @@
 	<None Remove="Web\*.js" />
 	<EmbeddedResource Include="Web\*.html" />
 	<EmbeddedResource Include="Web\*.js" />
-	</ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.16.1" />
-    <PackageReference Include="Jellyfin.Common" Version="10.7.7" />
-    <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
+    <PackageReference Include="Jellyfin.Common" Version="10.8.0-alpha5" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.8.0-alpha5" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
+
+
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="PowerShell  Compress-Archive -Path $(TargetDir) -DestinationPath &quot;$(SolutionDir)\Build\$(ProjectName).zip&quot; -Force" />

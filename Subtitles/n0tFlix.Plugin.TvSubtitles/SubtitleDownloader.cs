@@ -1,25 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Security.Authentication;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using n0tFlix.Plugin.TvSubtitles.Configuration;
-using MediaBrowser.Common.Extensions;
 using MediaBrowser.Controller.Providers;
 using MediaBrowser.Controller.Subtitles;
-using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Providers;
 using Microsoft.Extensions.Logging;
 using System.Web;
 using AngleSharp;
 using AngleSharp.Dom;
 using System.IO.Compression;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Linq;
+using System.IO;
 
 namespace n0tFlix.Plugin.TvSubtitles
 {
@@ -30,7 +23,6 @@ namespace n0tFlix.Plugin.TvSubtitles
     {
         private readonly ILogger<SubtitleDownloader> logger;
 
-        private IReadOnlyList<string>? _languages;
         private readonly IHttpClientFactory httpClientFactory;
 
         /// <summary>
@@ -47,7 +39,7 @@ namespace n0tFlix.Plugin.TvSubtitles
 
         /// <inheritdoc />
         public string Name
-            => this.GetType().Namespace.Replace("n0tFlix.Plugin.","");
+            => "TvSubtitles";
 
         /// <inheritdoc />
         public IEnumerable<VideoContentType> SupportedMediaTypes
