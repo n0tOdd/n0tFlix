@@ -13,7 +13,7 @@
         "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
-        "checksum": "3658D3717CA15106DE13603A88EEBCA4",
+        "checksum": "1535143B46796BCDBEE6BF4DD1CE5B7A",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]
