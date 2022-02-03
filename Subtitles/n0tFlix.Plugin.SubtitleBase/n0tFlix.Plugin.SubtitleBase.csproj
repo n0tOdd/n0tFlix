@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Remove="Web\*.html" />
+	<None Remove="Web\*.js" />
+	<EmbeddedResource Include="Web\*.html" />
+	<EmbeddedResource Include="Web\*.js" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Jellyfin.Common" Version="10.7.7" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

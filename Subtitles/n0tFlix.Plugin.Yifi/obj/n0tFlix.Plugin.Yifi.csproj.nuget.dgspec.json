@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.Yifi\\n0tFlix.Plugin.Yifi.csproj": {}
+  },
+  "projects": {
+    "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.Yifi\\n0tFlix.Plugin.Yifi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.Yifi\\n0tFlix.Plugin.Yifi.csproj",
+        "projectName": "n0tFlix.Plugin.Yifi",
+        "projectPath": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.Yifi\\n0tFlix.Plugin.Yifi.csproj",
+        "packagesPath": "C:\\Users\\oddos\\.nuget\\packages\\",
+        "outputPath": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.Yifi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\oddos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[0.16.1, )"
+            },
+            "Jellyfin.Common": {
+              "target": "Package",
+              "version": "[10.7.7, )"
+            },
+            "Jellyfin.Controller": {
+              "target": "Package",
+              "version": "[10.7.7, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

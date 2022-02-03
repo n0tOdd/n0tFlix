@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "242bafef-3d2e-479a-9ff3-1d475e9a06d1": {
+      "ProjectGuid": "242bafef-3d2e-479a-9ff3-1d475e9a06d1",
+      "DisplayName": "n0tFlix.Plugin.SubtitleBase",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
