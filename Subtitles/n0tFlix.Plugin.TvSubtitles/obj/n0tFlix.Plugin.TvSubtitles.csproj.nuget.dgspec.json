@@ -46,11 +46,11 @@
             },
             "Jellyfin.Common": {
               "target": "Package",
-              "version": "[10.8.0-alpha5, )"
+              "version": "[10.7.7, )"
             },
             "Jellyfin.Controller": {
               "target": "Package",
-              "version": "[10.8.0-alpha5, )"
+              "version": "[10.7.7, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
