@@ -1,0 +1,12 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\bin\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.deps.json
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\bin\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\bin\Debug\net6.0\ref\n0tFlix.Plugin.SubtitleBase.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\bin\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\ref\n0tFlix.Plugin.SubtitleBase.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubtitleBase\obj\Debug\net6.0\n0tFlix.Plugin.SubtitleBase.pdb

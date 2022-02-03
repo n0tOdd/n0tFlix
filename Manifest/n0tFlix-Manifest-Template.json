@@ -1,0 +1,21 @@
+[
+  {
+    "guid": "4b9ed42f-5185-48b5-9803-6ff2989014c4",
+    "name": "n0tFlix.Yifi.Subtitles",
+    "description": "Subtitle downloader for yifi",
+    "overview": "Grabs subtitles from yifi",
+    "owner": "jellyfin",
+    "category": "General",
+    "imageUrl": "https://repo.jellyfin.org/releases/plugin/images/jellyfin-plugin-autoorganize.png",
+    "versions": [
+      {
+        "version": "12.0.0.0",
+        "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
+        "targetAbi": "10.8.0.0",
+        "sourceUrl": "https://repo.jellyfin.org/releases/plugin/auto-organize/auto-organize_12.0.0.0.zip",
+        "checksum": "1a1b08719718a38a8cc402565547866e",
+        "timestamp": "2022-01-08T17:21:56Z"
+      }
+    ]
+  }
+]
