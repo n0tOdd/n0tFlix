@@ -99,7 +99,9 @@ namespace n0tFlix.Plugin.Yifi
         {
             string query = request.Name + " " + request.ProductionYear;
             query = HttpUtility.UrlEncode("https://yifysubtitles.org/search?q=" + query);
+            this.logger.LogInformation(query);
             Uri ura = new Uri(query);
+
             string source = await new HttpClient().GetStringAsync(ura);
 
             var conf = AngleSharp.Configuration.Default;
