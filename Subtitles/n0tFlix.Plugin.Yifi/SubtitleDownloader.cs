@@ -46,7 +46,7 @@ namespace n0tFlix.Plugin.Yifi
 
         /// <inheritdoc />
         public string Name
-            => this.GetType().Namespace.Replace("n0tFlix.Plugin.","");
+            => "Yifi";
 
         /// <inheritdoc />
         public IEnumerable<VideoContentType> SupportedMediaTypes

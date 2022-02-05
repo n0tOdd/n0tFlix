@@ -27,7 +27,7 @@ namespace n0tFlix.Plugin.Yifi
 
         /// <inheritdoc />
         public override string Name
-            => this.GetType().Name;
+            => "Yifi";
 
         /// <inheritdoc />
         public override Guid Id
