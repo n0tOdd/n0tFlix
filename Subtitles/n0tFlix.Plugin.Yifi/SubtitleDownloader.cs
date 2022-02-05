@@ -136,7 +136,7 @@ namespace n0tFlix.Plugin.Yifi
                     string link = "https://yifysubtitles.org" + subtitle.GetElementsByTagName("a").First().GetAttribute("href");
                     string uploader = subtitle.GetElementsByClassName("uploader-cell").First().TextContent;
                     this.logger.LogError(language.ToLower());
-                    if (request.Language.StartsWith(language.ToLower()))
+                    if (language.StartsWith(request.Language.ToLower()))
                     {
                         this.logger.LogError("We god a language match");
                         list.Add(new RemoteSubtitleInfo()
