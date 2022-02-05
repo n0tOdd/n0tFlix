@@ -2,7 +2,6 @@ D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\obj\Release\net5.0\n0tFlix.
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\obj\Release\net5.0\n0tFlix.Plugin.TheSubDB.AssemblyInfoInputs.cache
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\obj\Release\net5.0\n0tFlix.Plugin.TheSubDB.AssemblyInfo.cs
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\obj\Release\net5.0\n0tFlix.Plugin.TheSubDB.csproj.CoreCompileInputs.cache
-D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\obj\Release\net5.0\n0tFlix.Plugin.TheSubDB.csproj.AssemblyReference.cache
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\bin\Release\net5.0\n0tFlix.Plugin.TheSubDB.deps.json
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\bin\Release\net5.0\n0tFlix.Plugin.TheSubDB.dll
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TheSubDB\bin\Release\net5.0\ref\n0tFlix.Plugin.TheSubDB.dll

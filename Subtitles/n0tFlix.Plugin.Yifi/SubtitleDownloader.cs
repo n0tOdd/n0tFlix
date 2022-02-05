@@ -97,7 +97,6 @@ namespace n0tFlix.Plugin.Yifi
         {
             string query = request.Name + " " + request.ProductionYear;
             query = "https://yifysubtitles.org/search?q=" + HttpUtility.UrlEncode(query);
-            this.logger.LogError(query);
       
             string source = await new HttpClient().GetStringAsync(query);
 
@@ -107,8 +106,7 @@ namespace n0tFlix.Plugin.Yifi
             var ss = document.GetElementsByClassName("col-sm-12").First();
             var results = ss.GetElementsByTagName("li");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
-            this.logger.LogError(results.Count().ToString());
-
+      
             foreach (IElement element in results)
             {
                 var href = element.GetElementsByTagName("a").First();
@@ -126,10 +124,6 @@ namespace n0tFlix.Plugin.Yifi
                 var subboxes = sub.GetElementsByClassName("table other-subs").First()
                     .GetElementsByTagName("tbody").First()
                     .GetElementsByTagName("tr");
-                this.logger.LogError(subboxes.Count().ToString());
-                this.logger.LogError(request.Language);
-                this.logger.LogError("språk over");
-
                 foreach (IElement subtitle in subboxes)
                 {
                     string rating = subtitle.GetElementsByClassName("rating-cell").First().TextContent;
@@ -139,10 +133,8 @@ namespace n0tFlix.Plugin.Yifi
 
                     string link = "https://yifysubtitles.org" + subtitle.GetElementsByTagName("a").First().GetAttribute("href");
                     string uploader = subtitle.GetElementsByClassName("uploader-cell").First().TextContent;
-                    this.logger.LogError(language.ToLower());
                     if (language.StartsWith(request.Language.ToLower()))
                     {
-                        this.logger.LogError("We god a language match");
                         list.Add(new RemoteSubtitleInfo()
                         {
                             
@@ -159,7 +151,6 @@ namespace n0tFlix.Plugin.Yifi
                 }
                 //Check awailable subtitles for all the results
             }
-            this.logger.LogError("We found " + list.Count().ToString());
             return list.ToArray();
         }
 

@@ -18,6 +18,7 @@ using MediaBrowser.Model.Providers;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using MediaBrowser.Common;
+using System.Net.Http.Headers;
 
 namespace n0tFlix.Plugin.TheSubDB
 {
@@ -63,10 +64,12 @@ namespace n0tFlix.Plugin.TheSubDB
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
             var hash = await GetHash(request.MediaPath, cancellationToken);
-       
+            var req = new HttpRequestMessage(HttpMethod.Get, "http://api.thesubdb.com/?action=search&hash=" + hash);
+            var productValue = new ProductInfoHeaderValue($"SubDB/1.0 (n0tFlix/{_appHost.ApplicationVersion}; https://github.com/n0tMaster)", "1.0");
+            req.Headers.UserAgent.Add(productValue);
             try
             {
-                using (var response = await new HttpClient().GetAsync("http://api.thesubdb.com/?action=search&hash=" + hash).ConfigureAwait(false))
+                using (var response = await new HttpClient().SendAsync(req).ConfigureAwait(false))
                 {
                     
                     using (var reader = new StreamReader(response.Content.ReadAsStream()))
