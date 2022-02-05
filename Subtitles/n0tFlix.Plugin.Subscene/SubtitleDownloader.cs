@@ -194,7 +194,7 @@ namespace n0tFlix.Plugin.Subscene
 
         _logger?.LogDebug($"Subscene= Searching for site search \"{title}\"");
         var url = string.Format(SearchUrl, HttpUtility.UrlEncode(title));
-            string html = await new HttpClient().GetStringAsync(Domain + url);
+            string html = await GetHtml(Domain , url);
             _logger?.LogError(Domain + url);
         if (string.IsNullOrWhiteSpace(html))
         {
