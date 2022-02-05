@@ -24,7 +24,7 @@
     "description": "Subtitle downloader for Yifi",
     "overview": "Grabs subtitles from Yifi",
     "owner": "n0tme",
-    "category": "n0tFlix subtitles",
+    "category": "n0tSubtitles",
     "imageUrl": "https://www.saashub.com/images/app/service_logos/181/42n213euftbx/large.png",
     "versions": [
       {
