@@ -5,7 +5,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git\1.0.0\buildMultiTargeting\Microsoft.Build.Tasks.Git.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git\1.0.0\buildMultiTargeting\Microsoft.Build.Tasks.Git.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github\1.0.0\buildMultiTargeting\Microsoft.SourceLink.GitHub.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github\1.0.0\buildMultiTargeting\Microsoft.SourceLink.GitHub.targets')" />
   </ImportGroup>
-  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net5.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common\1.0.0\build\Microsoft.SourceLink.Common.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common\1.0.0\build\Microsoft.SourceLink.Common.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git\1.0.0\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git\1.0.0\build\Microsoft.Build.Tasks.Git.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github\1.0.0\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github\1.0.0\build\Microsoft.SourceLink.GitHub.targets')" />

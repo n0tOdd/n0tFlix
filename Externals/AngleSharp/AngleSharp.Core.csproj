@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyName>AngleSharp</AssemblyName>
     <RootNamespace>AngleSharp</RootNamespace>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
