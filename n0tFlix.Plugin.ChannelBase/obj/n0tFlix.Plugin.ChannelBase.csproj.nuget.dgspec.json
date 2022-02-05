@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\n0tFlix.Plugin.SubtitleBase.csproj": {}
+    "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\n0tFlix.Plugin.ChannelBase.csproj": {}
   },
   "projects": {
-    "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\n0tFlix.Plugin.SubtitleBase.csproj": {
+    "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\n0tFlix.Plugin.ChannelBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\n0tFlix.Plugin.SubtitleBase.csproj",
-        "projectName": "n0tFlix.Plugin.SubtitleBase",
-        "projectPath": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\n0tFlix.Plugin.SubtitleBase.csproj",
+        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\n0tFlix.Plugin.ChannelBase.csproj",
+        "projectName": "n0tFlix.Plugin.ChannelBase",
+        "projectPath": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\n0tFlix.Plugin.ChannelBase.csproj",
         "packagesPath": "C:\\Users\\oddos\\.nuget\\packages\\",
-        "outputPath": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\obj\\",
+        "outputPath": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oddos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,10 +47,6 @@
             "Jellyfin.Controller": {
               "target": "Package",
               "version": "[10.7.7, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             }
           },
           "imports": [

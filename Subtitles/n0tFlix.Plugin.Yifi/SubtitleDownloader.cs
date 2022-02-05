@@ -16,8 +16,8 @@ using MediaBrowser.Controller.Subtitles;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Providers;
 using Microsoft.Extensions.Logging;
-using AngleSharp.Dom;
 using AngleSharp;
+using AngleSharp.Dom;
 using System.IO.Compression;
 using System.Web;
 
@@ -31,6 +31,7 @@ namespace n0tFlix.Plugin.Yifi
         private readonly ILogger<SubtitleDownloader> logger;
 
         private IReadOnlyList<string>? _languages;
+        private readonly IHttpClientFactory httpClientFactory;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SubtitleDownloader"/> class.
@@ -40,7 +41,7 @@ namespace n0tFlix.Plugin.Yifi
         public SubtitleDownloader(ILogger<SubtitleDownloader> logger, IHttpClientFactory httpClientFactory)
         {
             this.logger = logger;
-
+            this.httpClientFactory = httpClientFactory;
             this.logger.LogInformation("Loaded " + this.Name);
         }
 
@@ -58,8 +59,10 @@ namespace n0tFlix.Plugin.Yifi
             if (string.IsNullOrEmpty(id))
                 return default;
             string url = id.Split("_").First();
-
-            string source = await new HttpClient().GetStringAsync(url);
+            if (!url.StartsWith("https://"))
+                url = "https://" + url;
+            Uri uri = new Uri(url);
+            string source = await new HttpClient().GetStringAsync(uri);
             if (string.IsNullOrEmpty(source))
                 return default;
             var conf = AngleSharp.Configuration.Default;
@@ -88,6 +91,7 @@ namespace n0tFlix.Plugin.Yifi
                 }
             }
             return default;
+
         }
 
         /// <inheritdoc />
@@ -137,19 +141,7 @@ namespace n0tFlix.Plugin.Yifi
             return list;
         }
 
-        private async Task<SubtitleResponse> GetSubtitlesInternal(string id, CancellationToken cancellationToken)
-        {
-            if (string.IsNullOrWhiteSpace(id))
-            {
-                throw new ArgumentException("Missing param", nameof(id));
-            }
-            //Remember to grab this info from page you collect the subtitle from
-            string format = "srt";
-            string language = "english";
-            byte[] data = new byte[16];
-            return new SubtitleResponse { Format = format, Language = language, Stream = new MemoryStream(data) };
-        }
-
+        
         private PluginConfiguration GetOptions()
             => Yifi.Instance!.Configuration;
     }

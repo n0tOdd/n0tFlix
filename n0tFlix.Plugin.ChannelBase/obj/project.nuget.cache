@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gf+ITmG6Rw9jknrC0G0G6YQilRhP6tvmhOSqzgU4CIxY76S7yo+8orwM6zbe/Ta5iw3LZc7C0MlrFDi8PsZ3sQ==",
+  "dgSpecHash": "49badKlGWfMy09LSDH/UnSewUlPhNn0ccUvyS2bj/kbax2urmBaQ23Kn5amZHcgKJegNxbEEUKlr1bjxwElEwg==",
   "success": true,
-  "projectFilePath": "D:\\n0tFlix\\n0tFlix\\Subtitles\\n0tFlix.Plugin.SubtitleBase\\n0tFlix.Plugin.SubtitleBase.csproj",
+  "projectFilePath": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Plugin.ChannelBase\\n0tFlix.Plugin.ChannelBase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.common\\10.7.7\\jellyfin.common.10.7.7.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.controller\\10.7.7\\jellyfin.controller.10.7.7.nupkg.sha512",
@@ -25,7 +25,6 @@
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
-    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
