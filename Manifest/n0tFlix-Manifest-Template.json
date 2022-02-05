@@ -1,12 +1,12 @@
 [
   {
     "guid": "cabbd003-68c8-43f4-a6a1-4418da64bb73",
-    "name": "n0tFlix.Plugin.TvSubtitles",
-    "description": "Subtitle downloader for yifi",
-    "overview": "Grabs subtitles from yifi",
+    "name": "TvSubtitles",
+    "description": "Subtitle downloader for tvsubtitles",
+    "overview": "Grabs subtitles from tvsubtitles",
     "owner": "n0tme",
-    "category": "n0tFlix",
-    "imageUrl": "https://fictionhorizon.com/wp-content/uploads/2021/06/Dizajn-bez-naslova-2-1024x576.jpg",
+    "category": "n0tFlix subtitles",
+    "imageUrl": "https://image3.mouthshut.com/images/imagesp/925758431s.png",
     "versions": [
       {
         "version": "12.0.0.0",
@@ -14,6 +14,25 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "16C411E035B7EBF57A7BAA1C84841584",
+        "timestamp": "2022-01-08T17:21:56Z"
+      }
+    ]
+  },
+  {
+    "guid": "cabbd003-68c8-43f4-a6a1-4418da64bb73",
+    "name": "Yifi",
+    "description": "Subtitle downloader for Yifi",
+    "overview": "Grabs subtitles from Yifi",
+    "owner": "n0tme",
+    "category": "n0tFlix subtitles",
+    "imageUrl": "https://www.saashub.com/images/app/service_logos/181/42n213euftbx/large.png",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
+        "checksum": "FFCBDA16193A606B8EBD3B92A491825A",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]
