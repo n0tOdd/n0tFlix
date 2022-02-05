@@ -44,6 +44,7 @@ namespace n0tFlix.Plugin.Podnapisi
             _fileSystem = fileSystem;
             var handler = new HttpClientHandler();
             handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+            handler.SslProtocols = SslProtocols.None & SslProtocols.Tls12 & SslProtocols.Tls13 & SslProtocols.Ssl2 & SslProtocols.Ssl3 & SslProtocols.Default;
             handler.ServerCertificateCustomValidationCallback =
                 (httpRequestMessage, cert, cetChain, policyErrors) =>
                 {
