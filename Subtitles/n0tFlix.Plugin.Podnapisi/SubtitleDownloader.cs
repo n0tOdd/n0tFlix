@@ -123,7 +123,7 @@ namespace n0tFlix.Plugin.Podnapisi
      CancellationToken cancellationToken)
         {
 
-            var url = new StringBuilder("https://podnapisi.net/subtitles/search/old?sXML=1");
+            var url = new StringBuilder("http://podnapisi.net/subtitles/search/old?sXML=1");
             url.Append($"&sL={request.TwoLetterISOLanguageName}");
             if (request.SeriesName == null)
             {
@@ -151,7 +151,7 @@ namespace n0tFlix.Plugin.Podnapisi
 
             try
             {
-                using (var response = await this.downloader.GetStream(url.ToString(), "https://podnapisi.net", null, cancellationToken))
+                using (var response = await this.downloader.GetStream(url.ToString(), "http://podnapisi.net", null, cancellationToken))
                 {
                     this._logger?.LogError("Got result");
                    
