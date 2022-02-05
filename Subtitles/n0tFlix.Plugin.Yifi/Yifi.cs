@@ -39,6 +39,13 @@ namespace n0tFlix.Plugin.Yifi
         public static Yifi? Instance { get; private set; }
 
         /// <inheritdoc />
+        public override PluginInfo GetPluginInfo()
+        {
+            return new PluginInfo(Name, new Version(1, 0, 0, 0), "No description here", Id, true);
+        }
+
+
+        /// <inheritdoc />
         public IEnumerable<PluginPageInfo> GetPages()
         {
             return new[]
