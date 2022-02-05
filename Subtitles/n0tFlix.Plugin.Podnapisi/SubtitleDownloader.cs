@@ -146,7 +146,7 @@ namespace n0tFlix.Plugin.Podnapisi
                 url.Append($"&sY={request.ProductionYear}");
             }
 
-            _logger.LogDebug("Requesting {0}", url);
+            _logger.LogError("Requesting {0}", url);
 
             try
             {
