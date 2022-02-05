@@ -45,7 +45,7 @@ namespace n0tFlix.Plugin.YoutubeDL
                 {
                     Logger.LogDebug("Downloading youtube-dl.exe");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl.exe");
-                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe"), FileMode.CreateNew))
+                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe"), FileMode.CreateNew))
                     {
                         await youtubeDL.CopyToAsync(fs);
                     }
@@ -58,7 +58,7 @@ namespace n0tFlix.Plugin.YoutubeDL
                 {
                     Logger.LogDebug("Downloading youtube-dl");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl");
-                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl"), FileMode.CreateNew))
+                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl"), FileMode.CreateNew))
                     {
                         await youtubeDL.CopyToAsync(fs);
                     }
