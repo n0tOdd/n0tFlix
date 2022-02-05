@@ -132,7 +132,7 @@ namespace n0tFlix.Plugin.Yifi
                 foreach (IElement subtitle in subboxes)
                 {
                     string rating = subtitle.GetElementsByClassName("rating-cell").First().TextContent;
-                    string language = subtitle.GetElementsByClassName("sub-lang").First().TextContent;
+                    string language = subtitle.GetElementsByClassName("sub-lang").First().TextContent.ToLower();
                     string link = "https://yifysubtitles.org" + subtitle.GetElementsByTagName("a").First().GetAttribute("href");
                     string uploader = subtitle.GetElementsByClassName("uploader-cell").First().TextContent;
                     this.logger.LogError(language);
