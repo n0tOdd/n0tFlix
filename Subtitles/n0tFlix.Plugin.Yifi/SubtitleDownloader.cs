@@ -108,12 +108,16 @@ namespace n0tFlix.Plugin.Yifi
             IDocument document = await browser.OpenAsync(x => x.Content(source));
             var results = document.GetElementsByTagName("li");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
+            this.logger.LogError(results.Count().ToString());
+
             foreach (IElement element in results)
             {
                 var href = element.GetElementsByTagName("a").First();
                 string uri = href.GetAttribute("href");
                 if (string.IsNullOrEmpty(uri))
                     continue;
+
+                this.logger.LogError("https://yifysubtitles.org" + HttpUtility.UrlEncode(uri));
                 string subPage = await new HttpClient().GetStringAsync("https://yifysubtitles.org" +HttpUtility.UrlEncode( uri));
                 if (string.IsNullOrEmpty(subPage))
                     continue;
