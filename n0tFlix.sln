@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.ChannelBase"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.Yifi", "Subtitles\n0tFlix.Plugin.Yifi\n0tFlix.Plugin.Yifi.csproj", "{70F0CD04-5562-4001-BE71-17FC323D53F8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.TheSubDB", "Subtitles\n0tFlix.Plugin.TheSubDB\n0tFlix.Plugin.TheSubDB.csproj", "{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 		{69B8FBD0-E8D9-47A9-BE3F-D0D66C7FE236} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
 		{70F0CD04-5562-4001-BE71-17FC323D53F8} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
+		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

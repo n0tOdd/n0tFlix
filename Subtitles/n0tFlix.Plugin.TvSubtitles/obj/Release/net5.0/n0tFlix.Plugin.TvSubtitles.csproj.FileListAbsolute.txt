@@ -1,0 +1,5 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.csproj.AssemblyReference.cache

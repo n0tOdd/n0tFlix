@@ -1,19 +1,19 @@
 [
   {
-    "guid": "cabbd003-68c8-43f4-a6a1-4418da64bb73",
-    "name": "TvSubtitles",
-    "description": "Subtitle downloader for tvsubtitles",
-    "overview": "Grabs subtitles from tvsubtitles",
+    "guid": "629b9d5c-2afb-4268-ad7a-d9b8e527c8f2",
+    "name": "TheSubDB",
+    "description": "Subtitle downloader for TheSubDB",
+    "overview": "Grabs subtitles from TheSubDB",
     "owner": "n0tme",
-    "category": "n0tFlix subtitles",
-    "imageUrl": "https://image3.mouthshut.com/images/imagesp/925758431s.png",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://64.media.tumblr.com/avatar_9259f7abc816_128.pnj",
     "versions": [
       {
-        "version": "12.0.0.0",
-        "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
+        "version": "0.0.0.1",
+        "changelog": "First release",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
-        "checksum": "16C411E035B7EBF57A7BAA1C84841584",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TheSubDB.zip",
+        "checksum": "F6BAD4BAA195DFF2550639B2BEAAC580",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]

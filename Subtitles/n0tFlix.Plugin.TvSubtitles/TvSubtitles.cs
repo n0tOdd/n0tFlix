@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
-using n0tFlix.Plugin.SubtitleBase.Configuration;
+using n0tFlix.Plugin.TvSubtitles.Configuration;
 
-namespace n0tFlix.Plugin.SubtitleBase
+namespace n0tFlix.Plugin.TvSubtitles
 {
     /// <summary>
     /// The open subtitles plugin.
     /// </summary>
-    public class SubtitleBase : BasePlugin<PluginConfiguration>, IHasWebPages
+    public class TvSubtitles : BasePlugin<PluginConfiguration>, IHasWebPages
     {
 
         /// <summary>
@@ -19,7 +17,7 @@ namespace n0tFlix.Plugin.SubtitleBase
         /// </summary>
         /// <param name="applicationPaths">Instance of the <see cref="IApplicationPaths"/> interface.</param>
         /// <param name="xmlSerializer">Instance of the <see cref="IXmlSerializer"/> interface.</param>
-        public SubtitleBase(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+        public TvSubtitles(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
             : base(applicationPaths, xmlSerializer)
         {
             Instance = this;
@@ -31,12 +29,12 @@ namespace n0tFlix.Plugin.SubtitleBase
 
         /// <inheritdoc />
         public override Guid Id
-            => Guid.Parse("n0tGUID");
+            => Guid.Parse("4ace9dd8-6ab2-485e-a011-afae47641dcb");
 
         /// <summary>
         /// Gets the plugin instance.
         /// </summary>
-        public static SubtitleBase? Instance { get; private set; }
+        public static TvSubtitles? Instance { get; private set; }
 
         /// <inheritdoc />
         public IEnumerable<PluginPageInfo> GetPages()
