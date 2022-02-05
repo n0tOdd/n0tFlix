@@ -1,0 +1,11 @@
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\netstandard2.0\AngleSharp.deps.json
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\netstandard2.0\AngleSharp.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\netstandard2.0\AngleSharp.pdb
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\netstandard2.0\AngleSharp.xml
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.Core.AssemblyInfoInputs.cache
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.Core.AssemblyInfo.cs
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.Core.csproj.CoreCompileInputs.cache
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.Core.sourcelink.json
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.xml
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\netstandard2.0\AngleSharp.pdb

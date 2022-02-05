@@ -1,0 +1,14 @@
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\net472\AngleSharp.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\net472\AngleSharp.pdb
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\net472\AngleSharp.xml
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\bin\Debug\net472\System.Text.Encoding.CodePages.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.csprojAssemblyReference.cache
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.AssemblyInfoInputs.cache
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.AssemblyInfo.cs
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.csproj.CoreCompileInputs.cache
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.sourcelink.json
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.Core.csproj.CopyComplete
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.dll
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.xml
+C:\Users\oddos\Downloads\AngleSharp-master\AngleSharp-master\src\AngleSharp\obj\Debug\net472\AngleSharp.pdb

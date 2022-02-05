@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "c+k3Sfza9VDFhe4x4P+xKOZWrkvQPNvKRoYkr2oHKUBykS+CXU8LT4dMGTfSMlpQZONBx5ht2O8vB8+XY8Ccpg==",
+  "success": true,
+  "projectFilePath": "D:\\n0tFlix\\n0tFlix\\Externals\\AngleSharp\\AngleSharp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

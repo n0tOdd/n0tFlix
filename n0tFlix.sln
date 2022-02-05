@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manifest", "Manifest", "{2D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.TvSubtitles", "Subtitles\n0tFlix.Plugin.TvSubtitles\n0tFlix.Plugin.TvSubtitles.csproj", "{647FEDC9-93B4-4879-A829-20EFD7C791AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Core", "Externals\AngleSharp\AngleSharp.Core.csproj", "{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{647FEDC9-93B4-4879-A829-20EFD7C791AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{647FEDC9-93B4-4879-A829-20EFD7C791AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{647FEDC9-93B4-4879-A829-20EFD7C791AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +59,7 @@ Global
 		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{A066E052-7B69-4A0C-927B-A7613D01AD46} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{647FEDC9-93B4-4879-A829-20EFD7C791AD} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
+		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}
