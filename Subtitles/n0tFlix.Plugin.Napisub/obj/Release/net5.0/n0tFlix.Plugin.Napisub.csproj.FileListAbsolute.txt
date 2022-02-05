@@ -1,0 +1,5 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Napisub\obj\Release\net5.0\n0tFlix.Plugin.Napisub.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Napisub\obj\Release\net5.0\n0tFlix.Plugin.Napisub.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Napisub\obj\Release\net5.0\n0tFlix.Plugin.Napisub.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Napisub\obj\Release\net5.0\n0tFlix.Plugin.Napisub.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Napisub\obj\Release\net5.0\n0tFlix.Plugin.Napisub.csproj.AssemblyReference.cache

@@ -1,19 +1,19 @@
 [
   {
-    "guid": "629b9d5c-2afb-4268-ad7a-d9b8e527c8f2",
-    "name": "TheSubDB",
-    "description": "Subtitle downloader for TheSubDB",
-    "overview": "Grabs subtitles from TheSubDB",
+    "guid": "e84adafb-7ad0-43c9-92b6-2dfbd54d1342",
+    "name": "YoutubeDL",
+    "description": "API for grabbing streamable links with youtube-dl",
+    "overview": "grabs streamable links for you",
     "owner": "n0tme",
-    "category": "n0tSubtitles",
-    "imageUrl": "https://64.media.tumblr.com/avatar_9259f7abc816_128.pnj",
+    "category": "n0tAPI",
+    "imageUrl": "https://icon-library.com/images/youtube-downloader-icon/youtube-downloader-icon-16.jpg",
     "versions": [
       {
         "version": "0.0.0.1",
         "changelog": "First release",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TheSubDB.zip",
-        "checksum": "98500CE1F739E5C257A5988391F1905B",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
+        "checksum": "84A0504D29B91EA2927F015967EB4329",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]

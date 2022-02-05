@@ -8,8 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subtitles", "Subtitles", "{
 		Subtitles\Create new Subtitle Project.ps1 = Subtitles\Create new Subtitle Project.ps1
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.SubtitleBase", "Subtitles\n0tFlix.Plugin.SubtitleBase\n0tFlix.Plugin.SubtitleBase.csproj", "{8F9D7DCF-4211-49CF-BBA9-A469D494FD00}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8A0B8FE-BBD3-43F5-AE1C-764EFEABFA58}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -31,7 +29,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.ChannelBase"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.Yifi", "Subtitles\n0tFlix.Plugin.Yifi\n0tFlix.Plugin.Yifi.csproj", "{70F0CD04-5562-4001-BE71-17FC323D53F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.TheSubDB", "Subtitles\n0tFlix.Plugin.TheSubDB\n0tFlix.Plugin.TheSubDB.csproj", "{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{ED6B6391-BCB0-48CF-AD1D-57BD4445F3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.YoutubeDL", "API\n0tFlix.Plugin.YoutubeDL\n0tFlix.Plugin.YoutubeDL.csproj", "{65F3AC54-ECFC-4295-9364-B505E07C916A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,20 +51,19 @@ Global
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F0CD04-5562-4001-BE71-17FC323D53F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8F9D7DCF-4211-49CF-BBA9-A469D494FD00} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{DA532ACF-6E0F-42F9-BE6F-E76003D3F75B} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 		{69B8FBD0-E8D9-47A9-BE3F-D0D66C7FE236} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
 		{70F0CD04-5562-4001-BE71-17FC323D53F8} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
-		{4BFD68D9-8451-42FE-B26D-A8CCD195DED3} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
+		{65F3AC54-ECFC-4295-9364-B505E07C916A} = {ED6B6391-BCB0-48CF-AD1D-57BD4445F3A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}
