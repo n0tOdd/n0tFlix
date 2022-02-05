@@ -138,12 +138,13 @@ namespace n0tFlix.Plugin.Yifi
                     this.logger.LogError(language.ToLower());
                     if (request.Language.StartsWith(language.ToLower()))
                     {
+                        this.logger.LogError("We god a language match");
                         list.Add(new RemoteSubtitleInfo()
                         {
                             Author = uploader,
                             CommunityRating = float.Parse(rating),
                             Id = link + "_" + language,
-                            ThreeLetterISOLanguageName = language
+                            ThreeLetterISOLanguageName = request.Language
                         });
                     }
                 }
