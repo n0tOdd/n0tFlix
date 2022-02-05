@@ -38,12 +38,21 @@ namespace n0tFlix.Plugin.Podnapisi
         private readonly HttpClient _httpClient;
         private readonly IApplicationHost _appHost;
         private ILocalizationManager _localizationManager;
-        public SubtitleDownloader(ILogger<SubtitleDownloader> logger, IFileSystem fileSystem, IHttpClientFactory httpClientFactory, IApplicationHost appHost, ILocalizationManager localizationManager)
+        public SubtitleDownloader(ILogger<SubtitleDownloader> logger, IFileSystem fileSystem, IApplicationHost appHost, ILocalizationManager localizationManager)
         {
             _logger = logger;
             _fileSystem = fileSystem;
+            var handler = new HttpClientHandler();
+            handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+            handler.ServerCertificateCustomValidationCallback =
+                (httpRequestMessage, cert, cetChain, policyErrors) =>
+                {
+                    return true;
+                };
 
-            _httpClient = httpClientFactory.CreateClient();
+
+            _httpClient = new HttpClient(handler);
+          
             _appHost = appHost;
             _localizationManager = localizationManager;
 
