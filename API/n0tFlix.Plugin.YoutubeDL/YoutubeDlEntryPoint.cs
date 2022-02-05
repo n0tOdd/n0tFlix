@@ -54,7 +54,7 @@ namespace n0tFlix.Plugin.YoutubeDL
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                if (!File.Exists(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl")))
+                if (!File.Exists(Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_0.0.0.1/", "youtube-dl")))
                 {
                     Logger.LogDebug("Downloading youtube-dl");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl");
