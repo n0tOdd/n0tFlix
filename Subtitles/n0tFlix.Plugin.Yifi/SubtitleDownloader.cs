@@ -58,11 +58,8 @@ namespace n0tFlix.Plugin.Yifi
             if (string.IsNullOrEmpty(id))
                 return default;
             string url = id.Split("_").First();
-            if (!url.StartsWith("https://"))
-                url = "https://" + url;
-            Uri uri = new Uri(url);
             
-            string source = await httpClientFactory.CreateClient().GetStringAsync(uri);
+            string source = await httpClientFactory.CreateClient().GetStringAsync(url);
             if (string.IsNullOrEmpty(source))
                 return default;
             var conf = AngleSharp.Configuration.Default;
@@ -118,8 +115,8 @@ namespace n0tFlix.Plugin.Yifi
                 if (string.IsNullOrEmpty(uri))
                     continue;
 
-                this.logger.LogError("https://yifysubtitles.org" + HttpUtility.UrlEncode(uri));
-                string subPage = await new HttpClient().GetStringAsync("https://yifysubtitles.org" +HttpUtility.UrlEncode( uri));
+                this.logger.LogError("https://yifysubtitles.org" + uri.Replace("%2","/"));
+                string subPage = await new HttpClient().GetStringAsync("https://yifysubtitles.org" + uri.Replace("%2", "/"));
                 if (string.IsNullOrEmpty(subPage))
                     continue;
 
