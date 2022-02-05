@@ -106,7 +106,8 @@ namespace n0tFlix.Plugin.Yifi
             var conf = AngleSharp.Configuration.Default;
             var browser = AngleSharp.BrowsingContext.New(conf);
             IDocument document = await browser.OpenAsync(x => x.Content(source));
-            var results = document.GetElementsByTagName("li");
+            var ss = document.GetElementsByClassName("col-sm-12").First();
+            var results = ss.GetElementsByTagName("li");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
             this.logger.LogError(results.Count().ToString());
 
