@@ -126,6 +126,7 @@ namespace n0tFlix.Plugin.Yifi
                     .GetElementsByTagName("tbody").First()
                     .GetElementsByTagName("tr");
                 this.logger.LogError(subboxes.Count().ToString());
+                this.logger.LogError(request.Language);
                 foreach (IElement subtitle in subboxes)
                 {
                     string rating = subtitle.GetElementsByClassName("rating-cell").First().TextContent;
