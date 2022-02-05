@@ -32,7 +32,7 @@ namespace n0tFlix.Plugin.Podnapisi
             handler.MaxAutomaticRedirections = 10;
             handler.CheckCertificateRevocationList = false;
             handler.AutomaticDecompression = System.Net.DecompressionMethods.All;
-
+            
             _httpClient = new HttpClient(handler);
             _httpClient.DefaultRequestHeaders.Add("User-Agent", UserAgent);
             _httpClient.DefaultRequestHeaders.Add("Pragma", "no-cache");

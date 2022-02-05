@@ -47,11 +47,11 @@
     "imageUrl": "https://i0.wp.com/kodibeginner.com/wp-content/uploads/2019/09/podnapisi-kodi.jpg",
     "versions": [
       {
-        "version": "0.0.0.1",
+        "version": "0.0.0.2",
         "changelog": "Got some problems with the language matching",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.zip",
-        "checksum": "91E4E4D86C6792C5595581DD7414AA9F",
+        "checksum": "B2811EE42CEDFA419C2480A794DD3DE5",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]

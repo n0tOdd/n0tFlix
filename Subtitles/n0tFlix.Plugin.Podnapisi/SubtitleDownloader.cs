@@ -150,8 +150,9 @@ namespace n0tFlix.Plugin.Podnapisi
 
             try
             {
-                using (var response = await downloader.GetStream(url.ToString(), "https://podnapisi.net", null, cancellationToken))
+                using (var response = await this.downloader.GetStream(url.ToString(), "https://podnapisi.net", null, cancellationToken))
                 {
+                    this._logger?.LogError("Got result");
                    
                         var settings = Create(false);
                         settings.CheckCharacters = false;
