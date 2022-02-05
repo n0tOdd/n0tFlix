@@ -51,7 +51,7 @@ namespace n0tFlix.Plugin.TvSubtitles
             if (string.IsNullOrEmpty(id))
                 return default;
             string url = id.Split("_").First();
-            this.logger.LogInformation(url);
+            
             string source = await new HttpClient().GetStringAsync(url);
             if (string.IsNullOrEmpty(source))
                 return default;
