@@ -59,7 +59,7 @@ namespace n0tFlix.Plugin.Yifi
                 return default;
             string url = id.Split("_").First();
             
-            string source = await httpClientFactory.CreateClient().GetStringAsync(url);
+            string source = await new HttpClient().GetStringAsync(url);
             if (string.IsNullOrEmpty(source))
                 return default;
             var conf = AngleSharp.Configuration.Default;
