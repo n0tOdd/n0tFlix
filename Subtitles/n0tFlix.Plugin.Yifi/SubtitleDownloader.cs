@@ -81,6 +81,7 @@ namespace n0tFlix.Plugin.Yifi
                         return new SubtitleResponse()
                         {
                             Language = id.Split("_").Last(),
+                           
                             Stream = ms,
                             Format = "srt"
                         };
@@ -133,6 +134,9 @@ namespace n0tFlix.Plugin.Yifi
                 {
                     string rating = subtitle.GetElementsByClassName("rating-cell").First().TextContent;
                     string language = subtitle.GetElementsByClassName("sub-lang").First().TextContent.ToLower();
+                    string Name = subtitle.GetElementsByTagName("a").First().TextContent.ToLower().Replace("subtitle","");
+                    
+
                     string link = "https://yifysubtitles.org" + subtitle.GetElementsByTagName("a").First().GetAttribute("href");
                     string uploader = subtitle.GetElementsByClassName("uploader-cell").First().TextContent;
                     this.logger.LogError(language.ToLower());
@@ -141,17 +145,22 @@ namespace n0tFlix.Plugin.Yifi
                         this.logger.LogError("We god a language match");
                         list.Add(new RemoteSubtitleInfo()
                         {
+                            
                             Author = uploader,
                             CommunityRating = float.Parse(rating),
                             Id = link + "_" + language,
-                            ThreeLetterISOLanguageName = request.Language
+                            ThreeLetterISOLanguageName = request.Language,
+                            ProviderName ="Yifi",
+                            IsHashMatch = false,
+                            Name = Name,
+                            Format = "srt"
                         });
                     }
                 }
                 //Check awailable subtitles for all the results
             }
             this.logger.LogError("We found " + list.Count().ToString());
-            return list;
+            return list.ToArray();
         }
 
         
