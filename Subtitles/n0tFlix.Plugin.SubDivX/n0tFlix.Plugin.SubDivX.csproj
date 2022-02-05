@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <ImplicitUsings>disable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Remove="Web\*.html" />
+	<EmbeddedResource Include="Web\*.html" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Jellyfin.Common" Version="10.7.7" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="PowerShell  Compress-Archive -Path &quot;$(TargetDir)\*.dll&quot; -DestinationPath &quot;$(SolutionDir)\Build\$(ProjectName).zip&quot; -Force" />
+  </Target>
+
+</Project>

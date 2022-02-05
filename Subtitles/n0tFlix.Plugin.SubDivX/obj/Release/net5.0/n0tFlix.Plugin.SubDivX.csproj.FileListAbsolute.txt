@@ -1,0 +1,11 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\bin\Release\net5.0\n0tFlix.Plugin.SubDivX.deps.json
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\bin\Release\net5.0\n0tFlix.Plugin.SubDivX.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\bin\Release\net5.0\ref\n0tFlix.Plugin.SubDivX.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\bin\Release\net5.0\n0tFlix.Plugin.SubDivX.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\ref\n0tFlix.Plugin.SubDivX.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.SubDivX\obj\Release\net5.0\n0tFlix.Plugin.SubDivX.pdb

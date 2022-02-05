@@ -131,7 +131,7 @@ namespace n0tFlix.Plugin.Podnapisi
      CancellationToken cancellationToken)
         {
 
-            var url = new StringBuilder("https://www.podnapisi.net/subtitles/search/old?sXML=1");
+            var url = new StringBuilder("https://podnapisi.net/subtitles/search/old?sXML=1");
             url.Append($"&sL={request.TwoLetterISOLanguageName}");
             if (request.SeriesName == null)
             {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SubdivX</title>
+</head>
+<body>
+    <div data-role="page" class="page type-interior pluginConfigurationPage SubdivXConfigPage" data-require="emby-input,emby-button,emby-select,emby-checkbox">
+        <div data-role="content">
+            <div class="content-primary">
+                <h1>SubdivX</h1>
+
+                <form id="SubdivXConfigForm">
+                    <div class="checkboxContainer checkboxContainer-withDescription">
+                        <label>
+                            <input is="emby-checkbox" type="checkbox" name="UseOriginalTitle" />
+                            <span>Use original titles</span>
+                        </label>
+                        <div class="fieldDescription checkboxFieldDescription">
+                        </div>
+                    </div>
+                    <div class="checkboxContainer">
+                        <label>
+                            <input is="emby-checkbox" type="checkbox" name="ShowTitleInResult" />
+                            <span>Show title in result</span>
+                        </label>
+                    </div>
+                    <div class="checkboxContainer">
+                        <label>
+                            <input is="emby-checkbox" type="checkbox" name="ShowUploaderInResult" />
+                            <span>Show uploader in result</span>
+                        </label>
+                    </div>
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block emby-button">
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">var SubdivXConfig = {
+                pluginUniqueId: 'AA3B7CCD-BF23-4FE2-A9B9-69CCAD2E076B',
+                loadConfiguration: function (page) {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(SubdivXConfig.pluginUniqueId).then(function (config) {
+                        $('input[name="UseOriginalTitle"]', page).prop('checked', config.UseOriginalTitle);
+                        $('input[name="ShowTitleInResult"]', page).prop('checked', config.ShowTitleInResult);
+                        $('input[name="ShowUploaderInResult"]', page).prop('checked', config.ShowUploaderInResult);
+                        Dashboard.hideLoadingMsg();
+                    });
+                },
+                submit: function (page) {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(SubdivXConfig.pluginUniqueId).then(function (config) {
+                        config.UseOriginalTitle = $('input[name="UseOriginalTitle"]', page).prop('checked');
+                        config.ShowTitleInResult = $('input[name="ShowTitleInResult"]', page).prop('checked');
+                        config.ShowUploaderInResult = $('input[name="ShowUploaderInResult"]', page).prop('checked');
+
+                        ApiClient.updatePluginConfiguration(SubdivXConfig.pluginUniqueId, config).then(function (result) {
+                            Dashboard.processPluginConfigurationUpdateResult(result);
+                            Dashboard.alert('Settings saved.');
+                        });
+
+                        Dashboard.hideLoadingMsg();
+                    });
+                }
+            };
+
+            $('.SubdivXConfigPage').on('pageshow', function () {
+                SubdivXConfig.loadConfiguration(this);
+            });
+
+            $('.SubdivXConfigPage').on('submit', function () {
+                SubdivXConfig.submit(this);
+                return false;
+            });</script>
+    </div>
+</body>
+</html>
