@@ -30,7 +30,6 @@ namespace n0tFlix.Plugin.Yifi
     {
         private readonly ILogger<SubtitleDownloader> logger;
 
-        private IReadOnlyList<string>? _languages;
         private readonly IHttpClientFactory httpClientFactory;
 
         /// <summary>
@@ -62,7 +61,8 @@ namespace n0tFlix.Plugin.Yifi
             if (!url.StartsWith("https://"))
                 url = "https://" + url;
             Uri uri = new Uri(url);
-            string source = await new HttpClient().GetStringAsync(uri);
+            
+            string source = await httpClientFactory.CreateClient().GetStringAsync(uri);
             if (string.IsNullOrEmpty(source))
                 return default;
             var conf = AngleSharp.Configuration.Default;
@@ -98,7 +98,9 @@ namespace n0tFlix.Plugin.Yifi
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
             string query = request.Name + " " + request.ProductionYear;
-            string source = await new HttpClient().GetStringAsync(HttpUtility.UrlEncode("https://yifysubtitles.org/search?q=" + query));
+            query = HttpUtility.UrlEncode("https://yifysubtitles.org/search?q=" + query);
+            Uri ura = new Uri(query);
+            string source = await new HttpClient().GetStringAsync(ura);
 
             var conf = AngleSharp.Configuration.Default;
             var browser = AngleSharp.BrowsingContext.New(conf);
