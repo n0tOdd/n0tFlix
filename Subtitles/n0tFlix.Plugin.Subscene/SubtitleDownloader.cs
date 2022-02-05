@@ -156,8 +156,12 @@ namespace n0tFlix.Plugin.Subscene
     {
         _logger?.LogInformation(
             $"Subscene= Request subtitle for '{title}', language={lang}, year={year}, movie Id={movieId}, Season={season}, Episode={episode}");
+            if (contentType == VideoContentType.Movie)
+                _logger?.LogError("movie search");
+            if (contentType == VideoContentType.Episode)
+                _logger?.LogError("episode search");
 
-        var res = new List<RemoteSubtitleInfo>();
+            var res = new List<RemoteSubtitleInfo>();
             res = contentType == VideoContentType.Movie
                 ? await SearchMovie(title, year, lang, movieId)
                 : await SearchTV(title, year, lang, movieId, season, episode);
@@ -183,21 +187,9 @@ namespace n0tFlix.Plugin.Subscene
 
     private async Task<List<RemoteSubtitleInfo>> SearchMovie(string title, int? year, string lang, string movieId)
     {
-        var res = new List<RemoteSubtitleInfo>();
+            var res = new List<RemoteSubtitleInfo>();
 
-        if (!string.IsNullOrWhiteSpace(movieId))
-        {
-            //   var mDb = new MovieDb(_jsonSerializer, _httpClient, _appHost);
-            // var info = await mDb.GetMovieInfo(movieId);
-
-            //                if (info != null)
-            //              {
-            //                year = info.release_date.Year;
-            //              title = info.Title;
-            //            _logger?.LogInformation($"Subscene= Original movie title=\"{info.Title}\", year={info.release_date.Year}");
-            //      }
-        }
-
+            _logger?.LogError("Searching subscene for movies");
         #region Search subscene
 
         _logger?.LogDebug($"Subscene= Searching for site search \"{title}\"");
