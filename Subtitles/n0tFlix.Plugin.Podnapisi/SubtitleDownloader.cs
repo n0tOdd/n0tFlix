@@ -36,24 +36,16 @@ namespace n0tFlix.Plugin.Podnapisi
         private DateTime _lastLogin;
         private int _rateLimitLeft = 40;
         private readonly HttpClient _httpClient;
+        private readonly Downloader downloader;
         private readonly IApplicationHost _appHost;
         private ILocalizationManager _localizationManager;
         public SubtitleDownloader(ILogger<SubtitleDownloader> logger, IFileSystem fileSystem, IApplicationHost appHost, ILocalizationManager localizationManager)
         {
             _logger = logger;
             _fileSystem = fileSystem;
-            var handler = new HttpClientHandler();
-            handler.ClientCertificateOptions = ClientCertificateOption.Manual;
-            handler.SslProtocols = SslProtocols.None & SslProtocols.Tls12 & SslProtocols.Tls13 & SslProtocols.Ssl2 & SslProtocols.Ssl3 & SslProtocols.Default;
-            handler.ServerCertificateCustomValidationCallback =
-                (httpRequestMessage, cert, cetChain, policyErrors) =>
-                {
-                    return true;
-                };
-
-
-            _httpClient = new HttpClient(handler);
-          
+            
+            downloader = new Downloader();
+           
             _appHost = appHost;
             _localizationManager = localizationManager;
 
@@ -158,10 +150,9 @@ namespace n0tFlix.Plugin.Podnapisi
 
             try
             {
-                using (var response = await _httpClient.GetAsync(url.ToString()).ConfigureAwait(false))
+                using (var response = await downloader.GetStream(url.ToString(),"",null, cancellationToken))
                 {
-                    using (var reader = new StreamReader(response.Content.ReadAsStream()))
-                    {
+                   
                         var settings = Create(false);
                         settings.CheckCharacters = false;
                         settings.IgnoreComments = true;
@@ -169,12 +160,12 @@ namespace n0tFlix.Plugin.Podnapisi
                         settings.MaxCharactersFromEntities = 1024;
                         settings.Async = true;
 
-                        using (var result = XmlReader.Create(reader, settings))
+                        using (var result = XmlReader.Create(response, settings))
                         {
                             return (await ParseSearch(result).ConfigureAwait(false)).OrderByDescending(i => i.DownloadCount);
                         }
-                    }
                 }
+                
             }
             catch (Exception ex)
             {

@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.Podnapisi", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.SubDivX", "Subtitles\n0tFlix.Plugin.SubDivX\n0tFlix.Plugin.SubDivX.csproj", "{B151A56D-B232-4BF5-A455-40451BDA4EBB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.SubtitleBase", "Subtitles\n0tFlix.Plugin.SubtitleBase\n0tFlix.Plugin.SubtitleBase.csproj", "{03B64C8B-CA14-487A-900F-B5B10BA1734F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{B151A56D-B232-4BF5-A455-40451BDA4EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B151A56D-B232-4BF5-A455-40451BDA4EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B151A56D-B232-4BF5-A455-40451BDA4EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B64C8B-CA14-487A-900F-B5B10BA1734F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B64C8B-CA14-487A-900F-B5B10BA1734F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B64C8B-CA14-487A-900F-B5B10BA1734F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B64C8B-CA14-487A-900F-B5B10BA1734F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{293EB8C5-2A60-47FC-8764-06D1AA851C86} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{43064D51-0CAF-4000-B76E-5F72ECD7BD3A} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{B151A56D-B232-4BF5-A455-40451BDA4EBB} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
+		{03B64C8B-CA14-487A-900F-B5B10BA1734F} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}
