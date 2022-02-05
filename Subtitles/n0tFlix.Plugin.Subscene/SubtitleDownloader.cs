@@ -158,19 +158,13 @@ namespace n0tFlix.Plugin.Subscene
             $"Subscene= Request subtitle for '{title}', language={lang}, year={year}, movie Id={movieId}, Season={season}, Episode={episode}");
 
         var res = new List<RemoteSubtitleInfo>();
-        try
-        {
             res = contentType == VideoContentType.Movie
                 ? await SearchMovie(title, year, lang, movieId)
                 : await SearchTV(title, year, lang, movieId, season, episode);
 
             if (!res.Any())
                 return res;
-        }
-        catch (Exception e)
-        {
-            _logger?.LogError(e.Message, e);
-        }
+        
 
         res.RemoveAll(l => string.IsNullOrWhiteSpace(l.Name));
 
