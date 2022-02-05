@@ -17,7 +17,6 @@ D:\n0tFlix\n0tFlix\Externals\AngleSharp\bin\Release\net5.0\AngleSharp.dll
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\bin\Release\net5.0\ref\AngleSharp.dll
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\bin\Release\net5.0\AngleSharp.pdb
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\bin\Release\net5.0\AngleSharp.xml
-D:\n0tFlix\n0tFlix\Externals\AngleSharp\obj\Release\net5.0\AngleSharp.Core.csproj.AssemblyReference.cache
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\obj\Release\net5.0\AngleSharp.Core.GeneratedMSBuildEditorConfig.editorconfig
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\obj\Release\net5.0\AngleSharp.Core.AssemblyInfoInputs.cache
 D:\n0tFlix\n0tFlix\Externals\AngleSharp\obj\Release\net5.0\AngleSharp.Core.AssemblyInfo.cs
