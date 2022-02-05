@@ -117,6 +117,7 @@ namespace n0tFlix.Plugin.Yifi
 
                 this.logger.LogError("https://yifysubtitles.org" + uri.Replace("%2","/"));
                 string subPage = await new HttpClient().GetStringAsync("https://yifysubtitles.org" + uri.Replace("%2", "/"));
+                this.logger.LogError(subPage.Length.ToString());
                 if (string.IsNullOrEmpty(subPage))
                     continue;
 
@@ -124,6 +125,7 @@ namespace n0tFlix.Plugin.Yifi
                 var subboxes = sub.GetElementsByClassName("table other-subs").First()
                     .GetElementsByTagName("tbody").First()
                     .GetElementsByTagName("tr");
+                this.logger.LogError(subboxes.Count().ToString());
                 foreach (IElement subtitle in subboxes)
                 {
                     string rating = subtitle.GetElementsByClassName("rating-cell").First().TextContent;
@@ -143,6 +145,7 @@ namespace n0tFlix.Plugin.Yifi
                 }
                 //Check awailable subtitles for all the results
             }
+            this.logger.LogError("We found " + list.Count().ToString());
             return list;
         }
 

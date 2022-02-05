@@ -32,7 +32,7 @@
         "changelog": "### Code or Repo Maintenance ###\n- Use BaseItemKind (#76) @crobibero",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.zip",
-        "checksum": "8948977FCEA41E4C8B006E25F82FE3B2",
+        "checksum": "9155D7AE1508833E4211F51D288B0889",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]
