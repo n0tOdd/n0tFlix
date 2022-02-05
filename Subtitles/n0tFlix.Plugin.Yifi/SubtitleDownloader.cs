@@ -98,7 +98,7 @@ namespace n0tFlix.Plugin.Yifi
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
             string query = request.Name + " " + request.ProductionYear;
-            query = HttpUtility.UrlEncode("https://yifysubtitles.org/search?q=" + query);
+            query = "https://yifysubtitles.org/search?q=" + HttpUtility.UrlEncode(query);
             this.logger.LogError(query);
             Uri ura = new Uri(query);
 
