@@ -10,7 +10,7 @@
     "versions": [
       {
         "version": "0.0.0.1",
-        "changelog": "First release",
+        "changelog": "DO NOT INSTALL",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
         "checksum": "3668F38A3B1C29F59873E236BC4E121F",
@@ -48,7 +48,7 @@
     "versions": [
       {
         "version": "0.0.0.5",
-        "changelog": "Got some problems with the language matching",
+        "changelog": "testing",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.zip",
         "checksum": "7A69BD69527CA8B28F0A59F831740C0A",
