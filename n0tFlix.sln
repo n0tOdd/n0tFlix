@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{ED6B6391-BCB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.YoutubeDL", "API\n0tFlix.Plugin.YoutubeDL\n0tFlix.Plugin.YoutubeDL.csproj", "{65F3AC54-ECFC-4295-9364-B505E07C916A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.Subscene", "Subtitles\n0tFlix.Plugin.Subscene\n0tFlix.Plugin.Subscene.csproj", "{293EB8C5-2A60-47FC-8764-06D1AA851C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65F3AC54-ECFC-4295-9364-B505E07C916A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293EB8C5-2A60-47FC-8764-06D1AA851C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293EB8C5-2A60-47FC-8764-06D1AA851C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293EB8C5-2A60-47FC-8764-06D1AA851C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293EB8C5-2A60-47FC-8764-06D1AA851C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{69B8FBD0-E8D9-47A9-BE3F-D0D66C7FE236} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
 		{70F0CD04-5562-4001-BE71-17FC323D53F8} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{65F3AC54-ECFC-4295-9364-B505E07C916A} = {ED6B6391-BCB0-48CF-AD1D-57BD4445F3A3}
+		{293EB8C5-2A60-47FC-8764-06D1AA851C86} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

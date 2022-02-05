@@ -19,6 +19,25 @@
     ]
   },
   {
+    "guid": "e84adafb-7ad0-43c9-92b6-2dfbd54d1342",
+    "name": "Subscene",
+    "description": "Downloads subtitles from subscene",
+    "overview": "grabs subtitles from subscene",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://image.winudf.com/v2/image/c3Vic2NlbmUuYXBwX2ljb25fMTUyNTczNDMxN18wMzM/icon.png?w=&fakeurl=1",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "First release",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Subscene.zip",
+        "checksum": "705D26E3B6F6CEF136120A2F2A282192",
+        "timestamp": "2022-01-08T17:21:56Z"
+      }
+    ]
+  },
+  {
     "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
     "name": "Yifi",
     "description": "Subtitle downloader for Yifi",
