@@ -194,29 +194,35 @@ namespace n0tFlix.Plugin.Subscene
 
         _logger?.LogDebug($"Subscene= Searching for site search \"{title}\"");
         var url = string.Format(SearchUrl, HttpUtility.UrlEncode(title));
-        var html = await GetHtml(Domain, url);
-
+            string html = await new HttpClient().GetStringAsync(Domain + url);
+            _logger?.LogError(Domain + url);
         if (string.IsNullOrWhiteSpace(html))
         {
-            return res;
+                _logger?.LogError("No html found at subscene");
+                return res;
         }
 
-        var xml = new XmlDocument();
-        xml.LoadXml($"{XmlTag}{html}");
+            var xml = new XmlDocument();
+            xml.LoadXml($"{XmlTag}{html}");
 
-        var xNode = xml.SelectSingleNode("//div[@class='search-result']");
-        if (xNode == null)
+            var xNode = xml.SelectSingleNode("//div[@class='search-result']");
+            _logger?.LogError("1");
+
+            if (xNode == null)
             return res;
 
         var ex = xNode?.SelectSingleNode("h2[@class='exact']")
                  ?? xNode?.SelectSingleNode("h2[@class='close']")
                  ?? xNode?.SelectSingleNode("h2[@class='popular']");
+            _logger?.LogError("2");
 
-        if (ex == null)
+            if (ex == null)
             return res;
 
         xNode = xNode.SelectSingleNode("ul");
-        if (xNode == null)
+            _logger?.LogError("3");
+
+            if (xNode == null)
             return res;
         var sItems = xNode.SelectNodes(".//a");
 
@@ -240,8 +246,9 @@ namespace n0tFlix.Plugin.Subscene
         xml.LoadXml($"{XmlTag}{html}");
 
         var repeater = xml.SelectNodes("//table/tbody/tr");
+            _logger?.LogError("4");
 
-        if (repeater == null)
+            if (repeater == null)
         {
             return res;
         }
