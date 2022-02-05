@@ -1,0 +1,11 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\bin\Release\net5.0\n0tFlix.Plugin.Podnapisi.deps.json
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\bin\Release\net5.0\n0tFlix.Plugin.Podnapisi.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\bin\Release\net5.0\ref\n0tFlix.Plugin.Podnapisi.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\bin\Release\net5.0\n0tFlix.Plugin.Podnapisi.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\ref\n0tFlix.Plugin.Podnapisi.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Podnapisi\obj\Release\net5.0\n0tFlix.Plugin.Podnapisi.pdb
