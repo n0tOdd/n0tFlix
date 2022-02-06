@@ -1,4 +1,4 @@
 # n0tFlix
 
-please somebody test the repository and tell me if the plugin will install, im getting a new error every time i start jellyfin now
+some plugins are working, but most have some strange bugs here and there
 https://github.com/n0tOdd/n0tFlix/raw/main/Manifest/n0tFlix-Manifest-Template.json
