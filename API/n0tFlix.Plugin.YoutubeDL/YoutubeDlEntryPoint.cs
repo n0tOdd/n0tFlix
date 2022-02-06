@@ -38,11 +38,16 @@ namespace n0tFlix.Plugin.YoutubeDL
 
         public async Task RunAsync()
         {
+            Logger.LogError(Plugin.Instance.AssemblyFilePath);
+            Logger.LogError(Plugin.Instance.ConfigurationFilePath);
+            Logger.LogError(Plugin.Instance.DataFolderPath);
+            
             string youtube_dl_path = string.Empty;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
+
                 
-                if (!File.Exists(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe")))
+                if (!File.Exists(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe")))
                 {
                     Logger.LogDebug("Downloading youtube-dl.exe");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl.exe");
@@ -51,20 +56,20 @@ namespace n0tFlix.Plugin.YoutubeDL
                         await youtubeDL.CopyToAsync(fs);
                     }
                 }
-                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe");
+                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                if (!File.Exists(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl")))
+                if (!File.Exists(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl")))
                 {
                     Logger.LogDebug("Downloading youtube-dl");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl");
-                    using (var fs = new FileStream(Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl"), FileMode.CreateNew))
+                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl"), FileMode.CreateNew))
                     {
                         await youtubeDL.CopyToAsync(fs);
                     }
                     //dont belive this should give any output?
-                    Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl");
+                    Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl");
                 }
             }
             else
