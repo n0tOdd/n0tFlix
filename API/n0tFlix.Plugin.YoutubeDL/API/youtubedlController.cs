@@ -60,9 +60,14 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             n0tYoutubeDL.Core.n0tYoutubeDL youtubeDL = new n0tYoutubeDL.Core.n0tYoutubeDL();
             youtubeDL.YoutubeDLPath = Plugin.Instance.Configuration.YoutubeDlFilePath;
             youtubeDL.PythonPath =  Plugin.Instance.Configuration.PythonPath;
+            n0tYoutubeDL.Core.Options.OptionSet option = new n0tYoutubeDL.Core.Options.OptionSet()
+            {
+                GeoBypass = true,
+                ListSubs = true,
+                DumpSingleJson = true,
+            };
 
-
-            var res = await youtubeDL.RunVideoDataFetch(body.URL);
+            var res = await youtubeDL.RunVideoDataFetch(body.URL,default,true,option);
          
 
             return res.Data.PlayerUrl + " " + res.Data.Url;
