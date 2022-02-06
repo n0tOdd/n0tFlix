@@ -24,10 +24,10 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<ActionResult> GetStreamableLink([FromQuery] string? URL)
+        public async Task<ActionResult> Get([FromQuery] string? URL)
         {
             System.IO.File.WriteAllText("/media/Movies/Disk1/Movies/test.txt", URL);
-            return Ok();
+            return Ok(URL);
         }
     }
 
