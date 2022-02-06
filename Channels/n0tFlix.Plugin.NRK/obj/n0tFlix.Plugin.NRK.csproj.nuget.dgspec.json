@@ -47,10 +47,6 @@
             "Jellyfin.Controller": {
               "target": "Package",
               "version": "[10.7.7, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
             }
           },
           "imports": [

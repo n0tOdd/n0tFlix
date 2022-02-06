@@ -74,7 +74,7 @@ namespace n0tFlix.Plugin.NRK
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetCategoryItemsAsync), query.FolderId);
                 HttpClient httpClient = new HttpClient();
                 string json = await httpClient.GetStringAsync(query.FolderId);
-                var root = Newtonsoft.Json.JsonConvert.DeserializeObject<CategoryItems.root>(json);
+                var root = System.Text.Json.JsonSerializer.Deserialize<CategoryItems.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
                 foreach (var v in root.Sections)
                 {
@@ -167,7 +167,7 @@ namespace n0tFlix.Plugin.NRK
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetSeasonInfoAsync), "nrk-categories-seasoninfo-" + query.FolderId);
                 HttpClient httpClient = new HttpClient();
                 string json = await httpClient.GetStringAsync(query.FolderId);
-                var root = Newtonsoft.Json.JsonConvert.DeserializeObject<SeasonInfo.root>(json);
+                var root = System.Text.Json.JsonSerializer.Deserialize<SeasonInfo.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
 
                 foreach (var emb in root.Embedded.Seasons)
@@ -212,7 +212,7 @@ namespace n0tFlix.Plugin.NRK
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetCategoryItemsAsync), "nrk-episodeinfo-" + query.FolderId);
                 HttpClient httpClient = new HttpClient();
                 string json = await httpClient.GetStringAsync(query.FolderId);
-                var root = Newtonsoft.Json.JsonConvert.DeserializeObject<EpisodeInfo.root>(json);
+                var root = System.Text.Json.JsonSerializer.Deserialize<EpisodeInfo.root>(json); 
                 ChannelItemResult result = new ChannelItemResult();
 
                 foreach (var ep in root.Embedded.Episodes)
@@ -249,7 +249,7 @@ namespace n0tFlix.Plugin.NRK
             logger.LogError("Grabbing latest headliners");
             HttpClient httpClient = new HttpClient();
             string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/headliners/default");
-            var root = Newtonsoft.Json.JsonConvert.DeserializeObject<HeadlinersInfo.root>(json);
+            var root = System.Text.Json.JsonSerializer.Deserialize<HeadlinersInfo.root>(json); 
             List<ChannelItemInfo> list = new List<ChannelItemInfo>();
             foreach (var head in root.Headliners)
             {
@@ -280,7 +280,8 @@ namespace n0tFlix.Plugin.NRK
             logger.LogError("Grabbing stream data for " + id);
             HttpClient httpClient = new HttpClient();
             string json = await httpClient.GetStringAsync(id);
-            var root = Newtonsoft.Json.JsonConvert.DeserializeObject<PlayBackInfo.root>(json);
+            
+            var root = System.Text.Json.JsonSerializer.Deserialize<PlayBackInfo.root>(json);
             List<MediaStream> mediaStreams = new List<MediaStream>();
 
             return new List<MediaSourceInfo>()
