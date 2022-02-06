@@ -31,9 +31,9 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-            var info = await youtubeDL.GetDownloadInfoAsync(URL);
+            var info = youtubeDL.GetDownloadInfo(URL);
            
-            return Ok(new JsonResult(info));
+            return Ok(new JsonResult(info.Title));
         }
     }
 
