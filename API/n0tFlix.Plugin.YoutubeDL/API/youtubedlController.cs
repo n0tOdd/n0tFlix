@@ -63,14 +63,14 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             else
                 youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
 
-//            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
+            //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-          //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
-          //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
-          //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-            youtubeDL.Options.GeneralOptions.IgnoreErrors = true;
+            youtubeDL.Options.VerbositySimulationOptions.Quiet = true;
+
+            //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
+            //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
+            //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
-            youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
             
 //            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
             youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
