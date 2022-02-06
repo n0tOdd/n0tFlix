@@ -69,7 +69,7 @@ namespace n0tFlix.Plugin.Addic7ed
             foreach (var result in results)
             {
                 var lang = result.GetElementsByClassName("language").Where(x => x.TextContent.ToLower().StartsWith(request.Language)).FirstOrDefault();
-                if (lang == default)
+                if (lang == null)
                     continue;
                 try
                 {
