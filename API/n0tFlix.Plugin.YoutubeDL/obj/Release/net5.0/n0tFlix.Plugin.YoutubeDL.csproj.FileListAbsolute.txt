@@ -9,3 +9,8 @@ D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\n0tFlix.Plugi
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\n0tFlix.Plugin.YoutubeDL.dll
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\ref\n0tFlix.Plugin.YoutubeDL.dll
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\n0tFlix.Plugin.YoutubeDL.pdb
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Release\net5.0\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Release\net5.0\n0tYoutubeDL.pdb
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Release\net5.0\n0tYoutubeDL.xml
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\n0tFlix.Plugin.YoutubeDL.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Release\net5.0\n0tFlix.Plugin.YoutubeDL.csproj.CopyComplete

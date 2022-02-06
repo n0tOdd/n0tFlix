@@ -1,0 +1,14 @@
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\bin\Release\net5.0\n0tYoutubeDL.deps.json
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\bin\Release\net5.0\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\bin\Release\net5.0\ref\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\bin\Release\net5.0\n0tYoutubeDL.pdb
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\bin\Release\net5.0\n0tYoutubeDL.xml
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\ref\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.xml
+D:\n0tFlix\n0tFlix\Externals\n0tYoutubeDL\obj\Release\net5.0\n0tYoutubeDL.pdb

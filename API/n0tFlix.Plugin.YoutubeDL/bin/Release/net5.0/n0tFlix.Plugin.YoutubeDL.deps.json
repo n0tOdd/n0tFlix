@@ -13,7 +13,8 @@
           "Jellyfin.Model": "10.7.7",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
-          "Microsoft.Extensions.Http": "5.0.0"
+          "Microsoft.Extensions.Http": "5.0.0",
+          "n0tYoutubeDL": "0.4.1"
         },
         "runtime": {
           "n0tFlix.Plugin.YoutubeDL.dll": {}
@@ -1948,6 +1949,11 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
         }
+      },
+      "n0tYoutubeDL/0.4.1": {
+        "runtime": {
+          "n0tYoutubeDL.dll": {}
+        }
       }
     }
   },
@@ -3223,6 +3229,11 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "n0tYoutubeDL/0.4.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
