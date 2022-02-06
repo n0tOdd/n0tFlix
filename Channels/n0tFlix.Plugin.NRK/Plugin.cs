@@ -60,10 +60,7 @@ namespace n0tFlix.Plugin.NRK
             {
                 Name = this.Name,
                 DisplayName = this.Name,
-                MenuSection = "n0tFlix",//<== create my own part of the meny, slowly im taking over all the jellyfin and netflix is born :P
                 EmbeddedResourcePath = GetType().Namespace + ".Configuration.configPage.html",//todo add this bro, its suposed to be here
-                EnableInMainMenu = false, //<== this makes it show up on youre dashboard menu, i was hoping public menu
-                MenuIcon = "",
             });
             return pluginPageInfos;
         }

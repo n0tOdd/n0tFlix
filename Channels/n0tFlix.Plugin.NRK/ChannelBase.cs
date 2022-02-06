@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace n0tFlix.Plugin.NRK
 {
-    internal class Channel : IChannel, IRequiresMediaInfoCallback, ISupportsLatestMedia, ISupportsMediaProbe, IScheduledTask
+    public class Channel : IChannel, IRequiresMediaInfoCallback, ISupportsLatestMedia, ISupportsMediaProbe, IScheduledTask
     {
         #region Just some variables that uses the Plugin.cs file variables
 
