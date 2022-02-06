@@ -58,9 +58,11 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
             youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
             youtubeDL.VideoUrl = body.URL;
-            youtubeDL.Download(body.URL);
+            var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
+           
+            await youtubeDL.DownloadAsync(body.URL);
             Console.WriteLine(sb.ToString());
-            return Ok(new JsonResult(sb.ToString()));
+            return Ok(sb.ToString());
         }
     }
 
