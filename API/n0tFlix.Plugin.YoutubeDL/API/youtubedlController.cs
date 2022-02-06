@@ -63,8 +63,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             n0tYoutubeDL.Core.Options.OptionSet option = new n0tYoutubeDL.Core.Options.OptionSet()
             {
                 GeoBypass = true,
-                ListSubs = true,
-                DumpSingleJson = true,
+
             };
 
             var res = await youtubeDL.RunVideoDataFetch(body.URL,default,true,option);

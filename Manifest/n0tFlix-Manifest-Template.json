@@ -10,10 +10,10 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Make sure you have python installed (FINALY WE HAVE A WORKING API)",
+        "changelog": "Make sure you have python installed (FINALY WE HAVE A WORKING API, i think)",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "E5BAC47E312BC5A463E3F2B458AFECAA",
+        "checksum": "6166BD7968179D4684739C26AAC34E1B",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]
