@@ -103,9 +103,9 @@ namespace n0tFlix.Plugin.NRK
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/pages/"))
                 return await worker.GetCategoryItemsAsync(query, logger, memoryCache,cancellationToken);
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/catalog/series/") && !query.FolderId.Contains("seasons"))
-                return await worker.GetSeasonInfoAsync(query, logger, memoryCache);
+                return await worker.GetSeasonInfoAsync(query, logger, memoryCache, cancellationToken);
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/catalog/series/") && query.FolderId.Contains("seasons"))
-                return await worker.GetEpisodeInfoAsync(query, logger, memoryCache);
+                return await worker.GetEpisodeInfoAsync(query, logger, memoryCache, cancellationToken);
 
             logger.LogInformation("This should not happen, we cant find any folderid to use " + query.FolderId);
             return null;
@@ -157,7 +157,7 @@ namespace n0tFlix.Plugin.NRK
             => await this.worker.GetMediaSourceInfo(id, logger, cancellationToken);
 
         public async Task<IEnumerable<ChannelItemInfo>> GetLatestMedia(ChannelLatestMediaSearch request, CancellationToken cancellationToken)
-         => await worker.GetHeadlinersInfoAsync(logger, memoryCache);
+         => await worker.GetHeadlinersInfoAsync(logger, memoryCache,cancellationToken);
 
         /// <summary>
         /// This is the execution of our schedueled tasks

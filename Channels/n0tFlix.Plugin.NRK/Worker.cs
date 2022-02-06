@@ -58,7 +58,7 @@ namespace n0tFlix.Plugin.NRK
                             Type = ChannelItemType.Folder,
                             MediaType = ChannelMediaType.Video,
                             HomePageUrl = "https://tv.nrk.no" + v.Links.Self.Href,
-                            ImageUrl = v.Image.WebImages[0].Uri ?? v.Image.WebImages[1].Uri ?? v.Image.WebImages[2].Uri ?? v.Image.WebImages[3].Uri ?? v.Image.WebImages[4].Uri
+                            ImageUrl = v.Image.WebImages.FirstOrDefault(x => !string.IsNullOrEmpty(x.Uri)).Uri
                         });
                         result.TotalRecordCount++;
                     }
@@ -68,7 +68,7 @@ namespace n0tFlix.Plugin.NRK
                     }
                 }
                 logger.LogInformation("We Found " + result.TotalRecordCount.ToString() + " categories for nrk");
-                if(result.TotalRecordCount > 0)
+                if(result.Items.Count > 0)
                     memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
@@ -109,7 +109,7 @@ namespace n0tFlix.Plugin.NRK
                                 {
                                     Id = "https://psapi.nrk.no/tv/catalog" + p.Series.Links.Self.Href,
                                     Name = p.DisplayContractContent.ContentTitle,
-                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri,
+                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages.FirstOrDefault(x => !string.IsNullOrEmpty(x.Uri)).Uri,
                                     FolderType = ChannelFolderType.Container,
                                     Type = ChannelItemType.Folder,
 
@@ -160,7 +160,8 @@ namespace n0tFlix.Plugin.NRK
                         }
                     }
                 }
-                memoryCache.Set("nrk-categories-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
+                if(result.Items.Count >0 )
+                    memoryCache.Set("nrk-categories-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
         }
@@ -172,7 +173,7 @@ namespace n0tFlix.Plugin.NRK
         /// <param name="logger"></param>
         /// <param name="memoryCache"></param>
         /// <returns></returns>
-        internal async Task<ChannelItemResult> GetSeasonInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
+        internal async Task<ChannelItemResult> GetSeasonInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
             logger.LogError("GetSeasonInfoAsync");
 
@@ -184,28 +185,37 @@ namespace n0tFlix.Plugin.NRK
             else
             {
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetSeasonInfoAsync), "nrk-categories-seasoninfo-" + query.FolderId);
-                HttpClient httpClient = new HttpClient();
-                string json = await httpClient.GetStringAsync(query.FolderId);
+        
+                string json = await httpClient.GetStringAsync(query.FolderId, cancellationToken);
                 var root = System.Text.Json.JsonSerializer.Deserialize<SeasonInfo.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
 
                 foreach (var emb in root.Embedded.Seasons)
                 {
-                    ChannelItemInfo info = new ChannelItemInfo()
+                    try
                     {
-                        FolderType = ChannelFolderType.Container,
-                        SeriesName = root.Sequential.Titles.Title,
-                        Name = emb.Titles.Title,
-                        Overview = root.Sequential.Titles.Subtitle,
-                        HomePageUrl = "https://tv.nrk.no" + emb.Links.Series.Href,
-                        Id = "https://psapi.nrk.no" + emb.Links.Self.Href,
-                        MediaType = ChannelMediaType.Video,
-                        Type = ChannelItemType.Folder
-                    };
-                    result.Items.Add(info);
-                    result.TotalRecordCount++;
+                        ChannelItemInfo info = new ChannelItemInfo()
+                        {
+                            FolderType = ChannelFolderType.Container,
+                            SeriesName = root.Sequential.Titles.Title,
+                            Name = emb.Titles.Title,
+                            Overview = root.Sequential.Titles.Subtitle,
+                            ImageUrl = root.Sequential.Image.Where(x => !string.IsNullOrEmpty(x.Url)).FirstOrDefault().Url,
+                            HomePageUrl = "https://tv.nrk.no" + emb.Links.Series.Href,
+                            Id = "https://psapi.nrk.no" + emb.Links.Self.Href,
+                            MediaType = ChannelMediaType.Video,
+                            Type = ChannelItemType.Folder
+                        };
+                        result.Items.Add(info);
+                        result.TotalRecordCount++;
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.LogError("ERROR in GetSeasonInfoAsync: " + ex.Message);
+                    }
                 }
-                memoryCache.Set("nrk-categories-seasoninfo-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
+                if(result.Items.Count > 0)
+                    memoryCache.Set("nrk-categories-seasoninfo-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
         }
@@ -217,7 +227,7 @@ namespace n0tFlix.Plugin.NRK
         /// <param name="logger"></param>
         /// <param name="memoryCache"></param>
         /// <returns></returns>
-        internal async Task<ChannelItemResult> GetEpisodeInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
+        internal async Task<ChannelItemResult> GetEpisodeInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
             logger.LogError("GetEpisodeInfoAsync");
 
@@ -229,29 +239,36 @@ namespace n0tFlix.Plugin.NRK
             else
             {
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetCategoryItemsAsync), "nrk-episodeinfo-" + query.FolderId);
-                HttpClient httpClient = new HttpClient();
-                string json = await httpClient.GetStringAsync(query.FolderId);
+               string json = await httpClient.GetStringAsync(query.FolderId, cancellationToken);
                 var root = System.Text.Json.JsonSerializer.Deserialize<EpisodeInfo.root>(json); 
                 ChannelItemResult result = new ChannelItemResult();
 
                 foreach (var ep in root.Embedded.Episodes)
                 {
-                    ChannelItemInfo info = new ChannelItemInfo()
+                    try
                     {
-                        FolderType = ChannelFolderType.Container,
-                        SeriesName = root.Titles.Title,
-                        Name = ep.Titles.Title,
-                        ImageUrl = ep.image[0].Url ?? ep.image[1].Url ?? ep.image[2].Url ?? ep.image[3].Url ?? ep.image[4].Url ?? ep.image[5].Url,
-                        Overview = ep.Titles.Subtitle,
-                        HomePageUrl = ep.Links.Share.Href,
-                        Id = "https://psapi.nrk.no" + ep.Links.Playback.Href,
-                        MediaType = ChannelMediaType.Video,
-                        Type = ChannelItemType.Media
-                    };
-                    result.Items.Add(info);
-                    result.TotalRecordCount++;
+                        ChannelItemInfo info = new ChannelItemInfo()
+                        {
+                            FolderType = ChannelFolderType.Container,
+                            SeriesName = root.Titles.Title,
+                            Name = ep.Titles.Title,
+                            ImageUrl = ep.Image.Where(x => !string.IsNullOrEmpty(x.Url)).FirstOrDefault().Url,
+                            Overview = ep.Titles.Subtitle,
+                            HomePageUrl = ep.Links.Share.Href,
+                            Id = "https://psapi.nrk.no" + ep.Links.Playback.Href,
+                            MediaType = ChannelMediaType.Video,
+                            Type = ChannelItemType.Media
+                        };
+                        result.Items.Add(info);
+                        result.TotalRecordCount++;
+                    }
+                    catch(Exception ex)
+                    {
+                        logger.LogError("ERROR in GetSeasonInfoAsync: " + ex.Message);
+                    }
                 }
-                memoryCache.Set("nrk-episodeinfo-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
+                if(result.Items.Count > 0)
+                    memoryCache.Set("nrk-episodeinfo-" + query.FolderId, result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
             return null;
@@ -263,28 +280,36 @@ namespace n0tFlix.Plugin.NRK
         /// <param name="logger"></param>
         /// <param name="memoryCache"></param>
         /// <returns></returns>
-        internal async Task<IEnumerable<ChannelItemInfo>> GetHeadlinersInfoAsync(ILogger logger, IMemoryCache memoryCache)
+        internal async Task<IEnumerable<ChannelItemInfo>> GetHeadlinersInfoAsync(ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
             logger.LogError("Grabbing latest headliners");
-            HttpClient httpClient = new HttpClient();
-            string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/headliners/default");
+            string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/headliners/default", cancellationToken);
             var root = System.Text.Json.JsonSerializer.Deserialize<HeadlinersInfo.root>(json); 
             List<ChannelItemInfo> list = new List<ChannelItemInfo>();
             foreach (var head in root.Headliners)
             {
-                list.Add(new ChannelItemInfo()
+                try
                 {
-                    Name = head.Title,
-                    Id = "https://psapi.nrk.no" + head.Links.Seriespage.Href,
-                    Overview = head.SubTitle,
-                    ImageUrl = head.Images[0].Uri ?? head.Images[1].Uri ?? head.Images[2].Uri ?? head.Images[3].Uri ?? head.Images[4].Uri ?? head.Images[5].Uri,
-                    FolderType = ChannelFolderType.Container,
-                    Type = ChannelItemType.Folder,
-                    SeriesName = head.Title,
-                    MediaType = ChannelMediaType.Video,
-                });
+                    list.Add(new ChannelItemInfo()
+                    {
+                        Name = head.Title,
+                        Id = "https://psapi.nrk.no" + head.Links.Seriespage.Href,
+                        Overview = head.SubTitle,
+                        ImageUrl = head.Images.Where(x => !string.IsNullOrEmpty(x.Uri)).FirstOrDefault().Uri,
+                        FolderType = ChannelFolderType.Container,
+                        Type = ChannelItemType.Folder,
+                        SeriesName = head.Title,
+                        MediaType = ChannelMediaType.Video,
+                    });
+                  
+                }
+                catch(Exception ex)
+                {
+                    logger.LogError("ERROR in GetSeasonInfoAsync: " + ex.Message);
+
+                }
             }
-            return null;
+            return list;
         }
 
         /// <summary>
@@ -297,8 +322,7 @@ namespace n0tFlix.Plugin.NRK
         internal async Task<IEnumerable<MediaSourceInfo>> GetMediaSourceInfo(string id, ILogger logger, CancellationToken cancellationToken)
         {
             logger.LogError("Grabbing stream data for " + id);
-            HttpClient httpClient = new HttpClient();
-            string json = await httpClient.GetStringAsync(id);
+            string json = await httpClient.GetStringAsync(id, cancellationToken);
             
             var root = System.Text.Json.JsonSerializer.Deserialize<PlayBackInfo.root>(json);
             List<MediaStream> mediaStreams = new List<MediaStream>();
