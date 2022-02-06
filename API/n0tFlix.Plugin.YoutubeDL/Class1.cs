@@ -3,6 +3,7 @@ using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
+using Microsoft.Extensions.Logging;
 using n0tFlix.Plugin.YoutubeDL.Configuration;
 
 namespace n0tFlix.Plugin.YoutubeDL
@@ -21,10 +22,12 @@ namespace n0tFlix.Plugin.YoutubeDL
         {
             return new PluginInfo("YoutubeDL API", new Version(1, 0, 0, 0), "No description here", Id,true);
         }
-
-        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer) : base(applicationPaths,
+        public ILogger<Plugin> logger;
+        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer, ILogger<Plugin> logger) : base(applicationPaths,
             xmlSerializer)
         {
+            this.logger = logger;
+            
             //Todo add path dataen som youtubedl skal save i
             Instance = this;
         }

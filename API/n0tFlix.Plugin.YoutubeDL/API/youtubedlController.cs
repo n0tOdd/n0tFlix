@@ -77,18 +77,18 @@ namespace n0tFlix.Plugin.YoutubeDL.API
 //            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
             youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
             StringBuilder sb = new StringBuilder();
-            youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
+            youtubeDL.StandardOutputEvent += (sender, output) => sb.Append(output + " ");
             youtubeDL.RetrieveAllInfo = true;
             youtubeDL.Options.VerbositySimulationOptions.NoProgress = true;
             youtubeDL.Options.FilesystemOptions.RmCacheDir  = true;
-
             youtubeDL.VideoUrl = body.URL;
             // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
             //   youtubeDL.PrepareDownload();
             // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
 
             await youtubeDL.DownloadAsync(body.URL);
-            
+            Console.WriteLine(sb);
+
 
             return sb.ToString();
         }
