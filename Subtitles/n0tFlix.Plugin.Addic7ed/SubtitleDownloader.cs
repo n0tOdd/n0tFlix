@@ -75,7 +75,8 @@ namespace n0tFlix.Plugin.Addic7ed
                 {
                     string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
                     this.logger.LogError(auth);
-                    string id = "https://www.addic7ed.com" + lang.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang;
+                    
+                    string id = "https://www.addic7ed.com" + lang.ParentElement.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang;
                     this.logger.LogError(id);
                     string name = result.GetElementsByClassName("NewsTitle").First().TextContent;
                     this.logger.LogError(name);
@@ -94,7 +95,7 @@ namespace n0tFlix.Plugin.Addic7ed
                 }
                 catch(Exception ex)
                 {
-
+                    this.logger.LogError(ex.Message);
                 }
 
             }
