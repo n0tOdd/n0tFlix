@@ -64,20 +64,25 @@ namespace n0tFlix.Plugin.YoutubeDL.API
                 youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
 
             //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
-          //  youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-          //  youtubeDL.Options.VerbositySimulationOptions.Quiet = true;
+            youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
+            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
 
-            //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
+            //  youtubeDL.Options.VerbositySimulationOptions.Quiet = true;
+
+            youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
             //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-            youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
+          //  youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             
 //            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
             youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
+            youtubeDL.RetrieveAllInfo = true;
+            youtubeDL.Options.VerbositySimulationOptions.NoProgress = true;
+            youtubeDL.Options.FilesystemOptions.RmCacheDir  = true;
+
             youtubeDL.VideoUrl = body.URL;
-            string commandToRun = await youtubeDL.PrepareDownloadAsync();
             // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
             //   youtubeDL.PrepareDownload();
             // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
@@ -85,7 +90,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             await youtubeDL.DownloadAsync(body.URL);
             
 
-            return sb.ToString() + " :::::" + commandToRun;
+            return sb.ToString();
         }
     }
 
