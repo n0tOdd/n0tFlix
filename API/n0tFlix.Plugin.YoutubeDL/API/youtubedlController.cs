@@ -4,6 +4,9 @@ using System.Linq;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
+using MediaBrowser.Controller.Entities;
+using MediaBrowser.Model.Dto;
+using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,21 +17,17 @@ namespace n0tFlix.Plugin.YoutubeDL.API
     /// <summary>
     /// The open subtitles plugin controller.
     /// </summary>
-    [ApiController]
-    [Produces(MediaTypeNames.Application.Json)]
+    [Route("n0tFlix.Plugin.YoutubeDL")]
     [Authorize(Policy = "DefaultAuthorization")]
     public class YoutubeDlController : ControllerBase
     {
-        [HttpPost("n0tFlix.Plugin.YoutubeDL/GetStreamableLink")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult> GetStreamableLink([FromBody] CollectInfo body)
+
+        public async Task<ActionResult> GetStreamableLink([FromQuery] string? URL)
         {
-            if (string.IsNullOrEmpty(body.URL))
-                return BadRequest(new { Message = "BAD" });
-            
-            return Ok(new { Message = "WIN" });
+            System.IO.File.WriteAllText("/media/Movies/Disk1/Movies/test.txt", URL);
+            return Ok();
         }
     }
 
