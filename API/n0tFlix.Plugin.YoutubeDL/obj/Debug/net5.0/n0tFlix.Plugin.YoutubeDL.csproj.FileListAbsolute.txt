@@ -1,0 +1,12 @@
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.deps.json
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\ref\n0tFlix.Plugin.YoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.pdb
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\ref\n0tFlix.Plugin.YoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.pdb
