@@ -10,10 +10,10 @@
     "versions": [
       {
         "version": "0.0.0.1",
-        "changelog": "DO NOT INSTALL (new test2)",
+        "changelog": "DO NOT INSTALL (new test3)",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "8AC0E85D8315D083326733868F35D703",
+        "checksum": "8D637CE250330D6CF281F64EF4ADB6EC",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]
