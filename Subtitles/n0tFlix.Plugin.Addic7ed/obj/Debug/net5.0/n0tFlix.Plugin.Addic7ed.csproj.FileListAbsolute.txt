@@ -1,0 +1,16 @@
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\n0tFlix.Plugin.Addic7ed.deps.json
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\n0tFlix.Plugin.Addic7ed.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\ref\n0tFlix.Plugin.Addic7ed.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\n0tFlix.Plugin.Addic7ed.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\AngleSharp.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\AngleSharp.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Debug\net5.0\AngleSharp.xml
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.csproj.CopyComplete
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\ref\n0tFlix.Plugin.Addic7ed.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Debug\net5.0\n0tFlix.Plugin.Addic7ed.pdb
