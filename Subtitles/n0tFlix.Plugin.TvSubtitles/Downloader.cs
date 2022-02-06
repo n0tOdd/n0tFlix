@@ -4,16 +4,13 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
-using System.Net.Security;
 using System.Security.Authentication;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace n0tFlix.Plugin.SubtitleBase
+namespace n0tFlix.Plugin.TvSubtitles
 {
-
     public class Downloader
     {
         private const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43";
@@ -24,15 +21,12 @@ namespace n0tFlix.Plugin.SubtitleBase
         {
             handler = new HttpClientHandler();
             handler.ClientCertificateOptions = ClientCertificateOption.Manual;
-            handler.SslProtocols = SslProtocols.None & SslProtocols.Tls12 & SslProtocols.Tls13 & SslProtocols.Ssl2 & SslProtocols.Ssl3 & SslProtocols.Default;
-            handler.ServerCertificateCustomValidationCallback =
-                (httpRequestMessage, cert, cetChain, policyErrors) => {
-                    return true;
-                };
+            handler.SslProtocols = SslProtocols.None & SslProtocols.Tls12 & SslProtocols.Tls13;
+            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
             handler.MaxAutomaticRedirections = 10;
             handler.CheckCertificateRevocationList = false;
             handler.AutomaticDecompression = System.Net.DecompressionMethods.All;
-           
+
             _httpClient = new HttpClient(handler);
             _httpClient.DefaultRequestHeaders.Add("User-Agent", UserAgent);
             _httpClient.DefaultRequestHeaders.Add("Pragma", "no-cache");
@@ -40,7 +34,7 @@ namespace n0tFlix.Plugin.SubtitleBase
             _httpClient.Timeout = TimeSpan.FromSeconds(30);
         }
 
-        public async Task<string> GetString(string link,string referer, Dictionary<string, string> post_params, CancellationToken cancellationToken)
+        public async Task<string> GetString(string link, string referer, Dictionary<string, string> post_params, CancellationToken cancellationToken)
         {
             HttpRequestMessage request;
             HttpResponseMessage response;
@@ -61,7 +55,7 @@ namespace n0tFlix.Plugin.SubtitleBase
             return result;
         }
 
-        public async Task<Stream> GetStream(string link,string referer, Dictionary<string, string> post_params, CancellationToken cancellationToken)
+        public async Task<Stream> GetStream(string link, string referer, Dictionary<string, string> post_params, CancellationToken cancellationToken)
         {
             HttpRequestMessage request;
             HttpResponseMessage response;

@@ -25,10 +25,7 @@ namespace n0tFlix.Plugin.Podnapisi
             handler = new HttpClientHandler();
             handler.ClientCertificateOptions = ClientCertificateOption.Manual;
             handler.SslProtocols = SslProtocols.None & SslProtocols.Tls12 & SslProtocols.Tls13 & SslProtocols.Ssl2 & SslProtocols.Ssl3 & SslProtocols.Default;
-            handler.ServerCertificateCustomValidationCallback =
-                (httpRequestMessage, cert, cetChain, policyErrors) => {
-                    return true;
-                };
+            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
             handler.MaxAutomaticRedirections = 10;
             handler.CheckCertificateRevocationList = false;
             handler.AutomaticDecompression = System.Net.DecompressionMethods.All;

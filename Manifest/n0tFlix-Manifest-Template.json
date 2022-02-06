@@ -56,11 +56,30 @@
       }
     ]
   },
-
-
-  
   {
-    "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
+    "guid": "40d962d7-5a82-4ded-b201-1e8e15a6b1c7",
+    "name": "Podnapisi",
+    "description": "Subtitle downloader for Podnapisi",
+    "overview": "Grabs subtitles from Podnapisi",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "http://mirrors.kodi.tv/addons/leia/service.subtitles.podnapisi/icon.png",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "Got some problems with the language matching",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.zip",
+        "checksum": "4F67CC624913F9B226E815FDC24DFB5B",
+        "timestamp": "2022-01-08T17:33:56Z"
+      }
+    ]
+  },
+
+
+
+  {
+    "guid": "4e18b794-34be-42df-b67c-3823c4a9fe9e",
     "name": "Nrk ",
     "description": "Channel for watching https://tv.nrk.no/",
     "overview": "Channel for watching https://tv.nrk.no/",
