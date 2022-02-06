@@ -101,7 +101,7 @@ namespace n0tFlix.Plugin.TvSubtitles
             var conf = AngleSharp.Configuration.Default;
             var browser = AngleSharp.BrowsingContext.New(conf);
             IDocument document = await browser.OpenAsync(x => x.Content(cont));
-            var results = document.GetElementsByClassName("margin-left:2em").First();
+            var results = document.GetElementsByName("ul").Last();
             var links = results.GetElementsByTagName("a");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
             foreach (var link in links)
