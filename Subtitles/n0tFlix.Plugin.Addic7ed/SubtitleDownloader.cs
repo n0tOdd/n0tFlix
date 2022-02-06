@@ -53,7 +53,18 @@ namespace n0tFlix.Plugin.Addic7ed
 
         /// <inheritdoc />
         public async Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
-            => await GetSubtitlesInternal(id, cancellationToken);
+        {
+            this.logger.LogError(id);
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                throw new ArgumentException("Missing param", nameof(id));
+            }
+            string[] ss = id.Split("__");
+            Stream data = await downloader.GetStream(ss[0], "https://www.addic7ed.com/", null, cancellationToken);
+            this.logger.LogError("got stream");
+            //Remember to grab this info from page you collect the subtitle from
+            return new SubtitleResponse { Format = "srt", Language = ss[1], Stream = data };
+        }
 
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
@@ -106,19 +117,6 @@ namespace n0tFlix.Plugin.Addic7ed
             return list;
         }
 
-        private async Task<SubtitleResponse> GetSubtitlesInternal(string id, CancellationToken cancellationToken)
-        {
-            this.logger.LogError(id);
-            if (string.IsNullOrWhiteSpace(id))
-            {
-                throw new ArgumentException("Missing param", nameof(id));
-            }
-            string[] ss = id.Split("__");
-            Stream data = await downloader.GetStream(ss[0], "https://www.addic7ed.com/", null, cancellationToken);
-            this.logger.LogError("got stream");
-            //Remember to grab this info from page you collect the subtitle from
-            return new SubtitleResponse { Format = "srt", Language = ss[1], Stream =data };
-        }
 
         private PluginConfiguration GetOptions()
             => Addic7ed.Instance!.Configuration;

@@ -86,10 +86,10 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "fixed a missing await on downloading sub",
+        "changelog": "downloader not reacting",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
-        "checksum": "2682F7F47A63B6055A4CD81E3C267E6C",
+        "checksum": "23DEE854C315753C31BD3B68214E2094",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]
