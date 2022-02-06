@@ -62,8 +62,8 @@ namespace n0tFlix.Plugin.YoutubeDL.API
 //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
           //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
-            //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
-           // youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
+            youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
+            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.GeneralOptions.IgnoreErrors = true;
             /*youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
@@ -72,6 +72,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             */
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
+           
            // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
          //   youtubeDL.PrepareDownload();
            // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
@@ -79,7 +80,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Download(body.URL);
             
 
-            return new JsonResult(sb.ToString() + " " + youtubeDL.VideoUrl);
+            return new JsonResult(sb.ToString());
         }
     }
 
