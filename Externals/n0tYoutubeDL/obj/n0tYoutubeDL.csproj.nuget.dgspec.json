@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {}
+  },
+  "projects": {
+    "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {
+      "version": "0.4.1",
+      "restore": {
+        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj",
+        "projectName": "n0tYoutubeDL",
+        "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj",
+        "packagesPath": "C:\\Users\\oddos\\.nuget\\packages\\",
+        "outputPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\oddos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://f.feedz.io/autostep/ci/nuget/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

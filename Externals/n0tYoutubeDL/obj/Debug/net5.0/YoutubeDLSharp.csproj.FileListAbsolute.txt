@@ -1,0 +1,13 @@
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\bin\Debug\net5.0\YoutubeDLSharp.deps.json
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\bin\Debug\net5.0\YoutubeDLSharp.dll
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\bin\Debug\net5.0\ref\YoutubeDLSharp.dll
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\bin\Debug\net5.0\YoutubeDLSharp.pdb
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\bin\Debug\net5.0\YoutubeDLSharp.xml
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.AssemblyInfoInputs.cache
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.AssemblyInfo.cs
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.csproj.CoreCompileInputs.cache
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.dll
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\ref\YoutubeDLSharp.dll
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.xml
+C:\Users\oddos\Downloads\YoutubeDLSharp-master\YoutubeDLSharp-master\YoutubeDLSharp\obj\Debug\net5.0\YoutubeDLSharp.pdb

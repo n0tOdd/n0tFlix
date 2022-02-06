@@ -2739,14 +2739,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "NYoutubeDL/0.11.2": {
+      "n0tYoutubeDL/0.4.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/NYoutubeDL.dll": {}
+          "bin/placeholder/n0tYoutubeDL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/NYoutubeDL.dll": {}
+          "bin/placeholder/n0tYoutubeDL.dll": {}
         }
       }
     }
@@ -8287,10 +8287,10 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "NYoutubeDL/0.11.2": {
+    "n0tYoutubeDL/0.4.1": {
       "type": "project",
-      "path": "../../Externals/NYoutube/NYoutubeDL.csproj",
-      "msbuildProject": "../../Externals/NYoutube/NYoutubeDL.csproj"
+      "path": "../../Externals/n0tYoutubeDL/n0tYoutubeDL.csproj",
+      "msbuildProject": "../../Externals/n0tYoutubeDL/n0tYoutubeDL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8301,7 +8301,7 @@
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.Extensions.Http >= 5.0.0",
-      "NYoutubeDL >= 0.11.2"
+      "n0tYoutubeDL >= 0.4.1"
     ]
   },
   "packageFolders": {
@@ -8332,8 +8332,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
-              "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj"
+            "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {
+              "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj"
             }
           }
         }

@@ -14,7 +14,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.Extensions.Http": "5.0.0",
-          "NYoutubeDL": "0.11.2"
+          "n0tYoutubeDL": "0.4.1"
         },
         "runtime": {
           "n0tFlix.Plugin.YoutubeDL.dll": {}
@@ -1950,9 +1950,9 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "NYoutubeDL/0.11.2": {
+      "n0tYoutubeDL/0.4.1": {
         "runtime": {
-          "NYoutubeDL.dll": {}
+          "n0tYoutubeDL.dll": {}
         }
       }
     }
@@ -3230,7 +3230,7 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "NYoutubeDL/0.11.2": {
+    "n0tYoutubeDL/0.4.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

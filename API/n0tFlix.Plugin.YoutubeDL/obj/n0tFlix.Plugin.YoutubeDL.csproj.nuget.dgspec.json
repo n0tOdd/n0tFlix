@@ -29,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
-                "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj"
+              "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {
+                "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj"
               }
             }
           }
@@ -89,15 +89,16 @@
         }
       }
     },
-    "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
-      "version": "0.11.2",
+    "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {
+      "version": "0.4.1",
       "restore": {
-        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj",
-        "projectName": "NYoutubeDL",
-        "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj",
+        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj",
+        "projectName": "n0tYoutubeDL",
+        "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj",
         "packagesPath": "C:\\Users\\oddos\\.nuget\\packages\\",
-        "outputPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\obj\\",
+        "outputPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\obj\\",
         "projectStyle": "PackageReference",
+        "crossTargeting": true,
         "configFilePaths": [
           "C:\\Users\\oddos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

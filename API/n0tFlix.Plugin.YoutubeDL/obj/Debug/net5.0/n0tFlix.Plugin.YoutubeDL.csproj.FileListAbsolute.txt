@@ -10,6 +10,7 @@ D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.dll
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\ref\n0tFlix.Plugin.YoutubeDL.dll
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.pdb
-D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\NYoutubeDL.dll
-D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\NYoutubeDL.pdb
 D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\obj\Debug\net5.0\n0tFlix.Plugin.YoutubeDL.csproj.CopyComplete
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tYoutubeDL.dll
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tYoutubeDL.pdb
+D:\n0tFlix\n0tFlix\API\n0tFlix.Plugin.YoutubeDL\bin\Debug\net5.0\n0tYoutubeDL.xml

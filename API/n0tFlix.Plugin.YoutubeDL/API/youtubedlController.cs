@@ -12,6 +12,8 @@ using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using n0tYoutubeDL.Core;
+using n0tFlix.Plugin.YoutubeDL;
 
 namespace n0tFlix.Plugin.YoutubeDL.API
 {
@@ -50,47 +52,20 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [Produces(MediaTypeNames.Application.Json)]
         public async Task<string> Get([FromBody] CollectInfo body)
         {
+
             if(!System.IO.File.Exists(Plugin.Instance.Configuration.YoutubeDlFilePath))
             {
                 return "ERROR: Youtubedl can not be found, try restarting jellyfin it should download it for you then";
             }
-            NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            {
-                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
-                youtubeDL.PythonPath = Plugin.Instance.Configuration.PythonPath;
-            }
-            else
-                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
-
-            //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
-            youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-
-            //  youtubeDL.Options.VerbositySimulationOptions.Quiet = true;
-
-            youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
-            //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
-            //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-          //  youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
-            
-//            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
-            youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
-            StringBuilder sb = new StringBuilder();
-            youtubeDL.StandardOutputEvent += (sender, output) => sb.Append(output + " ");
-            youtubeDL.RetrieveAllInfo = true;
-            youtubeDL.Options.VerbositySimulationOptions.NoProgress = true;
-            youtubeDL.Options.FilesystemOptions.RmCacheDir  = true;
-            youtubeDL.VideoUrl = body.URL;
-            // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
-            //   youtubeDL.PrepareDownload();
-            // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
-
-            await youtubeDL.DownloadAsync(body.URL);
-            Console.WriteLine(sb);
+            n0tYoutubeDL.Core.n0tYoutubeDL youtubeDL = new n0tYoutubeDL.Core.n0tYoutubeDL();
+            youtubeDL.YoutubeDLPath = Plugin.Instance.Configuration.YoutubeDlFilePath;
+            youtubeDL.PythonPath =  Plugin.Instance.Configuration.PythonPath;
 
 
-            return sb.ToString();
+            var res = await youtubeDL.RunVideoDataFetch(body.URL);
+         
+
+            return res.Data.PlayerUrl + " " + res.Data.Url;
         }
     }
 
