@@ -135,6 +135,7 @@ namespace n0tYoutubeDL.Core
             opts.FlatPlaylist = flat;
             VideoData videoData = null;
             var process = new YoutubeDLProcess(YoutubeDLPath);
+            process.PythonPath = this.PythonPath;
             process.OutputReceived += (o, e) => videoData = System.Text.Json.JsonSerializer.Deserialize<VideoData>(e.Data);
             (int code, string[] errors) = await runner.RunThrottled(process, new[] { url }, opts, ct);
             return new RunResult<VideoData>(code == 0, errors, videoData);
