@@ -20,4 +20,3 @@ D:\n0tFlix\n0tFlix\Externals\NYoutube\obj\Debug\net5.0\NYoutubeDL.csproj.CoreCom
 D:\n0tFlix\n0tFlix\Externals\NYoutube\obj\Debug\net5.0\NYoutubeDL.dll
 D:\n0tFlix\n0tFlix\Externals\NYoutube\obj\Debug\net5.0\ref\NYoutubeDL.dll
 D:\n0tFlix\n0tFlix\Externals\NYoutube\obj\Debug\net5.0\NYoutubeDL.pdb
-D:\n0tFlix\n0tFlix\Externals\NYoutube\obj\Debug\net5.0\NYoutubeDL.csproj.AssemblyReference.cache
