@@ -50,11 +50,11 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [Produces(MediaTypeNames.Application.Json)]
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
-            NYoutubeDL.YoutubeDL youtubeDL = null;
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.PythonPath + " " + Plugin.Instance.Configuration.YoutubeDlFilePath);
-            else
-                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
+            NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
+         //   if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+           //     youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.PythonPath + " " + Plugin.Instance.Configuration.YoutubeDlFilePath);
+           // else
+             //   youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
 
 //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;

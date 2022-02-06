@@ -10,10 +10,10 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Added variable for python path",
+        "changelog": "Make sure you have youtube-dl installed locally, i cant get my installer to work",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "C0E31B3D1778EEDA802AA2F7FCDA1669",
+        "checksum": "682ACBFD4E9BE29F2743CCF840679078",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]

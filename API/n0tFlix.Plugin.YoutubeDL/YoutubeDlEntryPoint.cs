@@ -34,6 +34,7 @@ namespace n0tFlix.Plugin.YoutubeDL
 
         public void Dispose()
         {
+
         }
 
         public async Task RunAsync()
