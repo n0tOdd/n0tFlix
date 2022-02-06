@@ -23,6 +23,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
     /// The open subtitles plugin controller.
     /// </summary>
     [ApiController]
+    [Route("n0tFlix.Plugin.YoutubeDL")]
     [Produces(MediaTypeNames.Application.Json)]
     [Authorize(Policy = "DefaultAuthorization")]
     public class YoutubeDlController : ControllerBase
@@ -41,10 +42,8 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         /// An <see cref="NoContentResult"/> if the login info is valid, a <see cref="BadRequestResult"/> if the request body missing is data
         /// or <see cref="UnauthorizedResult"/> if the login info is not valid.
         /// </returns>
-        [HttpPost("n0tFlix.Plugin.YoutubeDL/GrabStream")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [HttpPost()]
+        [Produces(MediaTypeNames.Application.Json)]
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
             Console.WriteLine(body.URL.ToLower());
