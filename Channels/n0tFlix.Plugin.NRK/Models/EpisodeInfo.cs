@@ -66,7 +66,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public object Subtitle { get; set; }
         }
 
-        public class Image
+        public class image
         {
             
             public string Url { get; set; }
@@ -75,7 +75,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public int Width { get; set; }
         }
 
-        public class BackdropImage
+        public class Backdropimage
         {
             
             public string Url { get; set; }
@@ -84,7 +84,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public int Width { get; set; }
         }
 
-        public class PosterImage
+        public class Posterimage
         {
             
             public string Url { get; set; }
@@ -174,7 +174,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public string AccessibilityValue { get; set; }
         }
 
-        public class Image2
+        public class image2
         {
             
             public string Url { get; set; }
@@ -345,7 +345,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public string OriginalTitle { get; set; }
 
             
-            public IList<Image2> Image { get; set; }
+            public IList<image2> image { get; set; }
 
             
             public string Duration { get; set; }
@@ -396,13 +396,13 @@ namespace n0tFlix.Plugin.NRK.Models
             public Titles Titles { get; set; }
 
             
-            public IList<Image> Image { get; set; }
+            public IList<image> image { get; set; }
 
             
-            public IList<BackdropImage> BackdropImage { get; set; }
+            public IList<Backdropimage> Backdropimage { get; set; }
 
             
-            public IList<PosterImage> PosterImage { get; set; }
+            public IList<Posterimage> Posterimage { get; set; }
 
             
             public bool HasAvailableEpisodes { get; set; }

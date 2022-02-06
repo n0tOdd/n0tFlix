@@ -111,7 +111,7 @@ namespace n0tFlix.Plugin.NRK
             return null;
         }
 
-        #region Channel image configuration
+        #region Channel Image configuration
 
         /// <summary>
         /// 850width and 475 Height are the dimensions that give me the best logo here, else its gonna be all kinds of coco
@@ -136,7 +136,7 @@ namespace n0tFlix.Plugin.NRK
                         });
                     }
                 default:
-                    throw new ArgumentException("Unsupported image type: " + type);
+                    throw new ArgumentException("Unsupported Image type: " + type);
             }
         }
 
@@ -151,7 +151,7 @@ namespace n0tFlix.Plugin.NRK
                 ImageType.Thumb
     };
 
-        #endregion Channel image configuration
+        #endregion Channel Image configuration
 
         public async Task<IEnumerable<MediaSourceInfo>> GetChannelItemMediaInfo(string id, CancellationToken cancellationToken)
             => await this.worker.GetMediaSourceInfo(id, logger, cancellationToken);

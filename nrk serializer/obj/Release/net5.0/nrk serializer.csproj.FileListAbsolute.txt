@@ -1,0 +1,16 @@
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.exe
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.deps.json
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.runtimeconfig.json
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.runtimeconfig.dev.json
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.dll
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\ref\nrk serializer.dll
+D:\n0tFlix\n0tFlix\nrk serializer\bin\Release\net5.0\nrk serializer.pdb
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.dll
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\ref\nrk serializer.dll
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.pdb
+D:\n0tFlix\n0tFlix\nrk serializer\obj\Release\net5.0\nrk serializer.genruntimeconfig.cache

@@ -18,7 +18,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public Self Self { get; set; }
         }
 
-        public class Image
+        public class image
         {
             
             public string Uri { get; set; }
@@ -81,7 +81,7 @@ namespace n0tFlix.Plugin.NRK.Models
             public string SubTitle { get; set; }
 
             
-            public IList<Image> Images { get; set; }
+            public IList<image> images { get; set; }
 
             
             public Links2 Links { get; set; }

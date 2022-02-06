@@ -1,0 +1,11 @@
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\n0tFlix.Plugin.NRK.deps.json
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\n0tFlix.Plugin.NRK.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\ref\n0tFlix.Plugin.NRK.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\n0tFlix.Plugin.NRK.pdb
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\ref\n0tFlix.Plugin.NRK.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.pdb

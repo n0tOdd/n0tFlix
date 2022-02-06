@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.NRK", "Chann
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.TvSubtitles", "Subtitles\n0tFlix.Plugin.TvSubtitles\n0tFlix.Plugin.TvSubtitles.csproj", "{828B56FA-7E9F-40F1-AF53-B217DE31B6BF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{914F237F-A6FD-42B2-BF96-00527868C10E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nrk serializer", "nrk serializer\nrk serializer.csproj", "{8495D7C9-C194-40DC-846F-3A6D0C7428D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,10 @@ Global
 		{828B56FA-7E9F-40F1-AF53-B217DE31B6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{828B56FA-7E9F-40F1-AF53-B217DE31B6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{828B56FA-7E9F-40F1-AF53-B217DE31B6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8495D7C9-C194-40DC-846F-3A6D0C7428D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8495D7C9-C194-40DC-846F-3A6D0C7428D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8495D7C9-C194-40DC-846F-3A6D0C7428D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8495D7C9-C194-40DC-846F-3A6D0C7428D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +93,7 @@ Global
 		{03B64C8B-CA14-487A-900F-B5B10BA1734F} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{20D84C2C-47D2-44E2-BA84-34FD4CD240CA} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
 		{828B56FA-7E9F-40F1-AF53-B217DE31B6BF} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
+		{8495D7C9-C194-40DC-846F-3A6D0C7428D3} = {914F237F-A6FD-42B2-BF96-00527868C10E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

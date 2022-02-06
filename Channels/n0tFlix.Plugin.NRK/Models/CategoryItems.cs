@@ -8,295 +8,295 @@ namespace n0tFlix.Plugin.NRK.Models
     {
         public class Self
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links
         {
-            public Self Self { get; set; }
+            public Self self { get; set; }
         }
 
-        public class WebImage
+        public class Webimage
         {
-            public string Uri { get; set; }
+            public string uri { get; set; }
 
-            public int Width { get; set; }
+            public int width { get; set; }
         }
 
-        public class DisplayContractImage
+        public class DisplayContractimage
         {
-            public string Id { get; set; }
+            public string id { get; set; }
 
-            public IList<WebImage> WebImages { get; set; }
+            public IList<Webimage> webimages { get; set; }
         }
 
-        public class WebImage2
+        public class Webimage2
         {
-            public string Uri { get; set; }
+            public string uri { get; set; }
 
-            public int Width { get; set; }
+            public int width { get; set; }
         }
 
-        public class FallbackImage
+        public class Fallbackimage
         {
-            public string Id { get; set; }
+            public string id { get; set; }
 
-            public IList<WebImage2> WebImages { get; set; }
+            public IList<Webimage2> webimages { get; set; }
         }
 
         public class DisplayContractContent
         {
-            public string ContentTitle { get; set; }
+            public string contentTitle { get; set; }
 
-            public string Description { get; set; }
+            public string description { get; set; }
 
-            public DisplayContractImage DisplayContractImage { get; set; }
+            public DisplayContractimage displayContractimage { get; set; }
 
-            public FallbackImage FallbackImage { get; set; }
+            public Fallbackimage fallbackimage { get; set; }
         }
 
         public class Self2
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Fargerik
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links2
         {
-            public Self2 Self { get; set; }
+            public Self2 self { get; set; }
 
-            public Fargerik Fargerik { get; set; }
+            public Fargerik fargerik { get; set; }
         }
 
         public class LegalAge
         {
-            public string Id { get; set; }
+            public string id { get; set; }
 
-            public string DisplayValue { get; set; }
+            public string displayValue { get; set; }
 
-            public string DisplayAge { get; set; }
+            public string displayAge { get; set; }
         }
 
         public class UsageRights
         {
-            public bool IsGeoBlocked { get; set; }
+            public bool isGeoBlocked { get; set; }
         }
 
         public class Series
         {
-            public Links2 Links { get; set; }
+            public Links2 links { get; set; }
 
-            public LegalAge LegalAge { get; set; }
+            public LegalAge legalAge { get; set; }
 
-            public UsageRights UsageRights { get; set; }
+            public UsageRights usageRights { get; set; }
         }
 
         public class Self3
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class MediaElement
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Series2
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Season
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Playback
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links3
         {
             
-            public Self3 Self { get; set; }
+            public Self3 self { get; set; }
 
             
-            public MediaElement MediaElement { get; set; }
+            public MediaElement mediaElement { get; set; }
 
             
-            public Series2 Series { get; set; }
+            public Series2 series { get; set; }
 
             
-            public Season Season { get; set; }
+            public Season season { get; set; }
 
             
-            public Playback Playback { get; set; }
+            public Playback playback { get; set; }
         }
 
         public class LegalAge2
         {
             
-            public string Id { get; set; }
+            public string id { get; set; }
 
             
-            public string DisplayValue { get; set; }
+            public string displayValue { get; set; }
 
             
-            public string DisplayAge { get; set; }
+            public string displayAge { get; set; }
         }
 
         public class UsageRights2
         {
             
-            public bool IsGeoBlocked { get; set; }
+            public bool isGeoBlocked { get; set; }
         }
 
         public class Episode
         {
             
-            public Links3 Links { get; set; }
+            public Links3 links { get; set; }
 
             
-            public string Duration { get; set; }
+            public string duration { get; set; }
 
             
-            public LegalAge2 LegalAge { get; set; }
+            public LegalAge2 legalAge { get; set; }
 
             
-            public UsageRights2 UsageRights { get; set; }
+            public UsageRights2 usageRights { get; set; }
         }
 
         public class Self4
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class MediaElement2
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Playback2
         {
             
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links4
         {
             
-            public Self4 Self { get; set; }
+            public Self4 self { get; set; }
 
             
-            public MediaElement2 MediaElement { get; set; }
+            public MediaElement2 mediaElement { get; set; }
 
             
-            public Playback2 Playback { get; set; }
+            public Playback2 playback { get; set; }
         }
 
         public class LegalAge3
         {
             
-            public string Id { get; set; }
+            public string id { get; set; }
 
             
-            public string DisplayValue { get; set; }
+            public string displayValue { get; set; }
 
             
-            public string DisplayAge { get; set; }
+            public string displayAge { get; set; }
         }
 
         public class UsageRights3
         {
             
-            public bool IsGeoBlocked { get; set; }
+            public bool isGeoBlocked { get; set; }
         }
 
         public class StandaloneProgram
         {
             
-            public Links4 Links { get; set; }
+            public Links4 links { get; set; }
 
             
-            public string Duration { get; set; }
+            public string duration { get; set; }
 
             
-            public LegalAge3 LegalAge { get; set; }
+            public LegalAge3 legalAge { get; set; }
 
             
-            public UsageRights3 UsageRights { get; set; }
+            public UsageRights3 usageRights { get; set; }
         }
 
         public class Plug
         {
             
-            public string TargetType { get; set; }
+            public string targetType { get; set; }
 
             
-            public DisplayContractContent DisplayContractContent { get; set; }
+            public DisplayContractContent displayContractContent { get; set; }
 
             
-            public Series Series { get; set; }
+            public Series series { get; set; }
 
             
-            public Episode Episode { get; set; }
+            public Episode episode { get; set; }
 
             
-            public StandaloneProgram StandaloneProgram { get; set; }
+            public StandaloneProgram standaloneProgram { get; set; }
         }
 
         public class Included
         {
             
-            public string Title { get; set; }
+            public string title { get; set; }
 
             
-            public int Count { get; set; }
+            public int count { get; set; }
 
             
-            public string DisplayContract { get; set; }
+            public string displayContract { get; set; }
 
             
-            public IList<Plug> Plugs { get; set; }
+            public IList<Plug> plugs { get; set; }
         }
 
         public class Section
         {
             
-            public string Type { get; set; }
+            public string type { get; set; }
 
             
-            public Included Included { get; set; }
+            public Included included { get; set; }
         }
 
         public class root
         {
             
-            public Links Links { get; set; }
+            public Links links { get; set; }
 
             
-            public string PublishedTime { get; set; }
+            public string publishedTime { get; set; }
 
             
-            public string Id { get; set; }
+            public string id { get; set; }
 
             
-            public string Title { get; set; }
+            public string sitle { get; set; }
 
             
-            public IList<Section> Sections { get; set; }
+            public IList<Section> sections { get; set; }
         }
     }
 }

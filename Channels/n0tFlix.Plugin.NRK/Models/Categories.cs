@@ -11,61 +11,61 @@ namespace n0tFlix.Plugin.NRK.Models
     {
         public class Self
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links
         {
-            public Self Self { get; set; }
+            public Self self { get; set; }
         }
 
         public class Self2
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class AccessibilityVersion
         {
-            public string Href { get; set; }
+            public string href { get; set; }
         }
 
         public class Links2
         {
-            public Self2 Self { get; set; }
+            public Self2 self { get; set; }
 
-            public AccessibilityVersion AccessibilityVersion { get; set; }
+            public AccessibilityVersion accessibilityVersion { get; set; }
         }
 
-        public class WebImage
+        public class Webimage
         {
-            public string Uri { get; set; }
+            public string uri { get; set; }
 
-            public int Width { get; set; }
+            public int width { get; set; }
         }
 
-        public class Image
+        public class image
         {
-            public string Id { get; set; }
+            public string id { get; set; }
 
-            public IList<WebImage> WebImages { get; set; }
+            public IList<Webimage> webimages { get; set; }
         }
 
         public class PageListItem
         {
-            public Links2 Links { get; set; }
+            public Links2 links { get; set; }
 
-            public string Id { get; set; }
+            public string id { get; set; }
 
-            public string Title { get; set; }
+            public string title { get; set; }
 
-            public Image Image { get; set; }
+            public image image { get; set; }
         }
 
         public class root
         {
-            public Links Links { get; set; }
+            public Links links { get; set; }
 
-            public IList<PageListItem> PageListItems { get; set; }
+            public IList<PageListItem> pageListItems { get; set; }
         }
 
         public static async Task<root> GetRoot()

@@ -35,17 +35,17 @@ namespace n0tFlix.Plugin.NRK
                 logger.LogDebug("Grabbing categories");
                 Categories.root root = await Categories.GetRoot();
                 ChannelItemResult result = new ChannelItemResult();
-                foreach (var v in root.PageListItems)
+                foreach (var v in root.pageListItems)
                 {
                     result.Items.Add(new ChannelItemInfo
                     {
-                        Id = "https://psapi.nrk.no/tv/pages/" + v.Id,
-                        Name = v.Title,
+                        Id = "https://psapi.nrk.no/tv/pages/" + v.id,
+                        Name = v.title,
                         FolderType = ChannelFolderType.Container,
                         Type = ChannelItemType.Folder,
                         MediaType = ChannelMediaType.Video,
-                        HomePageUrl = "https://tv.nrk.no" + v.Links.Self.Href,
-                        ImageUrl = v.Image.WebImages[0].Uri ?? v.Image.WebImages[1].Uri ?? v.Image.WebImages[2].Uri ?? v.Image.WebImages[3].Uri ?? v.Image.WebImages[4].Uri
+                        HomePageUrl = "https://tv.nrk.no" + v.links.self.href,
+                        ImageUrl = v.image.webimages[0].uri ?? v.image.webimages[1].uri ?? v.image.webimages[2].uri ?? v.image.webimages[3].uri ?? v.image.webimages[4].uri
                     });
                     result.TotalRecordCount++;
                 }
@@ -76,60 +76,60 @@ namespace n0tFlix.Plugin.NRK
                 string json = await httpClient.GetStringAsync(query.FolderId);
                 var root = System.Text.Json.JsonSerializer.Deserialize<CategoryItems.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
-                foreach (var v in root.Sections)
+                foreach (var v in root.sections)
                 {
-                    foreach (var p in v.Included.Plugs)
+                    foreach (var p in v.included.plugs)
                     {
                         try
 
                         {
                             string mainurl = string.Empty;
-                            if (p.TargetType == "series")
+                            if (p.targetType == "series")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no/tv/catalog" + p.Series.Links.Self.Href,
-                                    Name = p.DisplayContractContent.ContentTitle,
-                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri,
+                                    Id = "https://psapi.nrk.no/tv/catalog" + p.series.links.self.href,
+                                    Name = p.displayContractContent.contentTitle,
+                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri,
                                     FolderType = ChannelFolderType.Container,
                                     Type = ChannelItemType.Folder,
 
-                                    SeriesName = p.DisplayContractContent.ContentTitle,
+                                    SeriesName = p.displayContractContent.contentTitle,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.Series.Links.Self.Href,
-                                    Overview = p.DisplayContractContent.Description,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.series.links.self.href,
+                                    Overview = p.displayContractContent.description,
                                 });
                                 result.TotalRecordCount++;
                             }
-                            else if (p.TargetType == "standaloneProgram")
+                            else if (p.targetType == "standaloneProgram")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no" + p.StandaloneProgram.Links.Playback.Href,
-                                    Name = p.DisplayContractContent.ContentTitle,
-                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri,
+                                    Id = "https://psapi.nrk.no" + p.standaloneProgram.links.playback.href,
+                                    Name = p.displayContractContent.contentTitle,
+                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri,
                                     FolderType = ChannelFolderType.Container,
                                     Type = ChannelItemType.Media,
                                     //           RunTimeTicks = TimeSpan.Parse(p.StandaloneProgram.Duration).Ticks,
-                                    Overview = p.DisplayContractContent.Description,
+                                    Overview = p.displayContractContent.description,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.StandaloneProgram.Links.Self.Href,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.standaloneProgram.links.self.href,
                                 });
                                 result.TotalRecordCount++;
                             }
-                            else if (p.TargetType == "episode")
+                            else if (p.targetType == "episode")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no" + p.Episode.Links.Playback.Href,
-                                    Name = p.DisplayContractContent.ContentTitle,
-                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri ?? p.DisplayContractContent.FallbackImage.WebImages[0].Uri,
+                                    Id = "https://psapi.nrk.no" + p.episode.links.playback.href,
+                                    Name = p.displayContractContent.contentTitle,
+                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri ?? p.displayContractContent.fallbackimage.webimages[0].uri,
                                     FolderType = ChannelFolderType.Container,
                                     //           RunTimeTicks = TimeSpan.Parse(p.Episode.Duration).Ticks,
                                     Type = ChannelItemType.Media,
-                                    Overview = p.DisplayContractContent.Description,
+                                    Overview = p.displayContractContent.description,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.Episode.Links.Self.Href,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.episode.links.self.href,
                                 });
                                 result.TotalRecordCount++;
                             }
@@ -222,7 +222,7 @@ namespace n0tFlix.Plugin.NRK
                         FolderType = ChannelFolderType.Container,
                         SeriesName = root.Titles.Title,
                         Name = ep.Titles.Title,
-                        ImageUrl = ep.Image[0].Url ?? ep.Image[1].Url ?? ep.Image[2].Url ?? ep.Image[3].Url ?? ep.Image[4].Url ?? ep.Image[5].Url,
+                        ImageUrl = ep.image[0].Url ?? ep.image[1].Url ?? ep.image[2].Url ?? ep.image[3].Url ?? ep.image[4].Url ?? ep.image[5].Url,
                         Overview = ep.Titles.Subtitle,
                         HomePageUrl = ep.Links.Share.Href,
                         Id = "https://psapi.nrk.no" + ep.Links.Playback.Href,
@@ -258,7 +258,7 @@ namespace n0tFlix.Plugin.NRK
                     Name = head.Title,
                     Id = "https://psapi.nrk.no" + head.Links.Seriespage.Href,
                     Overview = head.SubTitle,
-                    ImageUrl = head.Images[0].Uri ?? head.Images[1].Uri ?? head.Images[2].Uri ?? head.Images[3].Uri ?? head.Images[4].Uri ?? head.Images[5].Uri,
+                    ImageUrl = head.images[0].Uri ?? head.images[1].Uri ?? head.images[2].Uri ?? head.images[3].Uri ?? head.images[4].Uri ?? head.images[5].Uri,
                     FolderType = ChannelFolderType.Container,
                     Type = ChannelItemType.Folder,
                     SeriesName = head.Title,
