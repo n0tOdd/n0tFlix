@@ -50,11 +50,12 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
             Console.WriteLine(body.URL.ToLower());
-            NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
+
+            NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
       //      YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-            youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
-            youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
+      //      youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
+          //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
             /*youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;

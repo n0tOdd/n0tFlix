@@ -17,7 +17,7 @@ namespace n0tFlix.Plugin.NRK
         public static Plugin Instance { get; private set; }
 
         #region Configuration Variables for the plugin, remember to update the version on upgrades
-
+       
         /// <summary>
         /// The name of youre plugin, we are gonna use the same variable all over so you just need to edit it this once ;)
         /// </summary>

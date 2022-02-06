@@ -41,6 +41,7 @@ namespace n0tFlix.Plugin.YoutubeDL
             string youtube_dl_path = string.Empty;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
+                
                 if (!File.Exists(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe")))
                 {
                     Logger.LogDebug("Downloading youtube-dl.exe");
@@ -50,11 +51,11 @@ namespace n0tFlix.Plugin.YoutubeDL
                         await youtubeDL.CopyToAsync(fs);
                     }
                 }
-                youtube_dl_path = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe");
+                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl.exe");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                if (!File.Exists(Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl")))
+                if (!File.Exists(Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl")))
                 {
                     Logger.LogDebug("Downloading youtube-dl");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl");
@@ -63,7 +64,7 @@ namespace n0tFlix.Plugin.YoutubeDL
                         await youtubeDL.CopyToAsync(fs);
                     }
                     //dont belive this should give any output?
-                    youtube_dl_path =Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl");
+                    Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl");
                 }
             }
             else

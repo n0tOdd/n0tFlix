@@ -9,5 +9,7 @@ namespace n0tFlix.Plugin.YoutubeDL.Configuration
 {
     public class PluginConfiguration : BasePluginConfiguration
     {
+
+        public string YoutubeDlFilePath { get; set; } = string.Empty;
     }
 }
