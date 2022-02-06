@@ -107,11 +107,11 @@
     "imageUrl": "https://iconape.com/wp-content/png_logo_vector/nrk-tv-logo.png",
     "versions": [
       {
-        "version": "0.0.1.0",
+        "version": "0.0.1.1",
         "changelog": "test release",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
-        "checksum": "F5D951DDA32F0FDD322521CDA1247CF5",
+        "checksum": "42C447A98FC3A118E652C094CD2EBC66",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]

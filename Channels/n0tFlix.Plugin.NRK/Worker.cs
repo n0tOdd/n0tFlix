@@ -59,7 +59,8 @@ namespace n0tFlix.Plugin.NRK
                     });
                     result.TotalRecordCount++;
                 }
-                memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
+                if(result.TotalRecordCount > 0)
+                    memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
         }
@@ -84,6 +85,7 @@ namespace n0tFlix.Plugin.NRK
                 string json = await httpClient.GetStringAsync(query.FolderId,cancellationToken);
                 var root = System.Text.Json.JsonSerializer.Deserialize<CategoryItems.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
+                logger.LogError(root.Sections.Count.ToString());
                 foreach (var v in root.Sections)
                 {
                     foreach (var p in v.Included.Plugs)
