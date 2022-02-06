@@ -26,9 +26,9 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         public async Task<ActionResult> GetStreamableLink([FromBody] CollectInfo body)
         {
             if (string.IsNullOrEmpty(body.URL))
-                return BadRequest();
-
-            return Ok();
+                return BadRequest(new { Message = "BAD" });
+            
+            return Ok(new { Message = "WIN" });
         }
     }
 
