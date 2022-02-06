@@ -19,63 +19,6 @@
     ]
   },
   {
-    "guid": "91e0a973-35c4-43c3-9280-c6f40a288a34",
-    "name": "Subscene",
-    "description": "Downloads subtitles from subscene",
-    "overview": "grabs subtitles from subscene",
-    "owner": "n0tme",
-    "category": "n0tSubtitles",
-    "imageUrl": "https://image.winudf.com/v2/image/c3Vic2NlbmUuYXBwX2ljb25fMTUyNTczNDMxN18wMzM/icon.png?w=&fakeurl=1",
-    "versions": [
-      {
-        "version": "0.0.0.1",
-        "changelog": "First release",
-        "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Subscene.zip",
-        "checksum": "A0F064B00D06C839D5FF85EE0AD8BD92",
-        "timestamp": "2022-01-08T17:21:56Z"
-      }
-    ]
-  },
-  {
-    "guid": "40d962d7-5a82-4ded-b201-1e8e15a6b1c7",
-    "name": "Podnapisi",
-    "description": "Subtitle downloader for podnapisi",
-    "overview": "Grabs subtitles from podnapisi",
-    "owner": "n0tme",
-    "category": "n0tSubtitles",
-    "imageUrl": "https://i0.wp.com/kodibeginner.com/wp-content/uploads/2019/09/podnapisi-kodi.jpg",
-    "versions": [
-      {
-        "version": "0.0.0.5",
-        "changelog": "testing",
-        "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.zip",
-        "checksum": "7A69BD69527CA8B28F0A59F831740C0A",
-        "timestamp": "2022-01-08T17:33:56Z"
-      }
-    ]
-  },
-  {
-    "guid": "691ee974-b6a8-4ab0-a6c4-1342c8a07f8a",
-    "name": "SubDivX",
-    "description": "Subtitle downloader for SubDivX",
-    "overview": "Grabs subtitles from SubDivX",
-    "owner": "n0tme",
-    "category": "n0tSubtitles",
-    "imageUrl": "http://mirrors.kodi.tv/addons/leia/service.subtitles.subdivx/icon.png",
-    "versions": [
-      {
-        "version": "0.0.0.1",
-        "changelog": "Got some problems with the language blll",
-        "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.SubDivX.zip",
-        "checksum": "75DC36FEEB4E4C76434500C37CC86889",
-        "timestamp": "2022-01-08T17:33:56Z"
-      }
-    ]
-  },
-  {
     "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
     "name": "Yifi",
     "description": "Subtitle downloader for Yifi",
@@ -90,6 +33,25 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "4F55C43DD1FE5611B1D50CAE46274F6D",
+        "timestamp": "2022-01-08T17:33:56Z"
+      }
+    ]
+  },
+  {
+    "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
+    "name": "Nrk ",
+    "description": "Channel for watching https://tv.nrk.no/",
+    "overview": "Channel for watching https://tv.nrk.no/",
+    "owner": "n0tme",
+    "category": "n0tChannels",
+    "imageUrl": "https://info.nrk.no/wp-content/uploads/2020/02/NRKTV_app.png",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "test release",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
+        "checksum": "3ADFCF2C87AE81DE07BADADDAEEC5096",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]
