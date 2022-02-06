@@ -148,11 +148,7 @@ namespace n0tFlix.Plugin.NRK
         public IEnumerable<ImageType> GetSupportedChannelImages()
             => new List<ImageType>
             {
-                ImageType.Thumb,
-                ImageType.Art,
-                ImageType.Banner,
-                ImageType.Logo,
-                ImageType.Primary
+                ImageType.Thumb
     };
 
         #endregion Channel image configuration

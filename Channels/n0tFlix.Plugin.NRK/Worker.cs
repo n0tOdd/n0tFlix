@@ -24,6 +24,7 @@ namespace n0tFlix.Plugin.NRK
         /// <returns><see cref="ChannelItemResult"/> containing the types of categories.</returns>
         internal async Task<ChannelItemResult> GetChannelCategoriesAsync(ILogger logger, IMemoryCache memoryCache)
         {
+            logger.LogError("GetChannelCategoriesAsync");
             if (memoryCache.TryGetValue("nrk-categories", out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetChannelCategoriesAsync), "nrk-categories");
@@ -62,6 +63,7 @@ namespace n0tFlix.Plugin.NRK
         /// <returns></returns>
         internal async Task<ChannelItemResult> GetCategoryItemsAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
         {
+            logger.LogError("GetCategoryItemsAsync");
             if (memoryCache.TryGetValue("nrk-categories-" + query.FolderId, out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetCategoryItemsAsync), query.FolderId);
@@ -153,6 +155,8 @@ namespace n0tFlix.Plugin.NRK
         /// <returns></returns>
         internal async Task<ChannelItemResult> GetSeasonInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
         {
+            logger.LogError("GetSeasonInfoAsync");
+
             if (memoryCache.TryGetValue("nrk-categories-seasoninfo-" + query.FolderId, out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetSeasonInfoAsync), "nrk-categories-seasoninfo-" + query.FolderId);
@@ -196,6 +200,8 @@ namespace n0tFlix.Plugin.NRK
         /// <returns></returns>
         internal async Task<ChannelItemResult> GetEpisodeInfoAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
         {
+            logger.LogError("GetEpisodeInfoAsync");
+
             if (memoryCache.TryGetValue("nrk-episodeinfo-" + query.FolderId, out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetSeasonInfoAsync), "nrk-episodeinfo-" + query.FolderId);
@@ -240,7 +246,7 @@ namespace n0tFlix.Plugin.NRK
         /// <returns></returns>
         internal async Task<IEnumerable<ChannelItemInfo>> GetHeadlinersInfoAsync(ILogger logger, IMemoryCache memoryCache)
         {
-            logger.LogInformation("Grabbing latest headliners");
+            logger.LogError("Grabbing latest headliners");
             HttpClient httpClient = new HttpClient();
             string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/headliners/default");
             var root = Newtonsoft.Json.JsonConvert.DeserializeObject<HeadlinersInfo.root>(json);
@@ -271,7 +277,7 @@ namespace n0tFlix.Plugin.NRK
         /// <returns></returns>
         internal async Task<IEnumerable<MediaSourceInfo>> GetMediaSourceInfo(string id, ILogger logger, CancellationToken cancellationToken)
         {
-            logger.LogInformation("Grabbing stream data for " + id);
+            logger.LogError("Grabbing stream data for " + id);
             HttpClient httpClient = new HttpClient();
             string json = await httpClient.GetStringAsync(id);
             var root = Newtonsoft.Json.JsonConvert.DeserializeObject<PlayBackInfo.root>(json);
