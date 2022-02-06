@@ -71,18 +71,15 @@ namespace n0tFlix.Plugin.Addic7ed
                 var lang = result.GetElementsByClassName("language").Where(x => x.TextContent.ToLower().StartsWith(request.Language)).FirstOrDefault();
                 if (lang == null)
                 {
-                    logger.LogError("null?");
                     continue;
                 }
                 try
                 {
                     string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
-                    this.logger.LogError(auth);
                     
-                    string id = "https://www.addic7ed.com" + lang.ParentElement.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang;
-                    this.logger.LogError(id);
+                    string id = "https://www.addic7ed.com" + lang.ParentElement.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang.TextContent;
+                    string title = document.GetElementsByClassName("titulo").First().TextContent;
                     string name = result.GetElementsByClassName("NewsTitle").First().TextContent;
-                    this.logger.LogError(name);
 
 
                     list.Add(new RemoteSubtitleInfo()
@@ -93,7 +90,8 @@ namespace n0tFlix.Plugin.Addic7ed
                         Format = "srt",
                         ThreeLetterISOLanguageName = request.Language,
 
-                        Name = name
+                        Name = title,
+                         
                     });
                 }
                 catch(Exception ex)
