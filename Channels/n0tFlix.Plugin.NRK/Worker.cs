@@ -48,17 +48,24 @@ namespace n0tFlix.Plugin.NRK
                 ChannelItemResult result = new ChannelItemResult();
                 foreach (var v in root.pageListItems)
                 {
-                    result.Items.Add(new ChannelItemInfo
+                    try
                     {
-                        Id = "https://psapi.nrk.no/tv/pages/" + v.id,
-                        Name = v.title,
-                        FolderType = ChannelFolderType.Container,
-                        Type = ChannelItemType.Folder,
-                        MediaType = ChannelMediaType.Video,
-                        HomePageUrl = "https://tv.nrk.no" + v.links.self.href,
-                        ImageUrl = v.image.webimages[0].uri ?? v.image.webimages[1].uri ?? v.image.webimages[2].uri ?? v.image.webimages[3].uri ?? v.image.webimages[4].uri
-                    });
-                    result.TotalRecordCount++;
+                        result.Items.Add(new ChannelItemInfo
+                        {
+                            Id = "https://psapi.nrk.no/tv/pages/" + v.id,
+                            Name = v.title,
+                            FolderType = ChannelFolderType.Container,
+                            Type = ChannelItemType.Folder,
+                            MediaType = ChannelMediaType.Video,
+                            HomePageUrl = "https://tv.nrk.no" + v.links.self.href,
+                            ImageUrl = v.image.webimages[0].uri ?? v.image.webimages[1].uri ?? v.image.webimages[2].uri ?? v.image.webimages[3].uri ?? v.image.webimages[4].uri
+                        });
+                        result.TotalRecordCount++;
+                    }
+                    catch(Exception ex)
+                    {
+                        this.logger.LogError("Error: " + ex.Message);
+                    }
                 }
                 logger.LogError("Collected " + result.TotalRecordCount.ToString() + " categories for this channel");
                 memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
