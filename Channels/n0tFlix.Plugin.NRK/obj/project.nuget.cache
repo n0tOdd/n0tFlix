@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hwpfo8FU40WMaPlsK3xA711gfa+RckAExAviqIqgyczO4UX13zferVlaIIk9rFhHGUyIBvC9h/clXzfXZrAE7Q==",
+  "dgSpecHash": "2RIV6HlmLcbK1yN/TrwT4/Y1st+WKttylGVnNfWeoKjOxxP/ZnW4ehWQNXXw0ssDoq117fMpHOuCEIpaNYIX2Q==",
   "success": true,
   "projectFilePath": "D:\\n0tFlix\\n0tFlix\\Channels\\n0tFlix.Plugin.NRK\\n0tFlix.Plugin.NRK.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.controller\\10.7.7\\jellyfin.controller.10.7.7.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.data\\10.7.7\\jellyfin.data.10.7.7.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.model\\10.7.7\\jellyfin.model.10.7.7.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\jellyfin.naming\\10.7.7\\jellyfin.naming.10.7.7.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.3\\microsoft.data.sqlite.core.5.0.3.nupkg.sha512",
@@ -25,6 +26,7 @@
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
+    "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",

@@ -10,3 +10,6 @@ D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.N
 D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\ref\n0tFlix.Plugin.NRK.dll
 D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.pdb
 D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\bin\Debug\net5.0\n0tFlix.Helpers.pdb
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.NRK\obj\Debug\net5.0\n0tFlix.Plugin.NRK.csproj.CopyComplete

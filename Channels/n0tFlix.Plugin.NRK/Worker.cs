@@ -11,18 +11,29 @@ using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Entities;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
+using n0tFlix.Helpers.Downloader;
 using n0tFlix.Plugin.NRK.Models;
 
 namespace n0tFlix.Plugin.NRK
 {
     public class Worker
     {
+        private readonly n0tHttpClient httpClient;
+        private readonly ILoggerFactory loggerFactory;
+        private readonly ILogger<Worker> logger;
+
+        public Worker(ILoggerFactory loggerFactory)
+        {
+            httpClient = new n0tHttpClient(loggerFactory);
+            this.loggerFactory = loggerFactory;
+            this.logger = loggerFactory.CreateLogger<Worker>();
+        }
         /// <summary>
         /// Henter alle channel typene vi bruker som start side da man åpner pluginet
         /// gir en søt liten oversikt over ting som man kanskje vil søke opp
         /// </summary>
         /// <returns><see cref="ChannelItemResult"/> containing the types of categories.</returns>
-        internal async Task<ChannelItemResult> GetChannelCategoriesAsync(ILogger logger, IMemoryCache memoryCache)
+        internal async Task<ChannelItemResult> GetChannelCategoriesAsync(ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
             logger.LogError("GetChannelCategoriesAsync");
             if (memoryCache.TryGetValue("nrk-categories", out ChannelItemResult cachedValue))
@@ -32,8 +43,8 @@ namespace n0tFlix.Plugin.NRK
             }
             else
             {
-                logger.LogDebug("Grabbing categories");
-                Categories.root root = await Categories.GetRoot();
+                logger.LogError("Grabbing categories");
+                var root = System.Text.Json.JsonSerializer.Deserialize<Categories.root>(await  httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages", cancellationToken));
                 ChannelItemResult result = new ChannelItemResult();
                 foreach (var v in root.pageListItems)
                 {
@@ -49,6 +60,7 @@ namespace n0tFlix.Plugin.NRK
                     });
                     result.TotalRecordCount++;
                 }
+                logger.LogError("Collected " + result.TotalRecordCount.ToString() + " categories for this channel");
                 memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
@@ -61,7 +73,7 @@ namespace n0tFlix.Plugin.NRK
         /// <param name="logger"></param>
         /// <param name="memoryCache"></param>
         /// <returns></returns>
-        internal async Task<ChannelItemResult> GetCategoryItemsAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache)
+        internal async Task<ChannelItemResult> GetCategoryItemsAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache, CancellationToken cancellationToken)
         {
             logger.LogError("GetCategoryItemsAsync");
             if (memoryCache.TryGetValue("nrk-categories-" + query.FolderId, out ChannelItemResult cachedValue))
@@ -72,8 +84,8 @@ namespace n0tFlix.Plugin.NRK
             else
             {
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetCategoryItemsAsync), query.FolderId);
-                HttpClient httpClient = new HttpClient();
-                string json = await httpClient.GetStringAsync(query.FolderId);
+                
+                string json = await httpClient.GetStringAsync(query.FolderId,cancellationToken);
                 var root = System.Text.Json.JsonSerializer.Deserialize<CategoryItems.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
                 foreach (var v in root.sections)

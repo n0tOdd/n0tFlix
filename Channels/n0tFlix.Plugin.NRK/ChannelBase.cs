@@ -51,10 +51,10 @@ namespace n0tFlix.Plugin.NRK
         private readonly Worker worker;
         private IMemoryCache memoryCache;
 
-        public Channel(ILogger<Channel> logger, IMemoryCache memoryCache)
+        public Channel(ILoggerFactory loggerFactory, IMemoryCache memoryCache)
         {
-            this.logger = logger;
-            worker = new Worker();
+            this.logger = loggerFactory.CreateLogger<Channel>();
+            worker = new Worker(loggerFactory);
             this.memoryCache = memoryCache;
             this.logger.LogError(GetType().Namespace + " initialised and ready for use");
         }
@@ -99,9 +99,9 @@ namespace n0tFlix.Plugin.NRK
         public async Task<ChannelItemResult> GetChannelItems(InternalChannelItemQuery query, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(query.FolderId))
-                return await worker.GetChannelCategoriesAsync(logger, memoryCache);
+                return await worker.GetChannelCategoriesAsync(logger, memoryCache, cancellationToken);
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/pages/"))
-                return await worker.GetCategoryItemsAsync(query, logger, memoryCache);
+                return await worker.GetCategoryItemsAsync(query, logger, memoryCache,cancellationToken);
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/catalog/series/") && !query.FolderId.Contains("seasons"))
                 return await worker.GetSeasonInfoAsync(query, logger, memoryCache);
             else if (query.FolderId.StartsWith("https://psapi.nrk.no/tv/catalog/series/") && query.FolderId.Contains("seasons"))
@@ -169,11 +169,11 @@ namespace n0tFlix.Plugin.NRK
         public async Task Execute(CancellationToken cancellationToken, IProgress<double> progress)
         {
             //Grabs all categories so we have them in the memorycache
-            var results = await worker.GetChannelCategoriesAsync(logger, memoryCache);
+            var results = await worker.GetChannelCategoriesAsync(logger, memoryCache,cancellationToken);
             //Grabs all the category content so we have that in memorycache too
             foreach (var result in results.Items)
             {
-                await worker.GetCategoryItemsAsync(new InternalChannelItemQuery() { FolderId = result.Id }, logger, memoryCache);
+                await worker.GetCategoryItemsAsync(new InternalChannelItemQuery() { FolderId = result.Id }, logger, memoryCache,cancellationToken);
             }
         }
 

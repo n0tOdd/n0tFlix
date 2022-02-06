@@ -68,12 +68,6 @@ namespace n0tFlix.Plugin.NRK.Models
             public IList<PageListItem> pageListItems { get; set; }
         }
 
-        public static async Task<root> GetRoot()
-        {
-            HttpClient httpClient = new HttpClient();
-            string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages");
-            root root = System.Text.Json.JsonSerializer.Deserialize<root>(json);
-            return root;
-        }
+
     }
 }

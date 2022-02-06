@@ -9,7 +9,8 @@
       "n0tFlix.Plugin.NRK/1.0.0": {
         "dependencies": {
           "Jellyfin.Common": "10.7.7",
-          "Jellyfin.Controller": "10.7.7"
+          "Jellyfin.Controller": "10.7.7",
+          "n0tFlix.Helpers": "1.0.0"
         },
         "runtime": {
           "n0tFlix.Plugin.NRK.dll": {}
@@ -66,6 +67,17 @@
         },
         "runtime": {
           "lib/net5.0/MediaBrowser.Model.dll": {
+            "assemblyVersion": "10.7.7.0",
+            "fileVersion": "10.7.7.0"
+          }
+        }
+      },
+      "Jellyfin.Naming/10.7.7": {
+        "dependencies": {
+          "Jellyfin.Model": "10.7.7"
+        },
+        "runtime": {
+          "lib/net5.0/Emby.Naming.dll": {
             "assemblyVersion": "10.7.7.0",
             "fileVersion": "10.7.7.0"
           }
@@ -242,6 +254,20 @@
       "Microsoft.Extensions.DependencyModel/5.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http/5.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.51904"
           }
@@ -445,7 +471,20 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {}
+      "System.Threading.Tasks.Dataflow/5.0.0": {},
+      "n0tFlix.Helpers/1.0.0": {
+        "dependencies": {
+          "Jellyfin.Common": "10.7.7",
+          "Jellyfin.Controller": "10.7.7",
+          "Jellyfin.Data": "10.7.7",
+          "Jellyfin.Model": "10.7.7",
+          "Jellyfin.Naming": "10.7.7",
+          "Microsoft.Extensions.Http": "5.0.0"
+        },
+        "runtime": {
+          "n0tFlix.Helpers.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -481,6 +520,13 @@
       "sha512": "sha512-o1azaV54/ueyhNMHEuAW5j2ESEnjKoozukXxpFZf1MTewPA1u/Y/HfOFEbBqV+HbJ65CfpDukaSEL8yMSnDItw==",
       "path": "jellyfin.model/10.7.7",
       "hashPath": "jellyfin.model.10.7.7.nupkg.sha512"
+    },
+    "Jellyfin.Naming/10.7.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/JKesjbtBBJUsMq5nPiLylYd/aJ85W+0PvVWDO0Ay6xC8WWSHPILcendo4IMaalDNN2MegbLIXO9GfJ07IJAhw==",
+      "path": "jellyfin.naming/10.7.7",
+      "hashPath": "jellyfin.naming.10.7.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
       "type": "package",
@@ -600,6 +646,13 @@
       "sha512": "sha512-umBECCoMC+sOUgm083yFr8SxTobUOcPFH4AXigdO2xJiszCHAnmeDl4qPphJt+oaJ/XIfV1wOjIts2nRnki61Q==",
       "path": "microsoft.extensions.dependencymodel/5.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kT1ijDKZuSUhBtYoC1sXrmVKP7mA08h9Xrsr4VrS/QOtiKCEtUTTd7dd3XI9dwAb46tZSak13q/zdIcr4jqbyg==",
+      "path": "microsoft.extensions.http/5.0.0",
+      "hashPath": "microsoft.extensions.http.5.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/5.0.0": {
       "type": "package",
@@ -747,6 +800,11 @@
       "sha512": "sha512-NBp0zSAMZp4muDje6XmbDfmkqw9+qsDCHp+YMEtnVgHEjQZ3Q7MzFTTp3eHqpExn4BwMrS7JkUVOTcVchig4Sw==",
       "path": "system.threading.tasks.dataflow/5.0.0",
       "hashPath": "system.threading.tasks.dataflow.5.0.0.nupkg.sha512"
+    },
+    "n0tFlix.Helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

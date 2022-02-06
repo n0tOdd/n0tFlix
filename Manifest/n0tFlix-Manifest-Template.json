@@ -107,11 +107,11 @@
     "imageUrl": "https://info.nrk.no/wp-content/uploads/2020/02/NRKTV_app.png",
     "versions": [
       {
-        "version": "0.0.0.7",
+        "version": "0.0.0.8",
         "changelog": "test release",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
-        "checksum": "884BD660F4AD4E927A3A13C37E4C84AB",
+        "checksum": "9C7E61EB595FFB0A5AA899BB033061FB",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]
