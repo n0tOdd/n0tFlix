@@ -13,7 +13,7 @@
         "changelog": "Tries to download youtubedl to our plugin folder, but needs python installed to work",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "CA187D0B16993905158F14FF554EE0D6",
+        "checksum": "2FEAD639B7CE8ADB46F70DBF5AF32872",
         "timestamp": "2022-01-08T17:21:56Z"
       }
     ]

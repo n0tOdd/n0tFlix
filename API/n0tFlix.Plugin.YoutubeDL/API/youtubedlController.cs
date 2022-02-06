@@ -63,7 +63,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
           //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
-            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
+          //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.GeneralOptions.IgnoreErrors = true;
             /*youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
