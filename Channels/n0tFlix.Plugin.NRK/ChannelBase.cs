@@ -56,7 +56,7 @@ namespace n0tFlix.Plugin.NRK
             this.logger = logger;
             worker = new Worker();
             this.memoryCache = memoryCache;
-            this.logger.LogInformation(GetType().Namespace + " initialised and ready for use");
+            this.logger.LogError(GetType().Namespace + " initialised and ready for use");
         }
 
         public InternalChannelFeatures GetChannelFeatures()
