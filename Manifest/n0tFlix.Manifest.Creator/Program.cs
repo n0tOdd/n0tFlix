@@ -101,7 +101,7 @@ namespace n0tFlix.Manifest.Creator
                                     overview = Instance.Description,
                                     owner = "n0tme",
                                     imageUrl = rooturl + zipfile.Name.Replace(".zip",".png"),
-                                    version = new System.Collections.Generic.List<Manifestdata.Version>() { ver },
+                                    versions = new System.Collections.Generic.List<Manifestdata.Version>() { ver },
                                 };
                                 liste.Add(manifestdata);
 

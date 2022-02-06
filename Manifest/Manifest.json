@@ -8,14 +8,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "03-DC-2C-3F-E4-9B-64-D5-E7-A0-09-58-82-EF-CB-01",
-        "timestamp": "2/6/2022 11:41:51 AM"
+        "timestamp": "2/6/2022 11:48:29 AM"
       }
     ]
   },
@@ -27,14 +27,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "D5-CC-16-38-94-EF-29-35-47-62-55-2D-2D-01-0C-13",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:29 AM"
       }
     ]
   },
@@ -46,14 +46,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Podnapisi.zip",
         "checksum": "A1-39-07-8F-61-56-82-AB-90-35-7E-45-01-35-0E-85",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   },
@@ -65,14 +65,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.SubDivX.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.SubDivX.zip",
         "checksum": "75-DC-36-FE-EB-4E-4C-76-43-45-00-C3-7C-C8-68-89",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   },
@@ -84,14 +84,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Subscene.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Subscene.zip",
         "checksum": "A0-F0-64-B0-0D-06-C8-39-D5-FF-85-EE-0A-D8-BD-92",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   },
@@ -103,14 +103,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TheSubDB.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TheSubDB.zip",
         "checksum": "98-50-0C-E1-F7-39-E5-C2-57-A5-98-83-91-F1-90-5B",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   },
@@ -122,14 +122,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "BB-1A-1F-EF-AC-5D-37-CA-AB-8A-14-0A-32-DB-9B-1B",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   },
@@ -141,14 +141,14 @@
     "owner": "n0tme",
     "category": "n0tFlix.Plugins",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.png",
-    "version": [
+    "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "E3-8D-39-D5-10-9A-36-90-C3-2D-EC-DF-73-C7-37-C7",
-        "timestamp": "2/6/2022 11:41:52 AM"
+        "timestamp": "2/6/2022 11:48:30 AM"
       }
     ]
   }

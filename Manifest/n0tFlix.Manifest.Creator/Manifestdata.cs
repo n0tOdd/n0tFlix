@@ -22,7 +22,7 @@ namespace n0tFlix.Manifest.Creator
 
         public string imageUrl { get; set; }
 
-        public List<Version> version { get; set; }
+        public List<Version> versions { get; set; }
 
         public class Version
         {

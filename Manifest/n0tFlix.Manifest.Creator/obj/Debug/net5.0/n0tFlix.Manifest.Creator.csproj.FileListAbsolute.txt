@@ -12,3 +12,11 @@ D:\n0tFlix\n0tFlix\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Cr
 D:\n0tFlix\n0tFlix\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.dll
 D:\n0tFlix\n0tFlix\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.pdb
 D:\n0tFlix\n0tFlix\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.genruntimeconfig.cache
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.dll
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.pdb
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.csproj.CopyComplete
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.genruntimeconfig.cache
