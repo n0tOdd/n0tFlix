@@ -64,7 +64,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
                 youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
 
             //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
-            youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
+          //  youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
           //  youtubeDL.Options.VerbositySimulationOptions.Quiet = true;
 
             //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
