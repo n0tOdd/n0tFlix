@@ -63,7 +63,7 @@ namespace n0tFlix.Plugin.YoutubeDL
                         await youtubeDL.CopyToAsync(fs);
                     }
                     //dont belive this should give any output?
-                    youtube_dl_path = Path.Combine(Plugin.Instance.DataFolderPath, "youtube-dl");
+                    youtube_dl_path =Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl");
                 }
             }
             else
