@@ -1191,6 +1191,18 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "NYoutubeDLP/0.11.4": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NYoutubeDLP.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NYoutubeDLP.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -4132,6 +4144,18 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NYoutubeDLP/0.11.4": {
+      "sha512": "6+STFIvE3ETGNRq9rXxaJ88RlxS9sSPZ2jI2R/2udULerpNZCkdwt0Ec8xNhMfNG+WvLkzVXCkDKttTSg1De6g==",
+      "type": "package",
+      "path": "nyoutubedlp/0.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NYoutubeDLP.dll",
+        "nyoutubedlp.0.11.4.nupkg.sha512",
+        "nyoutubedlp.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8285,7 +8309,8 @@
       "Jellyfin.Model >= 10.7.7",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
-      "Microsoft.Extensions.Http >= 5.0.0"
+      "Microsoft.Extensions.Http >= 5.0.0",
+      "NYoutubeDLP >= 0.11.4"
     ]
   },
   "packageFolders": {
@@ -8351,6 +8376,10 @@
           "Microsoft.Extensions.Http": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "NYoutubeDLP": {
+            "target": "Package",
+            "version": "[0.11.4, )"
           }
         },
         "imports": [

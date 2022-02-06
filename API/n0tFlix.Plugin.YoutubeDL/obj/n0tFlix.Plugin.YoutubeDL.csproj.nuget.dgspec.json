@@ -64,6 +64,10 @@
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "NYoutubeDLP": {
+              "target": "Package",
+              "version": "[0.11.4, )"
             }
           },
           "imports": [
