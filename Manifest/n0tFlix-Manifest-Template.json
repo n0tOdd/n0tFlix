@@ -39,6 +39,28 @@
   },
   {
     "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
+    "name": "TvSubtitles",
+    "description": "Subtitle downloader for TvSubtitles",
+    "overview": "Grabs subtitles from TvSubtitles",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://image3.mouthshut.com/images/imagesp/925758431s.png",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "Got some problems with the language matching",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
+        "checksum": "47622B8B5E71C90632BE984EEF5ECBC6",
+        "timestamp": "2022-01-08T17:33:56Z"
+      }
+    ]
+  },
+
+
+  
+  {
+    "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
     "name": "Nrk ",
     "description": "Channel for watching https://tv.nrk.no/",
     "overview": "Channel for watching https://tv.nrk.no/",

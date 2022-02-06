@@ -16,6 +16,10 @@ using MediaBrowser.Controller.Subtitles;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Providers;
 using Microsoft.Extensions.Logging;
+using AngleSharp.Dom;
+using AngleSharp;
+using System.Web;
+using System.IO.Compression;
 
 namespace n0tFlix.Plugin.TvSubtitles
 {
@@ -47,35 +51,99 @@ namespace n0tFlix.Plugin.TvSubtitles
 
         /// <inheritdoc />
         public IEnumerable<VideoContentType> SupportedMediaTypes
-            => new[] { VideoContentType.Episode, VideoContentType.Movie };
+            => new[] { VideoContentType.Episode };
 
         /// <inheritdoc />
-        public Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
-            => GetSubtitlesInternal(id, cancellationToken);
+        public async Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrEmpty(id))
+                return default;
+            string url = id;
+
+            string source = await new HttpClient().GetStringAsync(url);
+            if (string.IsNullOrEmpty(source))
+                return default;
+            var conf = AngleSharp.Configuration.Default;
+            var browser = AngleSharp.BrowsingContext.New(conf);
+            IDocument document = await browser.OpenAsync(x => x.Content(source));
+            var elem = document.GetElementsByClassName("btn-icon download-subtitle").First();
+            string download = elem.GetAttribute("href");
+
+            using (var stream = await new HttpClient().GetStreamAsync(download).ConfigureAwait(false))
+            {
+                ZipArchive zipArchive = new ZipArchive(stream);
+                var entry = zipArchive.Entries.FirstOrDefault();
+                if (entry != null)
+                {
+                    using (var unzippedEntryStream = entry.Open())
+                    {
+                        var ms = new MemoryStream();
+                        await unzippedEntryStream.CopyToAsync(ms).ConfigureAwait(false);
+                        return new SubtitleResponse()
+                        {
+                            Language = id.Split("_").Last(),
+                            Stream = ms,
+                            Format = "srt"
+                        };
+                    }
+                }
+            }
+            return default;
+        }
 
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
-            //This is the function used to search for and collect the subtitles matching our query
-            if (request == null)
+            string query = "q=" + request.Name + " " + request.ProductionYear;
+            var post = new StringContent(query.Replace(" ", "+"));
+            var source = await new HttpClient().PostAsync("http://www.tvsubtitles.net/search.php", post);
+            string cont = await source.Content.ReadAsStringAsync();
+            var conf = AngleSharp.Configuration.Default;
+            var browser = AngleSharp.BrowsingContext.New(conf);
+            IDocument document = await browser.OpenAsync(x => x.Content(cont));
+            var results = document.GetElementsByClassName("margin-left:2em").First();
+            var links = results.GetElementsByTagName("a");
+            List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
+            foreach (var link in links)
             {
-                throw new ArgumentNullException(nameof(request));
+                try
+                {
+                    string url = link.GetAttribute("href");
+                    string res = await new HttpClient().GetStringAsync(url);
+                    document = await browser.OpenAsync(x => x.Content(res));
+                    var desc = document.GetElementsByClassName("description").First();
+                    var seasons = desc.GetElementsByTagName("a");
+                    var correct = seasons.Where(x => x.TextContent.Contains(request.ParentIndexNumber.ToString())).First();
+                    string seasonurl = "http://www.tvsubtitles.net/" + correct.GetAttribute("href");
+                    res = await new HttpClient().GetStringAsync(seasonurl);
+                    document = await browser.OpenAsync(x => x.Content(res));
+                    var episodes = document.GetElementsByName("tbody").First().GetElementsByTagName("table").First().GetElementsByTagName("tr");
+                    var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().Equals("")).First();
+                    var hrr = thisone.GetElementsByTagName("a").Where(x => x.GetAttribute("href").StartsWith("subtitle")).First();
+                    string dllink = "http://www.tvsubtitles.net/" + hrr.GetAttribute("href");
+                    res = await new HttpClient().GetStringAsync(dllink);
+                    document = await browser.OpenAsync(x => x.Content(res));
+                    string title = document.QuerySelector("//*[@id=\"content\"]/div[4]/div/div[3]/table/tbody/tr[2]/td[3]").TextContent;
+                    string author = document.QuerySelector("//*[@id=\"content\"]/div[4]/div/div[3]/table/tbody/tr[5]/td[3]").TextContent;
+
+                    list.Add(new RemoteSubtitleInfo()
+                    {
+                        Name = title,
+                        Format = "srt",
+                        Id = dllink.Replace("subtitle", "download"),
+                        Author = author,
+                        ProviderName = "TvSubtitles"
+                    });
+                }
+                catch(Exception ex)
+                {
+
+                }
             }
-            return Enumerable.Empty<RemoteSubtitleInfo>();
+            //todo add så den henter ut riktig episode som vi trenger
+            return list;
         }
 
-        private async Task<SubtitleResponse> GetSubtitlesInternal(string id, CancellationToken cancellationToken)
-        {
-            if (string.IsNullOrWhiteSpace(id))
-            {
-                throw new ArgumentException("Missing param", nameof(id));
-            }
-            //Remember to grab this info from page you collect the subtitle from
-            string format = "srt";
-            string language = "english";
-            byte[] data = new byte[16];
-            return new SubtitleResponse { Format = format, Language = language, Stream = new MemoryStream(data) };
-        }
 
         private PluginConfiguration GetOptions()
             => TvSubtitles.Instance!.Configuration;
