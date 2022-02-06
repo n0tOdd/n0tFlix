@@ -47,16 +47,19 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult> Get([FromBody] CollectInfo body)
         {
+            Console.WriteLine(body.URL.ToLower());
             YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
-            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
+            youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
+            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
+
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
             youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
             youtubeDL.VideoUrl = body.URL;
             youtubeDL.Download(body.URL);
-           
+            Console.WriteLine(sb.ToString());
             return Ok(new JsonResult(sb.ToString()));
         }
     }
