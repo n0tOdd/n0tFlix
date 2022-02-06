@@ -73,6 +73,7 @@ namespace n0tFlix.Plugin.Addic7ed
                 {
                     continue;
                 }
+                
                 try
                 {
                     string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
@@ -106,12 +107,14 @@ namespace n0tFlix.Plugin.Addic7ed
 
         private async Task<SubtitleResponse> GetSubtitlesInternal(string id, CancellationToken cancellationToken)
         {
+            this.logger.LogError(id);
             if (string.IsNullOrWhiteSpace(id))
             {
                 throw new ArgumentException("Missing param", nameof(id));
             }
             string[] ss = id.Split("__");
             Stream data = await downloader.GetStream(ss[0], "https://www.addic7ed.com/", null, cancellationToken);
+            this.logger.LogError("got stream");
             //Remember to grab this info from page you collect the subtitle from
             return new SubtitleResponse { Format = "srt", Language = ss[1], Stream =data };
         }
