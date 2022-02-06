@@ -58,7 +58,7 @@ namespace n0tFlix.Plugin.Addic7ed
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
-            var uri = "https://www.addic7ed.com/search.php?search=" +  request.SeriesName + request.ParentIndexNumber + "e" + request.IndexNumber + "&Submit=Search";
+            var uri = "https://www.addic7ed.com/search.php?search=" +  request.SeriesName + " s" + request.ParentIndexNumber + "e" + request.IndexNumber + "&Submit=Search";
             this.logger?.LogError(uri);
             string source = await downloader.GetString(uri, "https://www.addic7ed.com/",null,cancellationToken);
             var conf = AngleSharp.Configuration.Default;
