@@ -35,7 +35,6 @@ namespace n0tFlix.Plugin.NRK
         /// <returns><see cref="ChannelItemResult"/> containing the types of categories.</returns>
         internal async Task<ChannelItemResult> GetChannelCategoriesAsync(ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
-            logger.LogError("GetChannelCategoriesAsync");
             if (memoryCache.TryGetValue("nrk-categories", out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetChannelCategoriesAsync), "nrk-categories");
@@ -43,31 +42,23 @@ namespace n0tFlix.Plugin.NRK
             }
             else
             {
-                logger.LogError("Grabbing categories");
-                var root = System.Text.Json.JsonSerializer.Deserialize<Categories.root>(await  httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages", cancellationToken));
+                logger.LogDebug("Grabbing categories");
+                var root = System.Text.Json.JsonSerializer.Deserialize<Categories.root>(await httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages", cancellationToken));
                 ChannelItemResult result = new ChannelItemResult();
-                foreach (var v in root.pageListItems)
+                foreach (var v in root.PageListItems)
                 {
-                    try
+                    result.Items.Add(new ChannelItemInfo
                     {
-                        result.Items.Add(new ChannelItemInfo
-                        {
-                            Id = "https://psapi.nrk.no/tv/pages/" + v.id,
-                            Name = v.title,
-                            FolderType = ChannelFolderType.Container,
-                            Type = ChannelItemType.Folder,
-                            MediaType = ChannelMediaType.Video,
-                            HomePageUrl = "https://tv.nrk.no" + v.links.self.href,
-                            ImageUrl = v.image.webimages[0].uri ?? v.image.webimages[1].uri ?? v.image.webimages[2].uri ?? v.image.webimages[3].uri ?? v.image.webimages[4].uri
-                        });
-                        result.TotalRecordCount++;
-                    }
-                    catch(Exception ex)
-                    {
-                        this.logger.LogError("Error: " + ex.Message);
-                    }
+                        Id = "https://psapi.nrk.no/tv/pages/" + v.Id,
+                        Name = v.Title,
+                        FolderType = ChannelFolderType.Container,
+                        Type = ChannelItemType.Folder,
+                        MediaType = ChannelMediaType.Video,
+                        HomePageUrl = "https://tv.nrk.no" + v.Links.Self.Href,
+                        ImageUrl = v.Image.WebImages[0].Uri ?? v.Image.WebImages[1].Uri ?? v.Image.WebImages[2].Uri ?? v.Image.WebImages[3].Uri ?? v.Image.WebImages[4].Uri
+                    });
+                    result.TotalRecordCount++;
                 }
-                logger.LogError("Collected " + result.TotalRecordCount.ToString() + " categories for this channel");
                 memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
                 return result;
             }
@@ -80,9 +71,8 @@ namespace n0tFlix.Plugin.NRK
         /// <param name="logger"></param>
         /// <param name="memoryCache"></param>
         /// <returns></returns>
-        internal async Task<ChannelItemResult> GetCategoryItemsAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache, CancellationToken cancellationToken)
+        internal async Task<ChannelItemResult> GetCategoryItemsAsync(InternalChannelItemQuery query, ILogger logger, IMemoryCache memoryCache,CancellationToken cancellationToken)
         {
-            logger.LogError("GetCategoryItemsAsync");
             if (memoryCache.TryGetValue("nrk-categories-" + query.FolderId, out ChannelItemResult cachedValue))
             {
                 logger.LogInformation("Function={function} FolderId={folderId} Cache Hit", nameof(GetCategoryItemsAsync), query.FolderId);
@@ -91,64 +81,63 @@ namespace n0tFlix.Plugin.NRK
             else
             {
                 logger.LogInformation("Function={function} FolderId={folderId} web download", nameof(GetCategoryItemsAsync), query.FolderId);
-                
                 string json = await httpClient.GetStringAsync(query.FolderId,cancellationToken);
                 var root = System.Text.Json.JsonSerializer.Deserialize<CategoryItems.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
-                foreach (var v in root.sections)
+                foreach (var v in root.Sections)
                 {
-                    foreach (var p in v.included.plugs)
+                    foreach (var p in v.Included.Plugs)
                     {
                         try
 
                         {
                             string mainurl = string.Empty;
-                            if (p.targetType == "series")
+                            if (p.TargetType == "series")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no/tv/catalog" + p.series.links.self.href,
-                                    Name = p.displayContractContent.contentTitle,
-                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri,
+                                    Id = "https://psapi.nrk.no/tv/catalog" + p.Series.Links.Self.Href,
+                                    Name = p.DisplayContractContent.ContentTitle,
+                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri,
                                     FolderType = ChannelFolderType.Container,
                                     Type = ChannelItemType.Folder,
 
-                                    SeriesName = p.displayContractContent.contentTitle,
+                                    SeriesName = p.DisplayContractContent.ContentTitle,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.series.links.self.href,
-                                    Overview = p.displayContractContent.description,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.Series.Links.Self.Href,
+                                    Overview = p.DisplayContractContent.Description,
                                 });
                                 result.TotalRecordCount++;
                             }
-                            else if (p.targetType == "standaloneProgram")
+                            else if (p.TargetType == "standaloneProgram")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no" + p.standaloneProgram.links.playback.href,
-                                    Name = p.displayContractContent.contentTitle,
-                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri,
+                                    Id = "https://psapi.nrk.no" + p.StandaloneProgram.Links.Playback.Href,
+                                    Name = p.DisplayContractContent.ContentTitle,
+                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri,
                                     FolderType = ChannelFolderType.Container,
                                     Type = ChannelItemType.Media,
                                     //           RunTimeTicks = TimeSpan.Parse(p.StandaloneProgram.Duration).Ticks,
-                                    Overview = p.displayContractContent.description,
+                                    Overview = p.DisplayContractContent.Description,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.standaloneProgram.links.self.href,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.StandaloneProgram.Links.Self.Href,
                                 });
                                 result.TotalRecordCount++;
                             }
-                            else if (p.targetType == "episode")
+                            else if (p.TargetType == "episode")
                             {
                                 result.Items.Add(new ChannelItemInfo
                                 {
-                                    Id = "https://psapi.nrk.no" + p.episode.links.playback.href,
-                                    Name = p.displayContractContent.contentTitle,
-                                    ImageUrl = p.displayContractContent.displayContractimage.webimages[0].uri ?? p.displayContractContent.displayContractimage.webimages[1].uri ?? p.displayContractContent.fallbackimage.webimages[0].uri,
+                                    Id = "https://psapi.nrk.no" + p.Episode.Links.Playback.Href,
+                                    Name = p.DisplayContractContent.ContentTitle,
+                                    ImageUrl = p.DisplayContractContent.DisplayContractImage.WebImages[0].Uri ?? p.DisplayContractContent.DisplayContractImage.WebImages[1].Uri ?? p.DisplayContractContent.FallbackImage.WebImages[0].Uri,
                                     FolderType = ChannelFolderType.Container,
                                     //           RunTimeTicks = TimeSpan.Parse(p.Episode.Duration).Ticks,
                                     Type = ChannelItemType.Media,
-                                    Overview = p.displayContractContent.description,
+                                    Overview = p.DisplayContractContent.Description,
                                     MediaType = ChannelMediaType.Video,
-                                    HomePageUrl = "htps://tv.nrk.no" + p.episode.links.self.href,
+                                    HomePageUrl = "htps://tv.nrk.no" + p.Episode.Links.Self.Href,
                                 });
                                 result.TotalRecordCount++;
                             }

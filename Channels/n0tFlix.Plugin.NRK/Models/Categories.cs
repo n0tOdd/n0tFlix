@@ -1,8 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace n0tFlix.Plugin.NRK.Models
@@ -11,63 +11,79 @@ namespace n0tFlix.Plugin.NRK.Models
     {
         public class Self
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links
         {
-            public Self self { get; set; }
+            [JsonPropertyName("self")]
+            public Self Self { get; set; }
         }
 
         public class Self2
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class AccessibilityVersion
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links2
         {
-            public Self2 self { get; set; }
+            [JsonPropertyName("self")]
+            public Self2 Self { get; set; }
 
-            public AccessibilityVersion accessibilityVersion { get; set; }
+            [JsonPropertyName("accessibilityVersion")]
+            public AccessibilityVersion AccessibilityVersion { get; set; }
         }
 
-        public class Webimage
+        public class WebImage
         {
-            public string uri { get; set; }
+            [JsonPropertyName("uri")]
+            public string Uri { get; set; }
 
-            public int width { get; set; }
+            [JsonPropertyName("width")]
+            public int Width { get; set; }
         }
 
-        public class image
+        public class Image
         {
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            public IList<Webimage> webimages { get; set; }
+            [JsonPropertyName("webImages")]
+            public IList<WebImage> WebImages { get; set; }
         }
 
         public class PageListItem
         {
-            public Links2 links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links2 Links { get; set; }
 
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            public string title { get; set; }
+            [JsonPropertyName("title")]
+            public string Title { get; set; }
 
-            public image image { get; set; }
+            [JsonPropertyName("image")]
+            public Image Image { get; set; }
         }
 
         public class root
         {
-            public Links links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links Links { get; set; }
 
-            public IList<PageListItem> pageListItems { get; set; }
+            [JsonPropertyName("pageListItems")]
+            public IList<PageListItem> PageListItems { get; set; }
         }
 
-
+        
     }
 }

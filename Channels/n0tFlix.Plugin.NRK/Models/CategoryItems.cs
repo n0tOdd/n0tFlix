@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace n0tFlix.Plugin.NRK.Models
 {
@@ -8,295 +9,320 @@ namespace n0tFlix.Plugin.NRK.Models
     {
         public class Self
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links
         {
-            public Self self { get; set; }
+            [JsonPropertyName("self")]
+            public Self Self { get; set; }
         }
 
-        public class Webimage
+        public class WebImage
         {
-            public string uri { get; set; }
+            [JsonPropertyName("uri")]
+            public string Uri { get; set; }
 
-            public int width { get; set; }
+            [JsonPropertyName("width")]
+            public int Width { get; set; }
         }
 
-        public class DisplayContractimage
+        public class DisplayContractImage
         {
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            public IList<Webimage> webimages { get; set; }
+            [JsonPropertyName("webImages")]
+            public IList<WebImage> WebImages { get; set; }
         }
 
-        public class Webimage2
+        public class WebImage2
         {
-            public string uri { get; set; }
+            [JsonPropertyName("uri")]
+            public string Uri { get; set; }
 
-            public int width { get; set; }
+            [JsonPropertyName("width")]
+            public int Width { get; set; }
         }
 
-        public class Fallbackimage
+        public class FallbackImage
         {
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            public IList<Webimage2> webimages { get; set; }
+            [JsonPropertyName("webImages")]
+            public IList<WebImage2> WebImages { get; set; }
         }
 
         public class DisplayContractContent
         {
-            public string contentTitle { get; set; }
+            [JsonPropertyName("contentTitle")]
+            public string ContentTitle { get; set; }
 
-            public string description { get; set; }
+            [JsonPropertyName("description")]
+            public string Description { get; set; }
 
-            public DisplayContractimage displayContractimage { get; set; }
+            [JsonPropertyName("displayContractImage")]
+            public DisplayContractImage DisplayContractImage { get; set; }
 
-            public Fallbackimage fallbackimage { get; set; }
+            [JsonPropertyName("fallbackImage")]
+            public FallbackImage FallbackImage { get; set; }
         }
 
         public class Self2
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Fargerik
         {
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links2
         {
-            public Self2 self { get; set; }
+            [JsonPropertyName("self")]
+            public Self2 Self { get; set; }
 
-            public Fargerik fargerik { get; set; }
+            [JsonPropertyName("fargerik")]
+            public Fargerik Fargerik { get; set; }
         }
 
         public class LegalAge
         {
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            public string displayValue { get; set; }
+            [JsonPropertyName("displayValue")]
+            public string DisplayValue { get; set; }
 
-            public string displayAge { get; set; }
+            [JsonPropertyName("displayAge")]
+            public string DisplayAge { get; set; }
         }
 
         public class UsageRights
         {
-            public bool isGeoBlocked { get; set; }
+            [JsonPropertyName("isGeoBlocked")]
+            public bool IsGeoBlocked { get; set; }
         }
 
         public class Series
         {
-            public Links2 links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links2 Links { get; set; }
 
-            public LegalAge legalAge { get; set; }
+            [JsonPropertyName("legalAge")]
+            public LegalAge LegalAge { get; set; }
 
-            public UsageRights usageRights { get; set; }
+            [JsonPropertyName("usageRights")]
+            public UsageRights UsageRights { get; set; }
         }
 
         public class Self3
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class MediaElement
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Series2
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Season
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Playback
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links3
         {
-            
-            public Self3 self { get; set; }
+            [JsonPropertyName("self")]
+            public Self3 Self { get; set; }
 
-            
-            public MediaElement mediaElement { get; set; }
+            [JsonPropertyName("mediaElement")]
+            public MediaElement MediaElement { get; set; }
 
-            
-            public Series2 series { get; set; }
+            [JsonPropertyName("series")]
+            public Series2 Series { get; set; }
 
-            
-            public Season season { get; set; }
+            [JsonPropertyName("season")]
+            public Season Season { get; set; }
 
-            
-            public Playback playback { get; set; }
+            [JsonPropertyName("playback")]
+            public Playback Playback { get; set; }
         }
 
         public class LegalAge2
         {
-            
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            
-            public string displayValue { get; set; }
+            [JsonPropertyName("displayValue")]
+            public string DisplayValue { get; set; }
 
-            
-            public string displayAge { get; set; }
+            [JsonPropertyName("displayAge")]
+            public string DisplayAge { get; set; }
         }
 
         public class UsageRights2
         {
-            
-            public bool isGeoBlocked { get; set; }
+            [JsonPropertyName("isGeoBlocked")]
+            public bool IsGeoBlocked { get; set; }
         }
 
         public class Episode
         {
-            
-            public Links3 links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links3 Links { get; set; }
 
-            
-            public string duration { get; set; }
+            [JsonPropertyName("duration")]
+            public string Duration { get; set; }
 
-            
-            public LegalAge2 legalAge { get; set; }
+            [JsonPropertyName("legalAge")]
+            public LegalAge2 LegalAge { get; set; }
 
-            
-            public UsageRights2 usageRights { get; set; }
+            [JsonPropertyName("usageRights")]
+            public UsageRights2 UsageRights { get; set; }
         }
 
         public class Self4
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class MediaElement2
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Playback2
         {
-            
-            public string href { get; set; }
+            [JsonPropertyName("href")]
+            public string Href { get; set; }
         }
 
         public class Links4
         {
-            
-            public Self4 self { get; set; }
+            [JsonPropertyName("self")]
+            public Self4 Self { get; set; }
 
-            
-            public MediaElement2 mediaElement { get; set; }
+            [JsonPropertyName("mediaElement")]
+            public MediaElement2 MediaElement { get; set; }
 
-            
-            public Playback2 playback { get; set; }
+            [JsonPropertyName("playback")]
+            public Playback2 Playback { get; set; }
         }
 
         public class LegalAge3
         {
-            
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            
-            public string displayValue { get; set; }
+            [JsonPropertyName("displayValue")]
+            public string DisplayValue { get; set; }
 
-            
-            public string displayAge { get; set; }
+            [JsonPropertyName("displayAge")]
+            public string DisplayAge { get; set; }
         }
 
         public class UsageRights3
         {
-            
-            public bool isGeoBlocked { get; set; }
+            [JsonPropertyName("isGeoBlocked")]
+            public bool IsGeoBlocked { get; set; }
         }
 
         public class StandaloneProgram
         {
-            
-            public Links4 links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links4 Links { get; set; }
 
-            
-            public string duration { get; set; }
+            [JsonPropertyName("duration")]
+            public string Duration { get; set; }
 
-            
-            public LegalAge3 legalAge { get; set; }
+            [JsonPropertyName("legalAge")]
+            public LegalAge3 LegalAge { get; set; }
 
-            
-            public UsageRights3 usageRights { get; set; }
+            [JsonPropertyName("usageRights")]
+            public UsageRights3 UsageRights { get; set; }
         }
 
         public class Plug
         {
-            
-            public string targetType { get; set; }
+            [JsonPropertyName("targetType")]
+            public string TargetType { get; set; }
 
-            
-            public DisplayContractContent displayContractContent { get; set; }
+            [JsonPropertyName("displayContractContent")]
+            public DisplayContractContent DisplayContractContent { get; set; }
 
-            
-            public Series series { get; set; }
+            [JsonPropertyName("series")]
+            public Series Series { get; set; }
 
-            
-            public Episode episode { get; set; }
+            [JsonPropertyName("episode")]
+            public Episode Episode { get; set; }
 
-            
-            public StandaloneProgram standaloneProgram { get; set; }
+            [JsonPropertyName("standaloneProgram")]
+            public StandaloneProgram StandaloneProgram { get; set; }
         }
 
         public class Included
         {
-            
-            public string title { get; set; }
+            [JsonPropertyName("title")]
+            public string Title { get; set; }
 
-            
-            public int count { get; set; }
+            [JsonPropertyName("count")]
+            public int Count { get; set; }
 
-            
-            public string displayContract { get; set; }
+            [JsonPropertyName("displayContract")]
+            public string DisplayContract { get; set; }
 
-            
-            public IList<Plug> plugs { get; set; }
+            [JsonPropertyName("plugs")]
+            public IList<Plug> Plugs { get; set; }
         }
 
         public class Section
         {
-            
-            public string type { get; set; }
+            [JsonPropertyName("type")]
+            public string Type { get; set; }
 
-            
-            public Included included { get; set; }
+            [JsonPropertyName("included")]
+            public Included Included { get; set; }
         }
 
         public class root
         {
-            
-            public Links links { get; set; }
+            [JsonPropertyName("_links")]
+            public Links Links { get; set; }
 
-            
-            public string publishedTime { get; set; }
+            [JsonPropertyName("publishedTime")]
+            public string PublishedTime { get; set; }
 
-            
-            public string id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            
-            public string sitle { get; set; }
+            [JsonPropertyName("title")]
+            public string Title { get; set; }
 
-            
-            public IList<Section> sections { get; set; }
+            [JsonPropertyName("sections")]
+            public IList<Section> Sections { get; set; }
         }
     }
 }
