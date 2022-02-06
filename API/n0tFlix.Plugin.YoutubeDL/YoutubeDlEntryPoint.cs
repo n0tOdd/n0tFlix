@@ -38,46 +38,43 @@ namespace n0tFlix.Plugin.YoutubeDL
 
         public async Task RunAsync()
         {
-            Logger.LogError(Plugin.Instance.AssemblyFilePath);
-            Logger.LogError(Plugin.Instance.ConfigurationFilePath);
-            Logger.LogError(Plugin.Instance.DataFolderPath);
+
+            FileInfo plug = new FileInfo(Plugin.Instance.AssemblyFilePath);
+            string PluginDir = plug.Directory.FullName;
             
             string youtube_dl_path = string.Empty;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
 
                 
-                if (!File.Exists(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe")))
+                if (!File.Exists(Path.Combine(PluginDir, "youtube-dl.exe")))
                 {
                     Logger.LogDebug("Downloading youtube-dl.exe");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl.exe");
-                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe"), FileMode.CreateNew))
+                    using (var fs = new FileStream(Path.Combine(PluginDir, "youtube-dl.exe"), FileMode.CreateNew))
                     {
                         await youtubeDL.CopyToAsync(fs);
                     }
                 }
-                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl.exe");
+                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(PluginDir, "youtube-dl.exe");
             }
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                if (!File.Exists(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl")))
+                if (!File.Exists(Path.Combine(PluginDir, "youtube-dl")))
                 {
                     Logger.LogDebug("Downloading youtube-dl");
                     Stream youtubeDL = await httpclient.GetStreamAsync("https://yt-dl.org/downloads/latest/youtube-dl");
-                    using (var fs = new FileStream(Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl"), FileMode.CreateNew))
+                    using (var fs = new FileStream(Path.Combine(PluginDir, "youtube-dl"), FileMode.CreateNew))
                     {
                         await youtubeDL.CopyToAsync(fs);
                     }
-                    //dont belive this should give any output?
-                    Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(Plugin.Instance.AssemblyFilePath, "youtube-dl");
                 }
+                Plugin.Instance.Configuration.YoutubeDlFilePath = Path.Combine(PluginDir, "youtube-dl");
             }
             else
             {
-                Logger.LogError("I NEED A MAC BEFORE I CAN IMPLEMENT SUPPORT FOR IT PLEASE COME WITH A DONATION IF YOU WISH FOR THIS");
-                Logger.LogError("I NEED A MAC BEFORE I CAN IMPLEMENT SUPPORT FOR IT PLEASE COME WITH A DONATION IF YOU WISH FOR THIS");
-                Logger.LogError("I NEED A MAC BEFORE I CAN IMPLEMENT SUPPORT FOR IT PLEASE COME WITH A DONATION IF YOU WISH FOR THIS");
-                Logger.LogError("I NEED A MAC BEFORE I CAN IMPLEMENT SUPPORT FOR IT PLEASE COME WITH A DONATION IF YOU WISH FOR THIS");
+                Logger.LogError("ERROR, CANT RECOGNIZE OS");
+
             }
         }
     }
