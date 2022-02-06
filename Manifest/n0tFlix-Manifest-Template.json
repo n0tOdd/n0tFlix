@@ -9,7 +9,7 @@
     "imageUrl": "https://icon-library.com/images/youtube-downloader-icon/youtube-downloader-icon-16.jpg",
     "versions": [
       {
-        "version": "0.0.0.1",
+        "version": "1.0.0.0",
         "changelog": "DO NOT INSTALL (new test3)",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
