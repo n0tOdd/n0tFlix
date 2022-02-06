@@ -6,14 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "n0tFlix.Plugin.NRK/1.0.0": {
+      "n0tFlix.Helpers/1.0.0": {
         "dependencies": {
           "Jellyfin.Common": "10.7.7",
           "Jellyfin.Controller": "10.7.7",
-          "n0tFlix.Helpers": "1.0.0"
+          "Jellyfin.Data": "10.7.7",
+          "Jellyfin.Model": "10.7.7",
+          "Jellyfin.Naming": "10.7.7",
+          "Microsoft.Extensions.Http": "5.0.0"
         },
         "runtime": {
-          "n0tFlix.Plugin.NRK.dll": {}
+          "n0tFlix.Helpers.dll": {}
         }
       },
       "Jellyfin.Common/10.7.7": {
@@ -471,24 +474,11 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {},
-      "n0tFlix.Helpers/1.0.0": {
-        "dependencies": {
-          "Jellyfin.Common": "10.7.7",
-          "Jellyfin.Controller": "10.7.7",
-          "Jellyfin.Data": "10.7.7",
-          "Jellyfin.Model": "10.7.7",
-          "Jellyfin.Naming": "10.7.7",
-          "Microsoft.Extensions.Http": "5.0.0"
-        },
-        "runtime": {
-          "n0tFlix.Helpers.dll": {}
-        }
-      }
+      "System.Threading.Tasks.Dataflow/5.0.0": {}
     }
   },
   "libraries": {
-    "n0tFlix.Plugin.NRK/1.0.0": {
+    "n0tFlix.Helpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -800,11 +790,6 @@
       "sha512": "sha512-NBp0zSAMZp4muDje6XmbDfmkqw9+qsDCHp+YMEtnVgHEjQZ3Q7MzFTTp3eHqpExn4BwMrS7JkUVOTcVchig4Sw==",
       "path": "system.threading.tasks.dataflow/5.0.0",
       "hashPath": "system.threading.tasks.dataflow.5.0.0.nupkg.sha512"
-    },
-    "n0tFlix.Helpers/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
