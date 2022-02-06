@@ -71,17 +71,31 @@ namespace n0tFlix.Plugin.Addic7ed
                 var lang = result.GetElementsByClassName("language").Where(x => x.TextContent.ToLower().StartsWith(request.Language)).FirstOrDefault();
                 if (lang == default)
                     continue;
-
-                list.Add(new RemoteSubtitleInfo()
+                try
                 {
-                    Author = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent,
-                    Id = "https://www.addic7ed.com" + lang.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang,
-                    ProviderName = "Adddic7ed",
-                    Format = "srt",
-                    ThreeLetterISOLanguageName = request.Language,
+                    string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
+                    this.logger.LogError(auth);
+                    string id = "https://www.addic7ed.com" + lang.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang;
+                    this.logger.LogError(id);
+                    string name = result.GetElementsByClassName("NewsTitle").First().TextContent;
+                    this.logger.LogError(name);
 
-                    Name = result.GetElementsByClassName("NewsTitle").First().TextContent
-                });
+
+                    list.Add(new RemoteSubtitleInfo()
+                    {
+                        Author = auth,
+                        Id = id,
+                        ProviderName = "Adddic7ed",
+                        Format = "srt",
+                        ThreeLetterISOLanguageName = request.Language,
+
+                        Name = name
+                    });
+                }
+                catch(Exception ex)
+                {
+
+                }
 
             }
             
