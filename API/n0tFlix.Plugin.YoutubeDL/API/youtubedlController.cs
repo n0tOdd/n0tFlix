@@ -76,6 +76,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
+            youtubeDL.VideoUrl = body.URL;
             string commandToRun = await youtubeDL.PrepareDownloadAsync();
             // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
             //   youtubeDL.PrepareDownload();
