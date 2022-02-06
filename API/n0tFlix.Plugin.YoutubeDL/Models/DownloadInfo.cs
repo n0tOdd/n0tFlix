@@ -27,7 +27,7 @@ namespace n0tFlix.Plugin.YoutubeDL.Models
     using Helpers;
     using n0tFlix.Plugin.YoutubeDL.Helpers;
     using n0tFlix.Plugin.YoutubeDL.Models;
-    using Newtonsoft.Json;
+    
 
     #endregion Using
 
@@ -160,7 +160,7 @@ namespace n0tFlix.Plugin.YoutubeDL.Models
         {
             try
             {
-                PlaylistInfo info = JsonConvert.DeserializeObject<PlaylistInfo>(output);
+                PlaylistInfo info = System.Text.Json.JsonSerializer.Deserialize<PlaylistInfo>(output);
                 if (!string.IsNullOrEmpty(info._type) && info._type.Equals("playlist"))
                 {
                     return new PlaylistDownloadInfo(info);
@@ -173,7 +173,7 @@ namespace n0tFlix.Plugin.YoutubeDL.Models
 
             try
             {
-                VideoInfo info = JsonConvert.DeserializeObject<VideoInfo>(output);
+                VideoInfo info = System.Text.Json.JsonSerializer.Deserialize<VideoInfo > (output);
                 if (!string.IsNullOrEmpty(info.title))
                 {
                     return new VideoDownloadInfo(info);

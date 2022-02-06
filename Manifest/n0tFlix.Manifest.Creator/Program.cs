@@ -67,6 +67,7 @@ namespace n0tFlix.Manifest.Creator
                 {
                     if (zipArchiveEntry.Name.EndsWith(".dll", StringComparison.OrdinalIgnoreCase))
                     {
+                        
                         try
                         {
                             Stream stream = zipArchiveEntry.Open();
@@ -74,6 +75,17 @@ namespace n0tFlix.Manifest.Creator
                             stream.CopyTo(memoryStream);
                             memoryStream.Position = 0;
                             Assembly dll = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(memoryStream);
+                            dll.GetReferencedAssemblies().ToList().ForEach(assembly => {
+                                Console.WriteLine(assembly.FullName);
+                                try
+                                {
+                                    AppDomain.CurrentDomain.Load(assembly);
+                                }
+                                catch (Exception ex)
+                                {
+
+                                }
+                            });
                             var type = typeof(IPlugin);
                             var matched = dll.GetTypes().Where(p => type.IsAssignableFrom(p));
                             foreach (var m in matched)
@@ -83,6 +95,8 @@ namespace n0tFlix.Manifest.Creator
                                 Object[] arg = { applicationPaths, xmlSerializer };
 
                                 var Instance = Activator.CreateInstance(m, arg) as IPlugin;
+                                Console.WriteLine(zipArchiveEntry.Name);
+
                                 var ver = new Manifestdata.Version()
                                 {
                                     sourceUrl = rooturl + zipfile.Name,
@@ -109,9 +123,11 @@ namespace n0tFlix.Manifest.Creator
                         }
                         catch(Exception ex)
                         {
+                            Console.WriteLine("Failed on: " + zipArchiveEntry.Name);
+                            Console.WriteLine(ex.Message);
 
                         }
-                       
+
                     }
                 }
             }

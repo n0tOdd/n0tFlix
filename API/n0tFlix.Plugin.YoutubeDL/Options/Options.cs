@@ -20,17 +20,14 @@
 
 namespace n0tFlix.Plugin.YoutubeDL.Options
 {
+    using System.Xml;
     #region Using
 
     using Helpers;
-    using Newtonsoft.Json;
+    
 
     #endregion
 
-    /// <summary>
-    ///     Object containing all of the option sections
-    /// </summary>
-    [JsonConverter(typeof(OptionsJsonConverter))]
     public class Options
     {
         public AdobePass AdobePassOptions { get; private set; } = new AdobePass();
@@ -81,12 +78,12 @@ namespace n0tFlix.Plugin.YoutubeDL.Options
 
         public static Options Deserialize(string json)
         {
-            return JsonConvert.DeserializeObject<Options>(json);
+            return System.Text.Json.JsonSerializer.Deserialize<Options>(json);
         }
         
         public string Serialize()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return System.Text.Json.JsonSerializer.Serialize<Options>(this);
         }
 
         /// <summary>

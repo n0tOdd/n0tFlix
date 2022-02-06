@@ -1657,7 +1657,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://f.feedz.io/autostep/ci/nuget/index.json": {}
       },
       "frameworks": {
         "net5.0": {

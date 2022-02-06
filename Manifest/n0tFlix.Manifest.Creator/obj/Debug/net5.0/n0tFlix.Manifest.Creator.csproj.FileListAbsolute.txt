@@ -20,3 +20,4 @@ D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Ma
 D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.pdb
 D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.csproj.CopyComplete
 D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.genruntimeconfig.cache
+D:\n0tFlix\n0tFlix\Manifest\n0tFlix.Manifest.Creator\obj\Debug\net5.0\n0tFlix.Manifest.Creator.csproj.AssemblyReference.cache

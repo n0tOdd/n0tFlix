@@ -45,7 +45,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult> Get([FromBody] CollectInfo body)
+        public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
             Console.WriteLine(body.URL.ToLower());
             YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
@@ -62,7 +62,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
            
             await youtubeDL.DownloadAsync(body.URL);
             Console.WriteLine(sb.ToString());
-            return Ok(sb.ToString());
+            return new JsonResult(sb.ToString());
         }
     }
 
