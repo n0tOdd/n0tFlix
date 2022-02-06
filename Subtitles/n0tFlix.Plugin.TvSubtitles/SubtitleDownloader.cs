@@ -109,6 +109,9 @@ namespace n0tFlix.Plugin.TvSubtitles
                 try
                 {
                     string url = link.GetAttribute("href");
+                    if (string.IsNullOrEmpty(url))
+                        continue;
+                    this.logger.LogError("testing url " + url);
                     string res = await new HttpClient().GetStringAsync(url);
                     document = await browser.OpenAsync(x => x.Content(res));
                     var desc = document.GetElementsByClassName("description").First();
