@@ -19,16 +19,35 @@ namespace n0tFlix.Plugin.YoutubeDL.API
     /// <summary>
     /// The open subtitles plugin controller.
     /// </summary>
-    [Route("n0tFlix.Plugin.YoutubeDL")]
+    /// <summary>
+    /// The open subtitles plugin controller.
+    /// </summary>
+    [ApiController]
     [Produces(MediaTypeNames.Application.Json)]
     [Authorize(Policy = "DefaultAuthorization")]
     public class YoutubeDlController : ControllerBase
     {
-        [HttpGet]
+        /// <summary>
+        /// Validates login info.
+        /// </summary>
+        /// <remarks>
+        /// Accepts plugin configuration as JSON body.
+        /// </remarks>
+        /// <response code="200">Login info valid.</response>
+        /// <response code="400">Login info is missing data.</response>
+        /// <response code="401">Login info not valid.</response>
+        /// <param name="body">The request body.</param>
+        /// <returns>
+        /// An <see cref="NoContentResult"/> if the login info is valid, a <see cref="BadRequestResult"/> if the request body missing is data
+        /// or <see cref="UnauthorizedResult"/> if the login info is not valid.
+        /// </returns>
+        [HttpPost("n0tFlix.Plugin.YoutubeDL/GrabStream")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult> Get([FromQuery] string? URL)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult> Get([FromBody] CollectInfo body)
         {
-            byte[] data = Convert.FromBase64String(URL);
+            byte[] data = Convert.FromBase64String(body.URL);
             string decodedString = Encoding.UTF8.GetString(data);
             YoutubeDL youtubeDL = new YoutubeDL(Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl"));
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
