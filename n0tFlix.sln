@@ -11,6 +11,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8A0B8FE-BBD3-43F5-AE1C-764EFEABFA58}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Todo.txt = Todo.txt
 		ZipProjectBuild.ps1 = ZipProjectBuild.ps1
 	EndProjectSection
 EndProject
@@ -49,6 +50,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NYoutubeDL", "Externals\NYoutube\NYoutubeDL.csproj", "{39A0CF29-B844-4A2A-BE55-17E55038861C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tYoutubeDL", "Externals\n0tYoutubeDL\n0tYoutubeDL.csproj", "{252D464F-E14A-42AA-AC4E-B225F9757DB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.TubiTV", "Channels\n0tFlix.Plugin.TubiTV\n0tFlix.Plugin.TubiTV.csproj", "{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Helpers", "n0tFlix.Helpers\n0tFlix.Helpers.csproj", "{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +105,14 @@ Global
 		{252D464F-E14A-42AA-AC4E-B225F9757DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252D464F-E14A-42AA-AC4E-B225F9757DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252D464F-E14A-42AA-AC4E-B225F9757DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +129,8 @@ Global
 		{A6938809-84C1-4166-9218-B794D751A522} = {2D3B710D-70EE-4AB5-94D4-8B3FA76B9C51}
 		{39A0CF29-B844-4A2A-BE55-17E55038861C} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 		{252D464F-E14A-42AA-AC4E-B225F9757DB2} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
+		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
+		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

@@ -1,0 +1,11 @@
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\bin\Debug\net5.0\n0tFlix.Helpers.deps.json
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\bin\Debug\net5.0\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\bin\Debug\net5.0\ref\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\bin\Debug\net5.0\n0tFlix.Helpers.pdb
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\ref\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.pdb

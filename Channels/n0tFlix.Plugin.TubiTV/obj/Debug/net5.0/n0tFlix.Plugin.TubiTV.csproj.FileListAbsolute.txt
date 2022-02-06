@@ -1,0 +1,15 @@
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.csproj.AssemblyReference.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.GeneratedMSBuildEditorConfig.editorconfig
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.AssemblyInfoInputs.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.AssemblyInfo.cs
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.csproj.CoreCompileInputs.cache
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\n0tFlix.Plugin.TubiTV.deps.json
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\n0tFlix.Plugin.TubiTV.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\ref\n0tFlix.Plugin.TubiTV.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\n0tFlix.Plugin.TubiTV.pdb
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\bin\Debug\net5.0\n0tFlix.Helpers.pdb
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.csproj.CopyComplete
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\ref\n0tFlix.Plugin.TubiTV.dll
+D:\n0tFlix\n0tFlix\Channels\n0tFlix.Plugin.TubiTV\obj\Debug\net5.0\n0tFlix.Plugin.TubiTV.pdb
