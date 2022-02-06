@@ -55,17 +55,22 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
+            youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
+            youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
+            youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
+            
             youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
 
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
             youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
-            youtubeDL.VideoUrl = body.URL;
+            youtubeDL.PrepareDownload();
             var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
            
             await youtubeDL.DownloadAsync(body.URL);
+            
             Console.WriteLine(sb.ToString());
-            return new JsonResult(sb.ToString());
+            return new JsonResult(info + " " + info + " " + youtubeDL.VideoUrl);
         }
     }
 
