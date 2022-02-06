@@ -18,11 +18,12 @@ namespace n0tFlix.Plugin.YoutubeDL.API
     /// The open subtitles plugin controller.
     /// </summary>
     [Route("n0tFlix.Plugin.YoutubeDL")]
+    [Authorize(Policy = "DefaultAuthorization")]
     public class YoutubeDlController : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult> Get([FromQuery] string? URL)
+        public async Task<JsonResult> Get([FromQuery] string? URL)
         {
             return new JsonResult(URL);
         }
