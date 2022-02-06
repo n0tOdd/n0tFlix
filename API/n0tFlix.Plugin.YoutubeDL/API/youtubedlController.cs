@@ -70,7 +70,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             await youtubeDL.DownloadAsync(body.URL);
             
             Console.WriteLine(sb.ToString());
-            return new JsonResult(info + " " + info + " " + youtubeDL.VideoUrl);
+            return new JsonResult(sb.ToString());
         }
     }
 
