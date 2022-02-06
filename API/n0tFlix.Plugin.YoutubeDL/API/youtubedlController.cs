@@ -32,9 +32,13 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
-            var info = youtubeDL.GetDownloadInfo(URL);
+            StringBuilder sb = new StringBuilder();
+            youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
+            youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
+
+            youtubeDL.Download(URL);
            
-            return Ok(new JsonResult(info.Title));
+            return Ok(new JsonResult(sb.ToString()));
         }
     }
 
