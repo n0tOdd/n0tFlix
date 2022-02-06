@@ -50,6 +50,10 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [Produces(MediaTypeNames.Application.Json)]
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
+            if(!System.IO.File.Exists(Plugin.Instance.Configuration.YoutubeDlFilePath))
+            {
+                return new JsonResult("ERROR: Youtubedl can not be found, try restarting jellyfin it should download it for you then");
+            }
             NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
@@ -65,11 +69,11 @@ namespace n0tFlix.Plugin.YoutubeDL.API
           //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
           //  youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.GeneralOptions.IgnoreErrors = true;
-            /*youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
+            youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
             
-            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
-            */
+//            youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
+            youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
            
