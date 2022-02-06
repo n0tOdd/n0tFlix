@@ -51,14 +51,17 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
             NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
-         //   if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-           //     youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.PythonPath + " " + Plugin.Instance.Configuration.YoutubeDlFilePath);
-           // else
-             //   youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
+                youtubeDL.PythonPath = Plugin.Instance.Configuration.PythonPath;
+            }
+            else
+                youtubeDL = new NYoutubeDL.YoutubeDL(Plugin.Instance.Configuration.YoutubeDlFilePath);
 
 //            YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-            youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
+          //  youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             //  youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
            // youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.GeneralOptions.IgnoreErrors = true;
@@ -75,8 +78,8 @@ namespace n0tFlix.Plugin.YoutubeDL.API
            
             youtubeDL.Download(body.URL);
             
-            Console.WriteLine(sb.ToString());
-            return new JsonResult(sb.ToString() + " " );
+
+            return new JsonResult(sb.ToString() + " " + youtubeDL.VideoUrl);
         }
     }
 
