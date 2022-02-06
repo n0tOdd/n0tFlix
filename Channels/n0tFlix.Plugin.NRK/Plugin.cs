@@ -26,7 +26,7 @@ namespace n0tFlix.Plugin.NRK
         /// <summary>
         /// The Description of youre plugin, goin to be used by the manifestmanager later to keep the repository clrean
         /// </summary>
-        public override string Description => "A Description of the channel here";
+        public override string Description => "Gives you access to all the content from https://tv.nrk.no";
 
         /// <summary>
         /// Just added so we can share where more is to be found :P

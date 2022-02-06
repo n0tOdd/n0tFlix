@@ -32,7 +32,7 @@ namespace n0tFlix.Plugin.TvSubtitles
         /// <inheritdoc />
         public override Guid Id
             => Guid.Parse("4ace9dd8-6ab2-485e-a011-afae47641dcb");
-
+        public override string Description => "Downloads subtitles from " + Name;
         /// <summary>
         /// Gets the plugin instance.
         /// </summary>

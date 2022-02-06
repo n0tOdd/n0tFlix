@@ -15,7 +15,7 @@ namespace n0tFlix.Plugin.YoutubeDL
         public override Guid Id => _id;
 
         public override string Name => GetPluginInfo().Name;
-        public override string Description => base.Description;
+        public override string Description => "An API for using youtube-dl to collect streamable links from around the web, for making faster channels";
 
         public override PluginInfo GetPluginInfo()
         {

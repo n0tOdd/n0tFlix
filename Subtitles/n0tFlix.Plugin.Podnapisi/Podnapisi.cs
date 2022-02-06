@@ -33,6 +33,7 @@ namespace n0tFlix.Plugin.Podnapisi
         public override Guid Id
             => Guid.Parse("40d962d7-5a82-4ded-b201-1e8e15a6b1c7");
 
+        public override string Description => "Downloads subtitles from podnapisi";
         /// <summary>
         /// Gets the plugin instance.
         /// </summary>

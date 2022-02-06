@@ -29,6 +29,7 @@ namespace n0tFlix.Plugin.Addic7ed
         public override string Name
             => this.GetType().Name;
 
+        public override string Description => "Downloads subtitles from Addic7ed.com"; 
         /// <inheritdoc />
         public override Guid Id
             => Guid.Parse("86e18da5-3591-44bb-a680-60092de84c0a");

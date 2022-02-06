@@ -33,6 +33,7 @@ namespace n0tFlix.Plugin.SubtitleBase
         public override Guid Id
             => Guid.Parse("n0tGUID");
 
+        public override string Description => "Downloads subtitles from " + Name;
         /// <summary>
         /// Gets the plugin instance.
         /// </summary>
