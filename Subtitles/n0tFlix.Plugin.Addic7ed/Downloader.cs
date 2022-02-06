@@ -37,6 +37,7 @@ namespace n0tFlix.Plugin.Addic7ed
             _httpClient.DefaultRequestHeaders.Add("User-Agent", UserAgent);
             _httpClient.DefaultRequestHeaders.Add("Pragma", "no-cache");
             _httpClient.DefaultRequestHeaders.Add("Accept-Encoding", "gzip");
+            _httpClient.DefaultRequestHeaders.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
             _httpClient.Timeout = TimeSpan.FromSeconds(30);
         }
 

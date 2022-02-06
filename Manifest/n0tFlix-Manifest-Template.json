@@ -85,11 +85,11 @@
     "imageUrl": "https://pbs.twimg.com/profile_images/3153896688/a6acb6bd0d60a56e4a0ad48f59d68038_400x400.jpeg",
     "versions": [
       {
-        "version": "0.0.0.1",
+        "version": "0.0.0.2",
         "changelog": "First release",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
-        "checksum": "F04F3BD7169C54B3E5DAD4845E18F879",
+        "checksum": "1720AB0758A8A3E77A464BFA427EB93F",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]
