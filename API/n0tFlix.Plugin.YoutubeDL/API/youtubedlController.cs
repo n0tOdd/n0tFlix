@@ -28,7 +28,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Get([FromQuery] string? URL)
         {
-            YoutubeDL youtubeDL = new YoutubeDL(new FileInfo("youtube-dl").GetFullPath());
+            YoutubeDL youtubeDL = new YoutubeDL(Path.Combine("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/", "youtube-dl"));
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
