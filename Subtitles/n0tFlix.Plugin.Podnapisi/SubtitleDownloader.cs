@@ -151,21 +151,21 @@ namespace n0tFlix.Plugin.Podnapisi
 
             try
             {
-                using (var response = await this.downloader.GetStream(url.ToString(), "http://podnapisi.net", null, cancellationToken))
+                using (var response = new WebClient().OpenRead(url.ToString()))
                 {
                     this._logger?.LogError("Got result");
-                   
-                        var settings = Create(false);
-                        settings.CheckCharacters = false;
-                        settings.IgnoreComments = true;
-                        settings.DtdProcessing = DtdProcessing.Parse;
-                        settings.MaxCharactersFromEntities = 1024;
-                        settings.Async = true;
 
-                        using (var result = XmlReader.Create(response, settings))
-                        {
-                            return (await ParseSearch(result).ConfigureAwait(false)).OrderByDescending(i => i.DownloadCount);
-                        }
+                    var settings = Create(false);
+                    settings.CheckCharacters = false;
+                    settings.IgnoreComments = true;
+                    settings.DtdProcessing = DtdProcessing.Parse;
+                    settings.MaxCharactersFromEntities = 1024;
+                    settings.Async = true;
+
+                    using (var result = XmlReader.Create(response, settings))
+                    {
+                        return (await ParseSearch(result).ConfigureAwait(false)).OrderByDescending(i => i.DownloadCount);
+                    }
                 }
                 
             }
