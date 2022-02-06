@@ -43,22 +43,31 @@ namespace n0tFlix.Plugin.NRK
             else
             {
                 logger.LogDebug("Grabbing categories");
-                var root = System.Text.Json.JsonSerializer.Deserialize<Categories.root>(await httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages", cancellationToken));
+                string json = await httpClient.GetStringAsync("https://psapi.nrk.no/tv/pages", cancellationToken);
+                var root = System.Text.Json.JsonSerializer.Deserialize<Categories.root>(json);
                 ChannelItemResult result = new ChannelItemResult();
                 foreach (var v in root.PageListItems)
                 {
-                    result.Items.Add(new ChannelItemInfo
+                    try
                     {
-                        Id = "https://psapi.nrk.no/tv/pages/" + v.Id,
-                        Name = v.Title,
-                        FolderType = ChannelFolderType.Container,
-                        Type = ChannelItemType.Folder,
-                        MediaType = ChannelMediaType.Video,
-                        HomePageUrl = "https://tv.nrk.no" + v.Links.Self.Href,
-                        ImageUrl = v.Image.WebImages[0].Uri ?? v.Image.WebImages[1].Uri ?? v.Image.WebImages[2].Uri ?? v.Image.WebImages[3].Uri ?? v.Image.WebImages[4].Uri
-                    });
-                    result.TotalRecordCount++;
+                        result.Items.Add(new ChannelItemInfo
+                        {
+                            Id = "https://psapi.nrk.no/tv/pages/" + v.Id,
+                            Name = v.Title,
+                            FolderType = ChannelFolderType.Container,
+                            Type = ChannelItemType.Folder,
+                            MediaType = ChannelMediaType.Video,
+                            HomePageUrl = "https://tv.nrk.no" + v.Links.Self.Href,
+                            ImageUrl = v.Image.WebImages[0].Uri ?? v.Image.WebImages[1].Uri ?? v.Image.WebImages[2].Uri ?? v.Image.WebImages[3].Uri ?? v.Image.WebImages[4].Uri
+                        });
+                        result.TotalRecordCount++;
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.LogError("ERROR: " + ex.Message);
+                    }
                 }
+                logger.LogInformation("We Found " + result.TotalRecordCount.ToString() + " categories for nrk");
                 if(result.TotalRecordCount > 0)
                     memoryCache.Set("nrk-categories", result, DateTimeOffset.Now.AddDays(7));
                 return result;
@@ -268,7 +277,7 @@ namespace n0tFlix.Plugin.NRK
                     Name = head.Title,
                     Id = "https://psapi.nrk.no" + head.Links.Seriespage.Href,
                     Overview = head.SubTitle,
-                    ImageUrl = head.images[0].Uri ?? head.images[1].Uri ?? head.images[2].Uri ?? head.images[3].Uri ?? head.images[4].Uri ?? head.images[5].Uri,
+                    ImageUrl = head.Images[0].Uri ?? head.Images[1].Uri ?? head.Images[2].Uri ?? head.Images[3].Uri ?? head.Images[4].Uri ?? head.Images[5].Uri,
                     FolderType = ChannelFolderType.Container,
                     Type = ChannelItemType.Folder,
                     SeriesName = head.Title,

@@ -9,3 +9,4 @@ D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.csproj.CoreC
 D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.dll
 D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\ref\n0tFlix.Helpers.dll
 D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.pdb
+D:\n0tFlix\n0tFlix\n0tFlix.Helpers\obj\Debug\net5.0\n0tFlix.Helpers.csproj.AssemblyReference.cache
