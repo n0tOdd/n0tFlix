@@ -66,22 +66,23 @@ namespace n0tFlix.Plugin.Addic7ed
             IDocument document = await browser.OpenAsync(x => x.Content(source));
             var results = document.GetElementsByClassName("tabel95");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
-            foreach(var result in results)
+            foreach (var result in results)
             {
-                var lang = result.GetElementsByClassName("language").First().TextContent;
-                if(lang.ToLower().StartsWith(request.Language.ToLower()))
+                var lang = result.GetElementsByClassName("language").Where(x => x.TextContent.ToLower().StartsWith(request.Language)).FirstOrDefault();
+                if (lang == default)
+                    continue;
+
+                list.Add(new RemoteSubtitleInfo()
                 {
-                    list.Add(new RemoteSubtitleInfo()
-                    {
-                        Author = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent,
-                        Id = "https://www.addic7ed.com" + result.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang,
-                        ProviderName = "Adddic7ed",
-                        Format = "srt",
-                        ThreeLetterISOLanguageName = request.Language,
-                       
-                        Name = result.GetElementsByClassName("NewsTitle").First().TextContent
-                    });
-                }
+                    Author = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent,
+                    Id = "https://www.addic7ed.com" + lang.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang,
+                    ProviderName = "Adddic7ed",
+                    Format = "srt",
+                    ThreeLetterISOLanguageName = request.Language,
+
+                    Name = result.GetElementsByClassName("NewsTitle").First().TextContent
+                });
+
             }
             
             return list;
