@@ -53,14 +53,14 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
       //      YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
-            youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
+            /*youtubeDL.Options.VerbositySimulationOptions.Simulate = true;
             youtubeDL.Options.VerbositySimulationOptions.SkipDownload = true;
             youtubeDL.Options.VerbositySimulationOptions.DumpSingleJson = true;
             youtubeDL.Options.VerbositySimulationOptions.PrintJson = true;
             youtubeDL.Options.GeoRestrictionOptions.GeoBypass = true;
             
             youtubeDL.Options.VerbositySimulationOptions.DumpJson = true;
-
+            */
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
             youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
