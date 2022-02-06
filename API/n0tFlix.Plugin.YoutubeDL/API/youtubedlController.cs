@@ -11,8 +11,6 @@ using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using n0tFlix.Plugin.YoutubeDL.Helpers;
-using n0tFlix.Plugin.YoutubeDL.Models;
 
 namespace n0tFlix.Plugin.YoutubeDL.API
 {
@@ -28,6 +26,11 @@ namespace n0tFlix.Plugin.YoutubeDL.API
     [Authorize(Policy = "DefaultAuthorization")]
     public class YoutubeDlController : ControllerBase
     {
+
+        public class CollectInfo
+        {
+            public string URL { get; set; }
+        }
         /// <summary>
         /// Validates login info.
         /// </summary>
@@ -47,7 +50,7 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         public async Task<JsonResult> Get([FromBody] CollectInfo body)
         {
             Console.WriteLine(body.URL.ToLower());
-            NYoutubeDL.YoutubeDLP youtubeDL = new NYoutubeDL.YoutubeDLP();
+            NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
       //      YoutubeDL youtubeDL = new YoutubeDL("/var/lib/jellyfin/plugins/YoutubeDL_1.0.0.0/youtube-dl");
             youtubeDL.Options.VerbositySimulationOptions.GetUrl = true;
             youtubeDL.Options.VerbositySimulationOptions.Simulate = true;

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>0.11.2</Version>
+    <Authors>Brian Allred</Authors>
+    <Company />
+    <Product />
+    <Description>A simple youtube-dl library for C#.</Description>
+    <Copyright>Copyright Brian Allred 2021</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>http://gitlab.com/brianallred/nyoutubedl</PackageProjectUrl>
+    <PackageTags>youtube-dl</PackageTags>
+    <NeutralLanguage></NeutralLanguage>
+    <AssemblyVersion>0.11.2.0</AssemblyVersion>
+    <FileVersion>0.11.2.0</FileVersion>
+  </PropertyGroup>
+</Project>

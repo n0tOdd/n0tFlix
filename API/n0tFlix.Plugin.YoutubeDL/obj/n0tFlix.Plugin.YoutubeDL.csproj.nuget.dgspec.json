@@ -28,7 +28,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
+                "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -64,12 +68,63 @@
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[5.0.0, )"
-            },
-            "NYoutubeDLP": {
-              "target": "Package",
-              "version": "[0.11.4, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
+      "version": "0.11.2",
+      "restore": {
+        "projectUniqueName": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj",
+        "projectName": "NYoutubeDL",
+        "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj",
+        "packagesPath": "C:\\Users\\oddos\\.nuget\\packages\\",
+        "outputPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\oddos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://f.feedz.io/autostep/ci/nuget/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",

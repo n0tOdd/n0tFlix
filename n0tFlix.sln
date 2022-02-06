@@ -46,6 +46,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Plugin.Addic7ed", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n0tFlix.Manifest.Creator", "Manifest\n0tFlix.Manifest.Creator\n0tFlix.Manifest.Creator.csproj", "{A6938809-84C1-4166-9218-B794D751A522}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NYoutubeDL", "Externals\NYoutube\NYoutubeDL.csproj", "{39A0CF29-B844-4A2A-BE55-17E55038861C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{A6938809-84C1-4166-9218-B794D751A522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6938809-84C1-4166-9218-B794D751A522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6938809-84C1-4166-9218-B794D751A522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A0CF29-B844-4A2A-BE55-17E55038861C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A0CF29-B844-4A2A-BE55-17E55038861C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A0CF29-B844-4A2A-BE55-17E55038861C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A0CF29-B844-4A2A-BE55-17E55038861C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{8495D7C9-C194-40DC-846F-3A6D0C7428D3} = {914F237F-A6FD-42B2-BF96-00527868C10E}
 		{BD8D68AB-021E-4FFB-9BDC-2D1F0D384663} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 		{A6938809-84C1-4166-9218-B794D751A522} = {2D3B710D-70EE-4AB5-94D4-8B3FA76B9C51}
+		{39A0CF29-B844-4A2A-BE55-17E55038861C} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

@@ -14,7 +14,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.Extensions.Http": "5.0.0",
-          "NYoutubeDLP": "0.11.4"
+          "NYoutubeDL": "0.11.2"
         },
         "runtime": {
           "n0tFlix.Plugin.YoutubeDL.dll": {}
@@ -1057,17 +1057,6 @@
           }
         }
       },
-      "NYoutubeDLP/0.11.4": {
-        "dependencies": {
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/NYoutubeDLP.dll": {
-            "assemblyVersion": "0.11.4.0",
-            "fileVersion": "0.11.4.0"
-          }
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1960,6 +1949,11 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
         }
+      },
+      "NYoutubeDL/0.11.2": {
+        "runtime": {
+          "NYoutubeDL.dll": {}
+        }
       }
     }
   },
@@ -2570,13 +2564,6 @@
       "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
-    },
-    "NYoutubeDLP/0.11.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6+STFIvE3ETGNRq9rXxaJ88RlxS9sSPZ2jI2R/2udULerpNZCkdwt0Ec8xNhMfNG+WvLkzVXCkDKttTSg1De6g==",
-      "path": "nyoutubedlp/0.11.4",
-      "hashPath": "nyoutubedlp.0.11.4.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -3242,6 +3229,11 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "NYoutubeDL/0.11.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

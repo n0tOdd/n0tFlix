@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NYoutubeDL</id>
+    <version>0.11.2</version>
+    <authors>Brian Allred</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>http://gitlab.com/brianallred/nyoutubedl</projectUrl>
+    <description>A simple youtube-dl library for C#.</description>
+    <copyright>Copyright Brian Allred 2021</copyright>
+    <tags>youtube-dl</tags>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\n0tFlix\n0tFlix\Externals\NYoutube\bin\Debug\net5.0\NYoutubeDL.dll" target="lib\net5.0\NYoutubeDL.dll" />
+  </files>
+</package>

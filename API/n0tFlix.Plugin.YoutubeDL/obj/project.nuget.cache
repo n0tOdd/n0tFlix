@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q1iJuRRYyqB2CU+pV5gwQ0FlcCkoBl5y8LGMbpNMU4RUqmV2OL/4Jpof0Dnp6S1uRTq689ohbG6LNdasaSHu6A==",
+  "dgSpecHash": "F5jaAquX2nQ8I9hMqptgFdQVh0BZN/jVVomqD/AMFIM0mpB60KMn484487/f9ehXoIbX6+bvTWx05G6O9jUJ4A==",
   "success": true,
   "projectFilePath": "D:\\n0tFlix\\n0tFlix\\API\\n0tFlix.Plugin.YoutubeDL\\n0tFlix.Plugin.YoutubeDL.csproj",
   "expectedPackageFiles": [
@@ -90,7 +90,6 @@
     "C:\\Users\\oddos\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
-    "C:\\Users\\oddos\\.nuget\\packages\\nyoutubedlp\\0.11.4\\nyoutubedlp.0.11.4.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\oddos\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

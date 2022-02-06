@@ -1191,18 +1191,6 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "NYoutubeDLP/0.11.4": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/NYoutubeDLP.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NYoutubeDLP.dll": {}
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2750,6 +2738,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "NYoutubeDL/0.11.2": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/NYoutubeDL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NYoutubeDL.dll": {}
+        }
       }
     }
   },
@@ -4144,18 +4142,6 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
-      ]
-    },
-    "NYoutubeDLP/0.11.4": {
-      "sha512": "6+STFIvE3ETGNRq9rXxaJ88RlxS9sSPZ2jI2R/2udULerpNZCkdwt0Ec8xNhMfNG+WvLkzVXCkDKttTSg1De6g==",
-      "type": "package",
-      "path": "nyoutubedlp/0.11.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/NYoutubeDLP.dll",
-        "nyoutubedlp.0.11.4.nupkg.sha512",
-        "nyoutubedlp.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8300,6 +8286,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "NYoutubeDL/0.11.2": {
+      "type": "project",
+      "path": "../../Externals/NYoutube/NYoutubeDL.csproj",
+      "msbuildProject": "../../Externals/NYoutube/NYoutubeDL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8310,7 +8301,7 @@
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.Extensions.Http >= 5.0.0",
-      "NYoutubeDLP >= 0.11.4"
+      "NYoutubeDL >= 0.11.2"
     ]
   },
   "packageFolders": {
@@ -8340,7 +8331,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj": {
+              "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\NYoutube\\NYoutubeDL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -8376,10 +8371,6 @@
           "Microsoft.Extensions.Http": {
             "target": "Package",
             "version": "[5.0.0, )"
-          },
-          "NYoutubeDLP": {
-            "target": "Package",
-            "version": "[0.11.4, )"
           }
         },
         "imports": [
