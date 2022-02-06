@@ -86,10 +86,10 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "fixed parser bug",
+        "changelog": "fixed parseranother  bug",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
-        "checksum": "1EF9F8CC00B0F5A4863A0DA533F94D71",
+        "checksum": "CA0C3BDA5A6BEA0B7E46B7334CB8457A",
         "timestamp": "2022-01-08T17:33:56Z"
       }
     ]

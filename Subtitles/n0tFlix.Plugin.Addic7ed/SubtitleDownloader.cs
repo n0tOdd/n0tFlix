@@ -70,7 +70,10 @@ namespace n0tFlix.Plugin.Addic7ed
             {
                 var lang = result.GetElementsByClassName("language").Where(x => x.TextContent.ToLower().StartsWith(request.Language)).FirstOrDefault();
                 if (lang == null)
+                {
+                    logger.LogError("null?");
                     continue;
+                }
                 try
                 {
                     string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
@@ -95,7 +98,7 @@ namespace n0tFlix.Plugin.Addic7ed
                 }
                 catch(Exception ex)
                 {
-                    this.logger.LogError(ex.Message);
+                    this.logger.LogError("error "+ex.Message);
                 }
 
             }
