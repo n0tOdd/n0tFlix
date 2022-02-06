@@ -48,11 +48,11 @@ namespace n0tFlix.Plugin.YoutubeDL.API
         /// </returns>
         [HttpPost()]
         [Produces(MediaTypeNames.Application.Json)]
-        public async Task<JsonResult> Get([FromBody] CollectInfo body)
+        public async Task<string> Get([FromBody] CollectInfo body)
         {
             if(!System.IO.File.Exists(Plugin.Instance.Configuration.YoutubeDlFilePath))
             {
-                return new JsonResult("ERROR: Youtubedl can not be found, try restarting jellyfin it should download it for you then");
+                return "ERROR: Youtubedl can not be found, try restarting jellyfin it should download it for you then";
             }
             NYoutubeDL.YoutubeDL youtubeDL = new NYoutubeDL.YoutubeDL();
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
@@ -76,15 +76,15 @@ namespace n0tFlix.Plugin.YoutubeDL.API
             youtubeDL.Options.VideoFormatOptions.Format = NYoutubeDL.Helpers.Enums.VideoFormat.best;
             StringBuilder sb = new StringBuilder();
             youtubeDL.StandardOutputEvent += (sender, output) => sb.AppendLine(output);
-           
-           // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
-         //   youtubeDL.PrepareDownload();
-           // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
-           
-            youtubeDL.Download(body.URL);
+            string commandToRun = await youtubeDL.PrepareDownloadAsync();
+            // youtubeDL.StandardErrorEvent += (sender, errorOutput) => sb.AppendLine(errorOutput);
+            //   youtubeDL.PrepareDownload();
+            // var info = await youtubeDL.GetDownloadInfoAsync(body.URL);
+
+            await youtubeDL.DownloadAsync(body.URL);
             
 
-            return new JsonResult(sb.ToString());
+            return sb.ToString() + " :::::" + commandToRun;
         }
     }
 
