@@ -26,6 +26,7 @@ namespace NYoutubeDL
     using System.ComponentModel;
     using System.Diagnostics;
     using System.IO;
+    using System.Runtime.InteropServices;
     using System.Threading;
     using System.Threading.Tasks;
     using Helpers;

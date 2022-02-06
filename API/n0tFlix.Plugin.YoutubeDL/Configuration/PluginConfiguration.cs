@@ -11,5 +11,10 @@ namespace n0tFlix.Plugin.YoutubeDL.Configuration
     {
 
         public string YoutubeDlFilePath { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Default install path for python (i think this is only needed on linux/max maybe
+        /// </summary>
+        public string PythonPath { get; set; } = "/usr/bin/python3";
     }
 }
