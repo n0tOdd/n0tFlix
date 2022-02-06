@@ -52,8 +52,8 @@ namespace n0tFlix.Plugin.Addic7ed
             => new[] { VideoContentType.Episode };
 
         /// <inheritdoc />
-        public Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
-            => GetSubtitlesInternal(id, cancellationToken);
+        public async Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
+            => await GetSubtitlesInternal(id, cancellationToken);
 
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
@@ -79,6 +79,7 @@ namespace n0tFlix.Plugin.Addic7ed
                     string auth = result.GetElementsByTagName("a").Where(x => x.HasAttribute("href") && x.GetAttribute("href").StartsWith("/user")).First().TextContent;
                     
                     string id = "https://www.addic7ed.com" + lang.ParentElement.GetElementsByClassName("buttonDownload").First().GetAttribute("href") + "__" + lang.TextContent;
+                    this.logger.LogInformation(id);
                     string title = document.GetElementsByClassName("titulo").First().TextContent;
                     string name = result.GetElementsByClassName("NewsTitle").First().TextContent;
 
