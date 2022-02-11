@@ -12,13 +12,38 @@
 	<EmbeddedResource Include="Web\*.html" />
 	<EmbeddedResource Include="Web\*.js" />
 	</ItemGroup>
+
+  <ItemGroup>
+    <None Include="TextTemplate1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Jellyfin.Common" Version="10.7.7" />
     <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="TextTemplate1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextTemplate1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="TextTemplate1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
 	  <Exec Command="PowerShell  Compress-Archive -Path &quot;$(TargetDir)\*.dll&quot; -DestinationPath &quot;$(SolutionDir)\Build\$(ProjectName).zip&quot; -Force" />
   </Target>
 
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v17.0\TextTemplating\Microsoft.TextTemplating.targets" />
 </Project>
