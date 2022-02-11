@@ -1,5 +1,4 @@
 [
-
   {
     "guid": "86e18da5-3591-44bb-a680-60092de84c0a",
     "name": "Addic7ed",
@@ -63,7 +62,7 @@
     "description": "",
     "overview": "",
     "owner": "n0tme",
-    "category": "n0tSubtitles,
+    "category": "n0tSubtitles",
     "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.png",
     "versions": [
       {
