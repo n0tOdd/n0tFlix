@@ -14,10 +14,10 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <None Include="TextTemplate1.cs">
+    <None Include="VersionIncrementer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>TextTemplate1.tt</DependentUpon>
+      <DependentUpon>VersionIncrementer.tt</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -26,9 +26,9 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="TextTemplate1.tt">
+    <None Update="VersionIncrementer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TextTemplate1.cs</LastGenOutput>
+      <LastGenOutput>VersionIncrementer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +39,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </Compile>
+    <Compile Update="VersionIncrementer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VersionIncrementer.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
