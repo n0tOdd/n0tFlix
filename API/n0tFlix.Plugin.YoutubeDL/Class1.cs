@@ -23,10 +23,9 @@ namespace n0tFlix.Plugin.YoutubeDL
             return new PluginInfo("YoutubeDL API", new Version(1, 0, 0, 0), "No description here", Id,true);
         }
         public ILogger<Plugin> logger;
-        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer, ILogger<Plugin> logger) : base(applicationPaths,
+        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer) : base(applicationPaths,
             xmlSerializer)
         {
-            this.logger = logger;
             
             //Todo add path dataen som youtubedl skal save i
             Instance = this;

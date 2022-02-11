@@ -2738,16 +2738,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "n0tYoutubeDL/0.4.1": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/n0tYoutubeDL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/n0tYoutubeDL.dll": {}
-        }
       }
     }
   },
@@ -8286,11 +8276,6 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "n0tYoutubeDL/0.4.1": {
-      "type": "project",
-      "path": "../../Externals/n0tYoutubeDL/n0tYoutubeDL.csproj",
-      "msbuildProject": "../../Externals/n0tYoutubeDL/n0tYoutubeDL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8300,8 +8285,7 @@
       "Jellyfin.Model >= 10.7.7",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
-      "Microsoft.Extensions.Http >= 5.0.0",
-      "n0tYoutubeDL >= 0.4.1"
+      "Microsoft.Extensions.Http >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -8331,11 +8315,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj": {
-              "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\n0tYoutubeDL\\n0tYoutubeDL.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
