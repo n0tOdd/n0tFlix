@@ -15,7 +15,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "7B90C8588B2908C76FD37026B65E449F",
-        "timestamp": "2/11/2022 3:26:48 AM"
+        "timestamp": "2021-12-12T13:48:15Z"
       }
     ]
   },
@@ -34,7 +34,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "F40609C3B0D531B023CDCF3B42EBBB4E",
-        "timestamp": "2/11/2022 3:26:49 AM"
+        "timestamp": "2021-12-12T13:48:15Z"
       }
     ]
   },
@@ -53,7 +53,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "282160D288A0BB6F81799E6EA68EB1F4",
-        "timestamp": "2/11/2022 3:26:50 AM"
+        "timestamp": "2021-12-12T13:48:15Z"
       }
     ]
   },
@@ -72,7 +72,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "4D3D132FD568917B6BE01CC96255156C",
-        "timestamp": "2/11/2022 3:26:50 AM"
+        "timestamp": "2021-12-12T13:48:15Z"
       }
     ]
   },
@@ -91,7 +91,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
         "checksum": "4D3D132FD568917B6BE01CC96255156C",
-        "timestamp": "2/11/2022 3:26:50 AM"
+        "timestamp": "2021-12-12T13:48:15Z"
       }
     ]
   }
