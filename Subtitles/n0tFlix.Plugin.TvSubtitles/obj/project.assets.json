@@ -62,18 +62,6 @@
           "lib/net5.0/MediaBrowser.Model.dll": {}
         }
       },
-      "Jellyfin.Naming/10.7.7": {
-        "type": "package",
-        "dependencies": {
-          "Jellyfin.Model": "10.7.7"
-        },
-        "compile": {
-          "lib/net5.0/Emby.Naming.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Emby.Naming.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -354,7 +342,7 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/5.0.0": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -541,24 +529,6 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Text.Encoding.CodePages/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Text.Encodings.Web/4.5.0": {
         "type": "package",
         "compile": {
@@ -584,37 +554,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {}
-        }
-      },
-      "AngleSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "System.Text.Encoding.CodePages": "5.0.0"
-        },
-        "compile": {
-          "bin/placeholder/AngleSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AngleSharp.dll": {}
-        }
-      },
-      "n0tFlix.Helpers/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Jellyfin.Common": "10.7.7",
-          "Jellyfin.Controller": "10.7.7",
-          "Jellyfin.Data": "10.7.7",
-          "Jellyfin.Model": "10.7.7",
-          "Jellyfin.Naming": "10.7.7",
-          "Microsoft.Extensions.Http": "5.0.0"
-        },
-        "compile": {
-          "bin/placeholder/n0tFlix.Helpers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/n0tFlix.Helpers.dll": {}
         }
       }
     }
@@ -670,19 +609,6 @@
         "jellyfin.model.nuspec",
         "lib/net5.0/MediaBrowser.Model.dll",
         "lib/net5.0/MediaBrowser.Model.xml"
-      ]
-    },
-    "Jellyfin.Naming/10.7.7": {
-      "sha512": "/JKesjbtBBJUsMq5nPiLylYd/aJ85W+0PvVWDO0Ay6xC8WWSHPILcendo4IMaalDNN2MegbLIXO9GfJ07IJAhw==",
-      "type": "package",
-      "path": "jellyfin.naming/10.7.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "jellyfin.naming.10.7.7.nupkg.sha512",
-        "jellyfin.naming.nuspec",
-        "lib/net5.0/Emby.Naming.dll",
-        "lib/net5.0/Emby.Naming.xml"
       ]
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
@@ -1097,22 +1023,19 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/5.0.0": {
-      "sha512": "VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/5.0.0",
+      "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtime.json"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
@@ -1557,47 +1480,6 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/5.0.0": {
-      "sha512": "NyscU59xX6Uo91qvhOs2Ccho3AR2TnZPomo1Z0K6YpyztBPM/A5VbkzOO19sy3A3i1TtEnTxA7bCe3Us+r5MWg==",
-      "type": "package",
-      "path": "system.text.encoding.codepages/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Text.Encoding.CodePages.dll",
-        "lib/net461/System.Text.Encoding.CodePages.dll",
-        "lib/net461/System.Text.Encoding.CodePages.xml",
-        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.5.0.0.nupkg.sha512",
-        "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Text.Encodings.Web/4.5.0": {
       "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "type": "package",
@@ -1664,25 +1546,13 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "AngleSharp/1.0.0": {
-      "type": "project",
-      "path": "../../Externals/AngleSharp/AngleSharp.Core.csproj",
-      "msbuildProject": "../../Externals/AngleSharp/AngleSharp.Core.csproj"
-    },
-    "n0tFlix.Helpers/1.0.0": {
-      "type": "project",
-      "path": "../../n0tFlix.Helpers/n0tFlix.Helpers.csproj",
-      "msbuildProject": "../../n0tFlix.Helpers/n0tFlix.Helpers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "AngleSharp >= 1.0.0",
       "Jellyfin.Common >= 10.7.7",
       "Jellyfin.Controller >= 10.7.7",
-      "Microsoft.Extensions.Http >= 5.0.0",
-      "n0tFlix.Helpers >= 1.0.0"
+      "Microsoft.Extensions.Http >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -1712,14 +1582,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "D:\\n0tFlix\\n0tFlix\\Externals\\AngleSharp\\AngleSharp.Core.csproj": {
-              "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\AngleSharp\\AngleSharp.Core.csproj"
-            },
-            "D:\\n0tFlix\\n0tFlix\\n0tFlix.Helpers\\n0tFlix.Helpers.csproj": {
-              "projectPath": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Helpers\\n0tFlix.Helpers.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

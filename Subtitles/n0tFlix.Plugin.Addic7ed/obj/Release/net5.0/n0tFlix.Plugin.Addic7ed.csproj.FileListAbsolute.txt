@@ -10,7 +10,3 @@ D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Release\net5.0\n0tFlix.
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Release\net5.0\n0tFlix.Plugin.Addic7ed.dll
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Release\net5.0\ref\n0tFlix.Plugin.Addic7ed.dll
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Release\net5.0\n0tFlix.Plugin.Addic7ed.pdb
-D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Release\net5.0\AngleSharp.dll
-D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Release\net5.0\AngleSharp.pdb
-D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\bin\Release\net5.0\AngleSharp.xml
-D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.Addic7ed\obj\Release\net5.0\n0tFlix.Plugin.Addic7ed.csproj.CopyComplete

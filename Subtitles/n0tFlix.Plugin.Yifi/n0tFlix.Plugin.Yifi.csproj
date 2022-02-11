@@ -17,9 +17,6 @@
     <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Externals\AngleSharp\AngleSharp.Core.csproj" />
-  </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="PowerShell  Compress-Archive -Path &quot;$(TargetDir)\*.dll&quot; -DestinationPath &quot;$(SolutionDir)\Build\$(ProjectName).zip&quot; -Force" />
   </Target>
