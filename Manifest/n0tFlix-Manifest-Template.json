@@ -1,5 +1,5 @@
 [
-
+  
   {
     "guid": "86e18da5-3591-44bb-a680-60092de84c0a",
     "name": "Addic7ed",
@@ -15,7 +15,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "0FEEC6BBFF2BCF058D3CE4C65CF60ED2",
-        "timestamp": "2022-02-11T12:27:43Z"
+        "timestamp": "2022-02-11T12:37:57Z"
       }
     ]
   },
@@ -34,7 +34,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "984C62CFAE097ECF22408ABB0AAC18CB",
-        "timestamp": "2022-02-11T12:27:43Z"
+        "timestamp": "2022-02-11T12:37:57Z"
       }
     ]
   },
@@ -48,12 +48,12 @@
     "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.png",
     "versions": [
       {
-        "version": "1.0.701.656",
+        "version": "1.0.0.0",
         "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
-        "checksum": "462650C93B457C5C3B86BFA5FF06FEC0",
-        "timestamp": "2022-02-11T12:27:43Z"
+        "checksum": "DD8D35EA951C0CFA568515199816A505",
+        "timestamp": "2022-02-11T12:37:58Z"
       }
     ]
   },
@@ -72,7 +72,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "A54DD58D94D2D2A2474DB9442353E5DD",
-        "timestamp": "2022-02-11T12:27:44Z"
+        "timestamp": "2022-02-11T12:37:58Z"
       }
     ]
   },
@@ -91,7 +91,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
         "checksum": "BD046AE97379DA43C434353A915E1886",
-        "timestamp": "2022-02-11T12:27:44Z"
+        "timestamp": "2022-02-11T12:37:58Z"
       }
     ]
   }

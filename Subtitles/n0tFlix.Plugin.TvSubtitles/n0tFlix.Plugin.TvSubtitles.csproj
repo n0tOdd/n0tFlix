@@ -12,14 +12,6 @@
 	<EmbeddedResource Include="Web\*.html" />
 	<EmbeddedResource Include="Web\*.js" />
 	</ItemGroup>
-
-  <ItemGroup>
-    <None Include="VersionIncrementer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>VersionIncrementer.tt</DependentUpon>
-    </None>
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Jellyfin.Common" Version="10.7.7" />
     <PackageReference Include="Jellyfin.Controller" Version="10.7.7" />
@@ -39,11 +31,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>TextTemplate1.tt</DependentUpon>
-    </Compile>
-    <Compile Update="VersionIncrementer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>VersionIncrementer.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
