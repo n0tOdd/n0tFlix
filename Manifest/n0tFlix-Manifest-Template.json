@@ -11,11 +11,11 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Unknown",
+        "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "0FEEC6BBFF2BCF058D3CE4C65CF60ED2",
-        "timestamp": "2022-2-11T10:56:58Z"
+        "timestamp": "2022-2-11T11:10:17Z"
       }
     ]
   },
@@ -30,11 +30,11 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Unknown",
+        "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "984C62CFAE097ECF22408ABB0AAC18CB",
-        "timestamp": "2022-2-11T10:56:58Z"
+        "timestamp": "2022-2-11T11:10:17Z"
       }
     ]
   },
@@ -49,11 +49,11 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Unknown",
+        "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "E52EF675566AB56AF3AAE8A47F59014B",
-        "timestamp": "2022-2-11T10:56:58Z"
+        "timestamp": "2022-2-11T11:10:18Z"
       }
     ]
   },
@@ -68,11 +68,11 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Unknown",
+        "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
-        "checksum": "FF17DEA7EE63CEA23261EB447B030A39",
-        "timestamp": "2022-2-11T10:56:59Z"
+        "checksum": "4F17C392241EF2EE3068676D7630E74D",
+        "timestamp": "2022-2-11T11:10:18Z"
       }
     ]
   },
@@ -87,11 +87,11 @@
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Unknown",
+        "changelog": "Check github for changelog",
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
         "checksum": "BD046AE97379DA43C434353A915E1886",
-        "timestamp": "2022-2-11T10:57:0Z"
+        "timestamp": "2022-2-11T11:10:18Z"
       }
     ]
   }

@@ -111,7 +111,7 @@ namespace n0tFlix.Plugin.Yifi
             {
                 var href = element.GetElementsByTagName("a").First();
                 string uri = href.GetAttribute("href");
-                if (string.IsNullOrEmpty(uri))
+                if (string.IsNullOrEmpty(uri) || uri.StartsWith("javascript"))
                     continue;
 
                 this.logger.LogError("https://yifysubtitles.org" + uri.Replace("%2","/"));
