@@ -100,7 +100,7 @@ namespace n0tFlix.Manifest.Creator
                                 var ver = new Manifestdata.Version()
                                 {
                                     sourceUrl = rooturl + zipfile.Name,
-                                    timestamp = "2021-12-12T13:48:15Z",
+                                    timestamp = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() +"T" + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString() + "Z",
                                     targetAbi = "10.7.7.0",
                                     version = Instance.Version.ToString(),
                                     changelog = "Unknown",
