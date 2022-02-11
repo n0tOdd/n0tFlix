@@ -135,7 +135,6 @@ namespace n0tFlix.Manifest.Creator
             }
 
             string json = System.Text.Json.JsonSerializer.Serialize<List<Manifestdata>>(liste);
-            json = json.Replace("[", "[\n");
             File.WriteAllText(Path.Combine(me.Directory.Parent.Parent.Parent.FullName,"Manifest", "n0tFlix-Manifest-Template.json"), json);
         }
         public static string GetCategory(Assembly dll)

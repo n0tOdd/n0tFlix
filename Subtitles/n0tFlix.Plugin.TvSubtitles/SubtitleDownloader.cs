@@ -115,6 +115,7 @@ namespace n0tFlix.Plugin.TvSubtitles
             {
                 try
                 {
+                    logger.LogError(link.InnerHtml);
                     if (!link.InnerHtml.Contains(searchwork, StringComparison.OrdinalIgnoreCase))
                         continue;
                     string url = "http://www.tvsubtitles.net" + link.GetAttribute("href");
