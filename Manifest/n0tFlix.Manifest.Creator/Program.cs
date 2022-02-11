@@ -105,7 +105,7 @@ namespace n0tFlix.Manifest.Creator
                                     timestamp = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() +"T" + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString() + "Z",
                                     targetAbi = "10.7.7.0",
                                     version = Instance.Version.ToString(),
-                                    changelog = "Unknown",
+                                    changelog = "Check github for changelog",
                                     checksum = GetMD5(zipfile.FullName)
                                 };
                                 Manifestdata manifestdata = new Manifestdata()

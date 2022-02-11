@@ -15,7 +15,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "0FEEC6BBFF2BCF058D3CE4C65CF60ED2",
-        "timestamp": "2022-2-11T10:49:47Z"
+        "timestamp": "2022-2-11T10:56:58Z"
       }
     ]
   },
@@ -34,7 +34,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "984C62CFAE097ECF22408ABB0AAC18CB",
-        "timestamp": "2022-2-11T10:49:48Z"
+        "timestamp": "2022-2-11T10:56:58Z"
       }
     ]
   },
@@ -53,7 +53,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "E52EF675566AB56AF3AAE8A47F59014B",
-        "timestamp": "2022-2-11T10:49:48Z"
+        "timestamp": "2022-2-11T10:56:58Z"
       }
     ]
   },
@@ -72,26 +72,26 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "FF17DEA7EE63CEA23261EB447B030A39",
-        "timestamp": "2022-2-11T10:49:49Z"
+        "timestamp": "2022-2-11T10:56:59Z"
       }
     ]
   },
   {
     "guid": "e84adafb-7ad0-43c9-92b6-2dfbd54d1342",
     "name": "YoutubeDL API",
-    "description": "Adds a api to jellyfin to grab streamable link with youtubedl",
-    "overview": "check github for better info on usage",
+    "description": "An API for using youtube-dl to collect streamable links from around the web, for making faster channels",
+    "overview": "An API for using youtube-dl to collect streamable links from around the web, for making faster channels",
     "owner": "n0tme",
-    "category": "n0tAPI",
-    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.png",
+    "category": "n0tOthers",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.png",
     "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "4D3D132FD568917B6BE01CC96255156C",
-        "timestamp": "2021-12-12T13:48:15Z"
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
+        "checksum": "BD046AE97379DA43C434353A915E1886",
+        "timestamp": "2022-2-11T10:57:0Z"
       }
     ]
   }
