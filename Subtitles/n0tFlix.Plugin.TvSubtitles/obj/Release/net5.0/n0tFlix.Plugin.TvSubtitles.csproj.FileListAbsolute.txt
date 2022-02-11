@@ -14,3 +14,5 @@ D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFl
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.dll
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\ref\n0tFlix.Plugin.TvSubtitles.dll
 D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\obj\Release\net5.0\n0tFlix.Plugin.TvSubtitles.pdb
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\bin\Release\net5.0\n0tFlix.Helpers.dll
+D:\n0tFlix\n0tFlix\Subtitles\n0tFlix.Plugin.TvSubtitles\bin\Release\net5.0\n0tFlix.Helpers.pdb
