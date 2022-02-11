@@ -7,6 +7,8 @@ using System.Reflection;
 using System.Security.Cryptography;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
+using MediaBrowser.Controller.Channels;
+using MediaBrowser.Controller.Subtitles;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
@@ -109,7 +111,7 @@ namespace n0tFlix.Manifest.Creator
                                 Manifestdata manifestdata = new Manifestdata()
                                 {
                                     name = Instance.Name,
-                                    category = "n0tFlix.Plugins",
+                                    category = GetCategory(dll),
                                     description = Instance.Description,
                                     guid = Instance.Id.ToString(),
                                     overview = Instance.Description,
@@ -134,6 +136,20 @@ namespace n0tFlix.Manifest.Creator
 
             string json = System.Text.Json.JsonSerializer.Serialize<List<Manifestdata>>(liste);
             File.WriteAllText(Path.Combine(me.Directory.Parent.Parent.Parent.FullName,"Manifest","Manifest.json"), json);
+        }
+        public static string GetCategory(Assembly dll)
+        {
+            var type = typeof(ISubtitleProvider);
+            var matched = dll.GetTypes().Where(p => type.IsAssignableFrom(p));
+            if (matched.Count() > 0)
+                return "n0tSubtitles";
+            type = typeof(IChannel);
+            matched = dll.GetTypes().Where(p => type.IsAssignableFrom(p));
+            if (matched.Count() > 0)
+                return "n0tChannels";
+
+
+            return "n0tOthers";
         }
         public static string GetMD5(string FilePath)
         {
