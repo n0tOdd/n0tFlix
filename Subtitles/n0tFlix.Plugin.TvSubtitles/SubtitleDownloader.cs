@@ -127,12 +127,15 @@ namespace n0tFlix.Plugin.TvSubtitles
                     var seasons = desc.GetElementsByTagName("a");
                     var correct = seasons.Where(x => x.TextContent.Equals("season " + request.ParentIndexNumber, StringComparison.OrdinalIgnoreCase)).First();
                     string seasonurl = "http://www.tvsubtitles.net/" + correct.GetAttribute("href");
+                    logger.LogError(seasonurl);
+
                     res = await client.GetStringAsync(seasonurl, cancellationToken);
                     document = await browser.OpenAsync(x => x.Content(res));
                     var episodes = document.GetElementsByName("tbody").First().GetElementsByTagName("table").First().GetElementsByTagName("tr");
                     var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().EndsWith(request.IndexNumber.ToString(), StringComparison.OrdinalIgnoreCase)).First();
                     var hrr = thisone.GetElementsByTagName("a").Where(x => x.GetAttribute("href").StartsWith("subtitle")).First();
                     string dllink = "http://www.tvsubtitles.net/" + hrr.GetAttribute("href");
+                    logger.LogError(dllink);
                     res = await client.GetStringAsync(dllink, cancellationToken);
                     document = await browser.OpenAsync(x => x.Content(res));
                     string title = document.QuerySelector("//*[@id=\"content\"]/div[4]/div/div[3]/table/tbody/tr[2]/td[3]").TextContent;
