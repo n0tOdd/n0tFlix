@@ -133,7 +133,7 @@ namespace n0tFlix.Plugin.TvSubtitles
                     res = await client.GetStringAsync(seasonurl, cancellationToken);
                     document = await browser.OpenAsync(x => x.Content(res));
                     logger.LogError(request.IndexNumber.Value.ToString());
-                    var episodes = document.GetElementsByTagName("tbody")[2].GetElementsByTagName("table").First().GetElementsByTagName("tr");
+                    var episodes = document.GetElementsByTagName("tbody")[2].GetElementsByTagName("tr");
                     logger.LogError(episodes.Count().ToString());
                     var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().EndsWith(request.IndexNumber.ToString(), StringComparison.OrdinalIgnoreCase)).First();
                     var hrr = thisone.GetElementsByTagName("a").Where(x => x.GetAttribute("href").StartsWith("subtitle")).First();
