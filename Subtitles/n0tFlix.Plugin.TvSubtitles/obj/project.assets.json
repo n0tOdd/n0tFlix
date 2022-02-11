@@ -62,6 +62,18 @@
           "lib/net5.0/MediaBrowser.Model.dll": {}
         }
       },
+      "Jellyfin.Naming/10.7.7": {
+        "type": "package",
+        "dependencies": {
+          "Jellyfin.Model": "10.7.7"
+        },
+        "compile": {
+          "lib/net5.0/Emby.Naming.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Emby.Naming.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -586,6 +598,24 @@
         "runtime": {
           "bin/placeholder/AngleSharp.dll": {}
         }
+      },
+      "n0tFlix.Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Jellyfin.Common": "10.7.7",
+          "Jellyfin.Controller": "10.7.7",
+          "Jellyfin.Data": "10.7.7",
+          "Jellyfin.Model": "10.7.7",
+          "Jellyfin.Naming": "10.7.7",
+          "Microsoft.Extensions.Http": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/n0tFlix.Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/n0tFlix.Helpers.dll": {}
+        }
       }
     }
   },
@@ -640,6 +670,19 @@
         "jellyfin.model.nuspec",
         "lib/net5.0/MediaBrowser.Model.dll",
         "lib/net5.0/MediaBrowser.Model.xml"
+      ]
+    },
+    "Jellyfin.Naming/10.7.7": {
+      "sha512": "/JKesjbtBBJUsMq5nPiLylYd/aJ85W+0PvVWDO0Ay6xC8WWSHPILcendo4IMaalDNN2MegbLIXO9GfJ07IJAhw==",
+      "type": "package",
+      "path": "jellyfin.naming/10.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jellyfin.naming.10.7.7.nupkg.sha512",
+        "jellyfin.naming.nuspec",
+        "lib/net5.0/Emby.Naming.dll",
+        "lib/net5.0/Emby.Naming.xml"
       ]
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
@@ -1626,6 +1669,11 @@
       "type": "project",
       "path": "../../Externals/AngleSharp/AngleSharp.Core.csproj",
       "msbuildProject": "../../Externals/AngleSharp/AngleSharp.Core.csproj"
+    },
+    "n0tFlix.Helpers/1.0.0": {
+      "type": "project",
+      "path": "../../n0tFlix.Helpers/n0tFlix.Helpers.csproj",
+      "msbuildProject": "../../n0tFlix.Helpers/n0tFlix.Helpers.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1633,7 +1681,8 @@
       "AngleSharp >= 1.0.0",
       "Jellyfin.Common >= 10.7.7",
       "Jellyfin.Controller >= 10.7.7",
-      "Microsoft.Extensions.Http >= 5.0.0"
+      "Microsoft.Extensions.Http >= 5.0.0",
+      "n0tFlix.Helpers >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1666,6 +1715,9 @@
           "projectReferences": {
             "D:\\n0tFlix\\n0tFlix\\Externals\\AngleSharp\\AngleSharp.Core.csproj": {
               "projectPath": "D:\\n0tFlix\\n0tFlix\\Externals\\AngleSharp\\AngleSharp.Core.csproj"
+            },
+            "D:\\n0tFlix\\n0tFlix\\n0tFlix.Helpers\\n0tFlix.Helpers.csproj": {
+              "projectPath": "D:\\n0tFlix\\n0tFlix\\n0tFlix.Helpers\\n0tFlix.Helpers.csproj"
             }
           }
         }

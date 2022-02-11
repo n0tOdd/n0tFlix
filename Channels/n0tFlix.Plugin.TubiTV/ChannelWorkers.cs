@@ -8,6 +8,7 @@ using MediaBrowser.Controller.Channels;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using n0tFlix.Helpers.Downloader;
+using n0tFlix.Plugin.TubiTV.Models;
 
 namespace n0tFlix.Plugin.TubiTV
 {

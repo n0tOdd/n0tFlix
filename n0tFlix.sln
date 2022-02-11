@@ -66,6 +66,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Plugin.TubiTV", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "n0tFlix.Helpers", "n0tFlix.Helpers\n0tFlix.Helpers.csproj", "{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubtitleDebugger", "Subtitles\SubtitleDebugger\SubtitleDebugger.csproj", "{A5481CAF-8A45-4C1B-A76A-372B70806A19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +126,10 @@ Global
 		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5481CAF-8A45-4C1B-A76A-372B70806A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5481CAF-8A45-4C1B-A76A-372B70806A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5481CAF-8A45-4C1B-A76A-372B70806A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5481CAF-8A45-4C1B-A76A-372B70806A19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +148,7 @@ Global
 		{252D464F-E14A-42AA-AC4E-B225F9757DB2} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
 		{12B6AA59-BD4E-4EDA-80F4-C7B9D0104A96} = {1C1FA51D-2703-4098-91EC-4152FEC74888}
 		{D27B8289-F565-4D0E-AB36-DC9B0BB1BF04} = {C787EDB7-02D0-47BF-BB3F-35D9D5CA5769}
+		{A5481CAF-8A45-4C1B-A76A-372B70806A19} = {287A39C8-C393-4446-A2C6-7A0EDBFDC64C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B3A82DB-72D9-428C-B61E-F02F6B2BF1C1}

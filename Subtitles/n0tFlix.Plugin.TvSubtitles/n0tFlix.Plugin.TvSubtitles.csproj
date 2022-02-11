@@ -19,6 +19,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Externals\AngleSharp\AngleSharp.Core.csproj" />
+    <ProjectReference Include="..\..\n0tFlix.Helpers\n0tFlix.Helpers.csproj" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
 	  <Exec Command="PowerShell  Compress-Archive -Path &quot;$(TargetDir)\*.dll&quot; -DestinationPath &quot;$(SolutionDir)\Build\$(ProjectName).zip&quot; -Force" />

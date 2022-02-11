@@ -20,6 +20,7 @@ using AngleSharp.Dom;
 using AngleSharp;
 using System.Web;
 using System.IO.Compression;
+using n0tFlix.Helpers.Downloader;
 
 namespace n0tFlix.Plugin.TvSubtitles
 {
@@ -32,7 +33,7 @@ namespace n0tFlix.Plugin.TvSubtitles
 
         private IReadOnlyList<string>? _languages;
         private readonly IHttpClientFactory httpClientFactory;
-
+        private readonly n0tHttpClient client;
         /// <summary>
         /// Initializes a new instance of the <see cref="SubtitleDownloader"/> class.
         /// </summary>
@@ -42,6 +43,9 @@ namespace n0tFlix.Plugin.TvSubtitles
         {
             this.logger = logger;
             this.httpClientFactory = httpClientFactory;
+            LoggerFactory ll = new LoggerFactory();
+            client = new n0tHttpClient(ll);
+
             this.logger.LogInformation("Loaded " + this.Name);
         }
 
@@ -94,37 +98,41 @@ namespace n0tFlix.Plugin.TvSubtitles
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
-            string query = "q=" + request.Name + " " + request.ProductionYear;
+            string searchwork = request.Name;
+            string query = "q=" + "Family guy ";
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("q", searchwork);
             var post = new StringContent(query.Replace(" ", "+"));
-            var source = await new HttpClient().PostAsync("http://www.tvsubtitles.net/search.php", post);
-            string cont = await source.Content.ReadAsStringAsync();
+            var source = await client.GetStringAsync("http://www.tvsubtitles.net/search.php", default, headers, default);
+            string cont = source;
             var conf = AngleSharp.Configuration.Default;
             var browser = AngleSharp.BrowsingContext.New(conf);
             IDocument document = await browser.OpenAsync(x => x.Content(cont));
-            var results = document.GetElementsByName("ul").Last();
+            var results = document.GetElementsByTagName("ul").Last();
             var links = results.GetElementsByTagName("a");
             List<RemoteSubtitleInfo> list = new List<RemoteSubtitleInfo>();
             foreach (var link in links)
             {
                 try
                 {
-                    string url = link.GetAttribute("href");
+                    if (!link.InnerHtml.Contains(searchwork, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    string url = "http://www.tvsubtitles.net" + link.GetAttribute("href");
                     if (string.IsNullOrEmpty(url))
                         continue;
-                    this.logger.LogError("testing url " + url);
-                    string res = await new HttpClient().GetStringAsync(url);
+                    string res = await client.GetStringAsync(url, default);
                     document = await browser.OpenAsync(x => x.Content(res));
                     var desc = document.GetElementsByClassName("description").First();
                     var seasons = desc.GetElementsByTagName("a");
-                    var correct = seasons.Where(x => x.TextContent.Contains(request.ParentIndexNumber.ToString())).First();
+                    var correct = seasons.Where(x => x.TextContent.Equals("season " + request.ParentIndexNumber, StringComparison.OrdinalIgnoreCase)).First();
                     string seasonurl = "http://www.tvsubtitles.net/" + correct.GetAttribute("href");
-                    res = await new HttpClient().GetStringAsync(seasonurl);
+                    res = await client.GetStringAsync(seasonurl, default);
                     document = await browser.OpenAsync(x => x.Content(res));
                     var episodes = document.GetElementsByName("tbody").First().GetElementsByTagName("table").First().GetElementsByTagName("tr");
-                    var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().Equals("")).First();
+                    var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().Equals(request.IndexNumber.ToString(), StringComparison.OrdinalIgnoreCase)).First();
                     var hrr = thisone.GetElementsByTagName("a").Where(x => x.GetAttribute("href").StartsWith("subtitle")).First();
                     string dllink = "http://www.tvsubtitles.net/" + hrr.GetAttribute("href");
-                    res = await new HttpClient().GetStringAsync(dllink);
+                    res = await client.GetStringAsync(dllink, default);
                     document = await browser.OpenAsync(x => x.Content(res));
                     string title = document.QuerySelector("//*[@id=\"content\"]/div[4]/div/div[3]/table/tbody/tr[2]/td[3]").TextContent;
                     string author = document.QuerySelector("//*[@id=\"content\"]/div[4]/div/div[3]/table/tbody/tr[5]/td[3]").TextContent;
@@ -138,12 +146,11 @@ namespace n0tFlix.Plugin.TvSubtitles
                         ProviderName = "TvSubtitles"
                     });
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
 
                 }
             }
-            //todo add så den henter ut riktig episode som vi trenger
             return list;
         }
 
