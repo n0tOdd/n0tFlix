@@ -48,7 +48,7 @@ namespace SubtitleDebugger
                     res = await client.GetStringAsync(seasonurl,default);
                     document = await browser.OpenAsync(x => x.Content(res));
                     var episodes = document.GetElementsByName("tbody").First().GetElementsByTagName("table").First().GetElementsByTagName("tr");
-                    var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().Equals("episodeher")).First();
+                    var thisone = episodes.Where(x => x.GetElementsByTagName("td").First().TextContent.Split("x").Last().Equals("8")).First();
                     var hrr = thisone.GetElementsByTagName("a").Where(x => x.GetAttribute("href").StartsWith("subtitle")).First();
                     string dllink = "http://www.tvsubtitles.net/" + hrr.GetAttribute("href");
                     res = await client.GetStringAsync(dllink,default);
