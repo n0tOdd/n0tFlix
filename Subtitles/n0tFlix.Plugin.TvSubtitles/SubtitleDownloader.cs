@@ -148,6 +148,8 @@ namespace n0tFlix.Plugin.TvSubtitles
                 }
                 catch (Exception ex)
                 {
+                    this.logger.LogError("Error in tvsubtitles:");
+                    this.logger.LogError(ex.Message);
 
                 }
             }

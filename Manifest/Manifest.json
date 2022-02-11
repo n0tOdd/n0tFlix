@@ -1,1 +1,98 @@
-[{"guid":"86e18da5-3591-44bb-a680-60092de84c0a","name":"Addic7ed","description":"Downloads subtitles from Addic7ed.com","overview":"Downloads subtitles from Addic7ed.com","owner":"n0tme","category":"n0tSubtitles","imageUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.png","versions":[{"version":"1.0.0.0","changelog":"Check github for changelog","targetAbi":"10.7.7.0","sourceUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip","checksum":"0FEEC6BBFF2BCF058D3CE4C65CF60ED2","timestamp":"2022-2-11T11:10:17Z"}]},{"guid":"4e18b794-34be-42df-b67c-3823c4a9fe9e","name":"NRK","description":"Gives you access to all the content from https://tv.nrk.no","overview":"Gives you access to all the content from https://tv.nrk.no","owner":"n0tme","category":"n0tChannels","imageUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.png","versions":[{"version":"1.0.0.0","changelog":"Check github for changelog","targetAbi":"10.7.7.0","sourceUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip","checksum":"984C62CFAE097ECF22408ABB0AAC18CB","timestamp":"2022-2-11T11:10:17Z"}]},{"guid":"4ace9dd8-6ab2-485e-a011-afae47641dcb","name":"TvSubtitles","description":"Downloads subtitles from TvSubtitles","overview":"Downloads subtitles from TvSubtitles","owner":"n0tme","category":"n0tSubtitles","imageUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.png","versions":[{"version":"1.0.0.0","changelog":"Check github for changelog","targetAbi":"10.7.7.0","sourceUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip","checksum":"E52EF675566AB56AF3AAE8A47F59014B","timestamp":"2022-2-11T11:10:18Z"}]},{"guid":"12b959d9-6931-4600-8ab5-899c2f023d58","name":"Yifi","description":"","overview":"","owner":"n0tme","category":"n0tSubtitles","imageUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.png","versions":[{"version":"1.0.0.0","changelog":"Check github for changelog","targetAbi":"10.7.7.0","sourceUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip","checksum":"4F17C392241EF2EE3068676D7630E74D","timestamp":"2022-2-11T11:10:18Z"}]},{"guid":"e84adafb-7ad0-43c9-92b6-2dfbd54d1342","name":"YoutubeDL API","description":"An API for using youtube-dl to collect streamable links from around the web, for making faster channels","overview":"An API for using youtube-dl to collect streamable links from around the web, for making faster channels","owner":"n0tme","category":"n0tOthers","imageUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.png","versions":[{"version":"1.0.0.0","changelog":"Check github for changelog","targetAbi":"10.7.7.0","sourceUrl":"https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip","checksum":"BD046AE97379DA43C434353A915E1886","timestamp":"2022-2-11T11:10:18Z"}]}]
+[
+  
+  {
+    "guid": "86e18da5-3591-44bb-a680-60092de84c0a",
+    "name": "Addic7ed",
+    "description": "Downloads subtitles from Addic7ed.com",
+    "overview": "Downloads subtitles from Addic7ed.com",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.png",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "changelog": "Check github for changelog",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
+        "checksum": "0FEEC6BBFF2BCF058D3CE4C65CF60ED2",
+        "timestamp": "2022-2-11T11:45:41Z"
+      }
+    ]
+  },
+  {
+    "guid": "4e18b794-34be-42df-b67c-3823c4a9fe9e",
+    "name": "NRK",
+    "description": "Gives you access to all the content from https://tv.nrk.no",
+    "overview": "Gives you access to all the content from https://tv.nrk.no",
+    "owner": "n0tme",
+    "category": "n0tChannels",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.png",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "changelog": "Check github for changelog",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
+        "checksum": "984C62CFAE097ECF22408ABB0AAC18CB",
+        "timestamp": "2022-2-11T11:45:41Z"
+      }
+    ]
+  },
+  {
+    "guid": "4ace9dd8-6ab2-485e-a011-afae47641dcb",
+    "name": "TvSubtitles",
+    "description": "Downloads subtitles from TvSubtitles",
+    "overview": "Downloads subtitles from TvSubtitles",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.png",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "changelog": "Check github for changelog",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
+        "checksum": "25D38549A30ABFDBE964309139D71EE2",
+        "timestamp": "2022-2-11T11:45:42Z"
+      }
+    ]
+  },
+  {
+    "guid": "12b959d9-6931-4600-8ab5-899c2f023d58",
+    "name": "Yifi",
+    "description": "",
+    "overview": "",
+    "owner": "n0tme",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.png",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "changelog": "Check github for changelog",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
+        "checksum": "68D09B9F992737BC76D1F6CA6A750EAE",
+        "timestamp": "2022-2-11T11:45:43Z"
+      }
+    ]
+  },
+  {
+    "guid": "e84adafb-7ad0-43c9-92b6-2dfbd54d1342",
+    "name": "YoutubeDL API",
+    "description": "An API for using youtube-dl to collect streamable links from around the web, for making faster channels",
+    "overview": "An API for using youtube-dl to collect streamable links from around the web, for making faster channels",
+    "owner": "n0tme",
+    "category": "n0tOthers",
+    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.png",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "changelog": "Check github for changelog",
+        "targetAbi": "10.7.7.0",
+        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
+        "checksum": "BD046AE97379DA43C434353A915E1886",
+        "timestamp": "2022-2-11T11:45:43Z"
+      }
+    ]
+  }
+]

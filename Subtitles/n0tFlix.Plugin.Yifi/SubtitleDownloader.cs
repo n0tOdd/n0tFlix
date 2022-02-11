@@ -50,7 +50,7 @@ namespace n0tFlix.Plugin.Yifi
 
         /// <inheritdoc />
         public IEnumerable<VideoContentType> SupportedMediaTypes
-            => new[] { VideoContentType.Episode, VideoContentType.Movie };
+            => new[] {  VideoContentType.Movie };
 
         /// <inheritdoc />
         public async Task<SubtitleResponse> GetSubtitles(string id, CancellationToken cancellationToken)
