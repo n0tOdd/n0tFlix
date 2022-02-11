@@ -98,11 +98,11 @@ namespace n0tFlix.Plugin.TvSubtitles
         /// <inheritdoc />
         public async Task<IEnumerable<RemoteSubtitleInfo>> Search(SubtitleSearchRequest request, CancellationToken cancellationToken)
         {
-            string searchwork = request.Name;
-            string query = "q=" + "Family guy ";
+            string searchwork = string.Empty;
+            if (!string.IsNullOrEmpty(request.SeriesName))
+                searchwork = request.SeriesName;
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers.Add("q", searchwork);
-            var post = new StringContent(query.Replace(" ", "+"));
             var source = await client.GetStringAsync("http://www.tvsubtitles.net/search.php", cancellationToken, headers, default);
             string cont = source;
             var conf = AngleSharp.Configuration.Default;
