@@ -1,5 +1,6 @@
 [
-    {
+  
+  {
     "guid": "86e18da5-3591-44bb-a680-60092de84c0a",
     "name": "Addic7ed",
     "description": "Downloads subtitles from Addic7ed.com",
@@ -14,7 +15,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
         "checksum": "0FEEC6BBFF2BCF058D3CE4C65CF60ED2",
-        "timestamp": "2022-13-11T12:13:30Z"
+        "timestamp": "2022-02-11T12:16:55Z"
       }
     ]
   },
@@ -33,7 +34,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
         "checksum": "984C62CFAE097ECF22408ABB0AAC18CB",
-        "timestamp": "2022-13-11T12:13:30Z"
+        "timestamp": "2022-02-11T12:16:55Z"
       }
     ]
   },
@@ -52,7 +53,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
         "checksum": "38ABB924EA4781C3D1B2ED5AABB52422",
-        "timestamp": "2022-13-11T12:13:30Z"
+        "timestamp": "2022-02-11T12:16:55Z"
       }
     ]
   },
@@ -71,7 +72,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
         "checksum": "A54DD58D94D2D2A2474DB9442353E5DD",
-        "timestamp": "2022-13-11T12:13:30Z"
+        "timestamp": "2022-02-11T12:16:55Z"
       }
     ]
   },
@@ -90,7 +91,7 @@
         "targetAbi": "10.7.7.0",
         "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
         "checksum": "BD046AE97379DA43C434353A915E1886",
-        "timestamp": "2022-13-11T12:13:31Z"
+        "timestamp": "2022-02-11T12:16:56Z"
       }
     ]
   }
