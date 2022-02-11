@@ -102,7 +102,7 @@ namespace n0tFlix.Manifest.Creator
                                 var ver = new Manifestdata.Version()
                                 {
                                     sourceUrl = rooturl + zipfile.Name,
-                                    timestamp = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() +"T" + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString() + "Z",
+                                    timestamp = DateTime.Now.ToString("yyyy-mm-ddThh:mm:ssZ"),
                                     targetAbi = "10.7.7.0",
                                     version = Instance.Version.ToString(),
                                     changelog = "Check github for changelog",
@@ -135,6 +135,7 @@ namespace n0tFlix.Manifest.Creator
             }
 
             string json = System.Text.Json.JsonSerializer.Serialize<List<Manifestdata>>(liste);
+            json = json.Replace("[", "[\n");
             File.WriteAllText(Path.Combine(me.Directory.Parent.Parent.Parent.FullName,"Manifest", "n0tFlix-Manifest-Template.json"), json);
         }
         public static string GetCategory(Assembly dll)
