@@ -6,16 +6,16 @@
     "description": "Downloads subtitles from Addic7ed.com",
     "overview": "Downloads subtitles from Addic7ed.com",
     "owner": "n0tme",
-    "category": "n0tFlix.Plugins",
-    "imageUrl": "https://pbs.twimg.com/profile_images/3153896688/a6acb6bd0d60a56e4a0ad48f59d68038_400x400.jpeg",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.png",
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Needs feedback",
+        "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Addic7ed.zip",
-        "checksum": "7B-90-C8-58-8B-29-08-C7-6F-D3-70-26-B6-5E-44-9F",
-        "timestamp": "2/6/2022 11:01:33 PM"
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Addic7ed.zip",
+        "checksum": "7B90C8588B2908C76FD37026B65E449F",
+        "timestamp": "2/11/2022 3:26:48 AM"
       }
     ]
   },
@@ -25,16 +25,16 @@
     "description": "Gives you access to all the content from https://tv.nrk.no",
     "overview": "Gives you access to all the content from https://tv.nrk.no",
     "owner": "n0tme",
-    "category": "n0tFlix.Plugins",
-    "imageUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.png",
+    "category": "n0tChannels",
+    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.png",
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Should be working",
+        "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.NRK.zip",
-        "checksum": "F4-06-09-C3-B0-D5-31-B0-23-CD-CF-3B-42-EB-BB-4E",
-        "timestamp": "2/6/2022 11:01:33 PM"
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.NRK.zip",
+        "checksum": "F40609C3B0D531B023CDCF3B42EBBB4E",
+        "timestamp": "2/11/2022 3:26:49 AM"
       }
     ]
   },
@@ -44,16 +44,16 @@
     "description": "Downloads subtitles from TvSubtitles",
     "overview": "Downloads subtitles from TvSubtitles",
     "owner": "n0tme",
-    "category": "n0tFlix.Plugins",
-    "imageUrl": "https://image3.mouthshut.com/images/imagesp/925758431s.png",
+    "category": "n0tSubtitles",
+    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.png",
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Needs feedback",
+        "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
-        "checksum": "28-21-60-D2-88-A0-BB-6F-81-79-9E-6E-A6-8E-B1-F4",
-        "timestamp": "2/6/2022 11:01:34 PM"
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.TvSubtitles.zip",
+        "checksum": "282160D288A0BB6F81799E6EA68EB1F4",
+        "timestamp": "2/11/2022 3:26:50 AM"
       }
     ]
   },
@@ -63,35 +63,35 @@
     "description": "",
     "overview": "",
     "owner": "n0tme",
-    "category": "n0tFlix.Plugins",
-    "imageUrl": "https://www.saashub.com/images/app/service_logos/181/42n213euftbx/large.png",
+    "category": "n0tSubtitles,
+    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.png",
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "semi working but Needs feedback",
+        "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.Yifi.zip",
-        "checksum": "4D-3D-13-2F-D5-68-91-7B-6B-E0-1C-C9-62-55-15-6C",
-        "timestamp": "2/6/2022 11:01:34 PM"
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.Yifi.zip",
+        "checksum": "4D3D132FD568917B6BE01CC96255156C",
+        "timestamp": "2/11/2022 3:26:50 AM"
       }
     ]
   },
   {
     "guid": "e84adafb-7ad0-43c9-92b6-2dfbd54d1342",
-    "name": "YoutubeDL",
-    "description": "A api for collecting streamable links with youtube-dl",
-    "overview": " curl -X POST \\\"http://jellyfinurl/n0tFlix.Plugin.YoutubeDL?api_key=APIKEYFROMJELLYHERE\\\" -H  \\\"accept: */*\\\"  -H  \\\"Content-Type: application/json\\\" -d \\\"{\\\"URL\\\" :\\\"https://tubitv.com/movies/547056/my-sidepiece-hit-the-lotto\\\"}\\ this is the curl command i used to get my first response",
+    "name": "YoutubeDL API",
+    "description": "Adds a api to jellyfin to grab streamable link with youtubedl",
+    "overview": "check github for better info on usage",
     "owner": "n0tme",
-    "category": "n0tFlix.Plugins",
-    "imageUrl": "https://www.slashgeek.net/wp-content/uploads/2016/06/youtube-dl-icon.jpg",
+    "category": "n0tAPI",
+    "imageUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.png",
     "versions": [
       {
         "version": "1.0.0.0",
-        "changelog": "Working but only tested on this one site so please give feedback",
+        "changelog": "Unknown",
         "targetAbi": "10.7.7.0",
-        "sourceUrl": "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
-        "checksum": "4D-3D-13-2F-D5-68-91-7B-6B-E0-1C-C9-62-55-15-6C",
-        "timestamp": "2/6/2022 11:01:34 PM"
+        "sourceUrl": "https://github.com/n0tOdd/n0tFlix/raw/main/Build/n0tFlix.Plugin.YoutubeDL.zip",
+        "checksum": "4D3D132FD568917B6BE01CC96255156C",
+        "timestamp": "2/11/2022 3:26:50 AM"
       }
     ]
   }

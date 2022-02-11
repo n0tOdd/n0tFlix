@@ -141,7 +141,7 @@ namespace n0tFlix.Manifest.Creator
             {
                 using (var stream = File.OpenRead(FilePath))
                 {
-                    return BitConverter.ToString(md5.ComputeHash(stream));
+                    return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-","");
                 }
             }
         }
