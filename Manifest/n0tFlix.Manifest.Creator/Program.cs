@@ -55,7 +55,7 @@ namespace n0tFlix.Manifest.Creator
 
         static void Main(string[] args)
         {
-            string rooturl = Console.ReadLine();
+            string rooturl = "https://raw.githubusercontent.com/n0tOdd/n0tFlix/main/Build/";// Console.ReadLine();
             if(!rooturl.EndsWith("/"))
                 rooturl = rooturl + "/";
             List<Manifestdata> liste = new List<Manifestdata>();
@@ -100,7 +100,7 @@ namespace n0tFlix.Manifest.Creator
                                 var ver = new Manifestdata.Version()
                                 {
                                     sourceUrl = rooturl + zipfile.Name,
-                                    timestamp = DateTime.Now.ToString(),
+                                    timestamp = "2021-12-12T13:48:15Z",
                                     targetAbi = "10.7.7.0",
                                     version = Instance.Version.ToString(),
                                     changelog = "Unknown",
@@ -133,7 +133,7 @@ namespace n0tFlix.Manifest.Creator
             }
 
             string json = System.Text.Json.JsonSerializer.Serialize<List<Manifestdata>>(liste);
-            File.WriteAllText("Manifest.json", json);
+            File.WriteAllText(Path.Combine(me.Directory.Parent.Parent.Parent.FullName,"Manifest","Manifest.json"), json);
         }
         public static string GetMD5(string FilePath)
         {
