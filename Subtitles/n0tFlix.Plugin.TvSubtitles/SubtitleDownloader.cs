@@ -125,7 +125,7 @@ namespace n0tFlix.Plugin.TvSubtitles
                     document = await browser.OpenAsync(x => x.Content(res));
                     var desc = document.GetElementsByClassName("description").First();
                     var seasons = desc.GetElementsByTagName("a");
-                    var correct = seasons.Where(x => x.TextContent.Equals("season " + request.ParentIndexNumber, StringComparison.OrdinalIgnoreCase)).First();
+                    var correct = seasons.Where(x => x.TextContent.Contains("Season " + request.ParentIndexNumber.Value.ToString(), StringComparison.OrdinalIgnoreCase)).First();
                     string seasonurl = "http://www.tvsubtitles.net/" + correct.GetAttribute("href");
                     logger.LogError(seasonurl);
 
